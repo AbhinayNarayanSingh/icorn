@@ -70,7 +70,7 @@ then
         git commit -m "Title: Pull Request comment resolve; Developer: $developer; Date: $currentdate;"
     elif [ $prCommentResolverCommit == 2 ]
     then
-        git commit -m "$title Developer: $developer; Date: $currentdate;"
+        git commit -m "Title: $title; Developer: $developer; Date: $currentdate;"
     else
         git commit -m "Title: $title; Description: $description; Developer: $developer; Date: $currentdate;"
     fi
