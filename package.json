@@ -9,11 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "moment": "^2.29.4",
     "next": "12.2.5",
+    "next-redux-wrapper": "^7.0.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0",
+    "redux-saga": "^1.2.1"
   },
   "devDependencies": {
+    "@redux-devtools/extension": "^3.2.3",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5"
   }
