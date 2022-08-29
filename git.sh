@@ -6,16 +6,16 @@
 node="v18.7.0"
 remote="origin"
 
-origin="origin"
+origin="main"
 
-branch="origin"
+branch="main"
 # branch=bugfix/shipping-flow-bug-06
 # branch=feature/sign-up-api-integrated
 # branch=release/shell_script
 
 prCommentResolverCommit=2
 
-title="Navbar & footer complete"
+title="Change in git commit script"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`
