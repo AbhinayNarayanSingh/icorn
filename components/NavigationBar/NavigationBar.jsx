@@ -1,4 +1,6 @@
+import { useSelector } from "react-redux";
 import { useState } from "react";
+import Link from "next/link";
 import {
   APP_LOGO,
   BAG_ICON,
@@ -7,7 +9,6 @@ import {
   PRIMARY_COLOUR,
   SEARCH_ICON,
 } from "../../utils/Environment";
-import { useSelector } from "react-redux";
 
 const NavigationBar = () => {
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -33,7 +34,9 @@ const NavigationBar = () => {
                 onClick={() => setSidebarActive(true)}
               />
             )}
-            <img src={APP_LOGO[0]} alt={APP_LOGO[1]} className="logo" />
+            <Link href="/">
+              <img src={APP_LOGO[0]} alt={APP_LOGO[1]} className="logo" />
+            </Link>
           </div>
 
           <div></div>
@@ -99,10 +102,12 @@ const NavigationBar = () => {
           <div className="navbar-active">
             {category.map((item, index) => {
               return (
-                <div key={index} className="navbar-cat">
-                  <img src={item["icon"]} alt="" />
-                  <p>{item["name"]}</p>
-                </div>
+                <Link href={item["slug"]} key={index}>
+                  <div className="navbar-cat">
+                    <img src={item["icon"]} alt="" />
+                    <p>{item["name"]}</p>
+                  </div>
+                </Link>
               );
             })}
           </div>
@@ -119,7 +124,7 @@ const NavigationBar = () => {
               display: flex;
               align-items: center;
               overflow: auto;
-              width: 90%;
+              width: 95%;
 
               -ms-overflow-style: none;
               scrollbar-width: none;
@@ -129,17 +134,17 @@ const NavigationBar = () => {
             }
             .navbar-cat {
               cursor: pointer;
-              min-width: 150px;
+              min-width: 125px;
               display: flex;
               flex-direction: column;
               align-items: center;
             }
             .navbar-cat img {
-              height: 70px;
+              height: 50px;
             }
             .navbar-cat p {
-              font-size: 1rem;
-              padding-top: 0.75rem;
+              font-size: 13px;
+              padding-top: 1rem;
               color: white;
             }
             @media only screen and (min-width: 1375px) {
@@ -148,18 +153,11 @@ const NavigationBar = () => {
               }
             }
             @media only screen and (max-width: 600px) {
-              .navbar-active {
-                width: 95%;
-              }
-              .navbar-cat {
-                cursor: pointer;
-                min-width: 125px;
-              }
               .navbar-cat img {
-                height: 50px;
+                height: 45px;
               }
-              .navbar-cat p {
-                font-size: 14px;
+              .navbar-active-container {
+                padding: 1.5rem 0 1rem;
               }
             }
           `}</style>

@@ -1,11 +1,14 @@
 import { APP_LOGO, PRIMARY_COLOUR } from "../../utils/Environment";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <>
       <div className="footer-container">
         <div className="footer">
-          <img src={APP_LOGO[0]} alt={APP_LOGO[1]} className="logo" />
+          <Link href="/">
+            <img src={APP_LOGO[0]} alt={APP_LOGO[1]} className="logo" />
+          </Link>
 
           <p>
             The iCorn store uses industry-standard encryption to protect the

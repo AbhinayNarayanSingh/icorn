@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="Change in git commit script"
+title="Landing page UI complete"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`

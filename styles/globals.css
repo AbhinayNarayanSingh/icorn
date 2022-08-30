@@ -81,3 +81,24 @@ label {
 a {
   text-decoration: none;
 }
+
+img,
+button {
+  cursor: pointer;
+}
+
+body {
+  background: #f5f5f7;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}

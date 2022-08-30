@@ -1,10 +1,18 @@
 import '../styles/globals.css'
-import { Provider, useDispatch, useSelector } from "react-redux";
+// import { styled } from '@mui/material/styles';
+import { Provider } from "react-redux";
 import { wrapper, store } from "../store/store"
-import { useEffect } from 'react';
+import Footer from "../components/Footer/Footer";
+import NavigationBar from "../components/NavigationBar/NavigationBar";
+
 
 function MyApp({ Component, pageProps }) {
-  return <Provider store={store}><Component {...pageProps} /></Provider>
+  return <Provider store={store}>
+    <NavigationBar></NavigationBar>
+    <Component {...pageProps} />
+    <Footer></Footer>
+
+  </Provider>
 }
 
 export default wrapper.withRedux(MyApp)
