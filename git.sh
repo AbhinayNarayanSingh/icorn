@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="small change in landing page & global css"
+title="category page ui complete"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`
