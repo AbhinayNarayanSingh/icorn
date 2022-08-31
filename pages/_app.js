@@ -1,9 +1,15 @@
 import '../styles/globals.css'
-// import { styled } from '@mui/material/styles';
+import '../styles/bootstrap-grid.css'
+
+// redux store 
 import { Provider } from "react-redux";
 import { wrapper, store } from "../store/store"
+
+// component
 import Footer from "../components/Footer/Footer";
 import NavigationBar from "../components/NavigationBar/NavigationBar";
+
+
 
 
 function MyApp({ Component, pageProps }) {

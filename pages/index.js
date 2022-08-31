@@ -1,6 +1,4 @@
 import { useSelector } from "react-redux";
-import { Container } from "@mui/material";
-
 
 import ProductCards from "../components/ProductCards/ProductCards";
 
@@ -9,7 +7,7 @@ import ProductCards from "../components/ProductCards/ProductCards";
 export default function Home() {
   const products = useSelector((state) => state.products)
   return (
-    <Container maxWidth="xl" className="mt-2">
+    <div className="mt-2 container-xxl">
       <h2><span>The latest. </span>Take a look at what’s new right now.</h2>
       {products.map((product, index) => {
         return (
@@ -48,6 +46,6 @@ export default function Home() {
         }
         `}
       </style>
-    </Container>
+    </div>
   )
 }

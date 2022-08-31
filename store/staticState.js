@@ -55,6 +55,7 @@ export const products = [
             "sellingPrice": 219990,
         },
         "images": "https://media.croma.com/image/upload/v1647427408/Croma%20Assets/Computers%20Peripherals/Laptop/Images/245235_hcqtej.png",
+        "color": ['#2e3642', '#f0e5d2', '#7d7e80', '#e3e4e6']
     },
     {
         "brand": "Apple",
@@ -68,6 +69,7 @@ export const products = [
             "sellingPrice": 123990,
         },
         "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
     },
     {
         "brand": "Apple",
@@ -81,6 +83,7 @@ export const products = [
             "sellingPrice": 219990,
         },
         "images": "https://media.croma.com/image/upload/v1619272147/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/234301_9_vxz8o4.png",
+        "color": ['#eaebed', '#7f8084']
     },
     {
         "brand": "Apple",
@@ -94,6 +97,7 @@ export const products = [
             "sellingPrice": 41900,
         },
         "images": "https://media.croma.com/image/upload/v1633696522/Croma%20Assets/Wearable/Wearable%20Devices/Images/244886_ipofha.png",
+        "color": ['#1a2531', '#ded6d1', '#35382c', '#6d8dba', '#aa393b', '#3e3a35', '#e6e6e6', '#e5caad', '#4c4845', '#d1cdca']
     },
     {
         "brand": "Apple",

@@ -102,3 +102,7 @@ body {
 .mt-2 {
   margin-top: 2rem;
 }
+
+.d-flex {
+  display: flex;
+}
