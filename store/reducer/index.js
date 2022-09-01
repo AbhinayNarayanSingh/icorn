@@ -1,9 +1,14 @@
-import { category, product, products } from "../staticState"
+import { category, product, productAccessories, productImages, productPrice, products, productVariants } from "../staticState"
 
 export const initialState = {
     category: category,
     products: products,
-    product: product
+    product: product,
+    productVariants: productVariants,
+    productImages: productImages,
+    productPrice: productPrice,
+    productAccessories: productAccessories,
+
 }
 
 const rootReducer = (state = initialState, action) => {

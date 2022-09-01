@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import Link from "next/link";
+import router from "next/router";
+
 import {
   APP_LOGO,
   BAG_ICON,
@@ -14,6 +16,10 @@ const NavigationBar = () => {
   const [sidebarActive, setSidebarActive] = useState(false);
   const category = useSelector((state) => state.category);
 
+  const categoryRoute = (path) => {
+    setSidebarActive(false);
+    router.push(path);
+  };
   return (
     <>
       <div className="navbar-container">
@@ -102,12 +108,12 @@ const NavigationBar = () => {
           <div className="navbar-active">
             {category.map((item, index) => {
               return (
-                <Link href={item["slug"]} key={index}>
+                <div onClick={() => categoryRoute(item["name"])} key={index}>
                   <div className="navbar-cat">
                     <img src={item["icon"]} alt="" />
                     <p>{item["name"]}</p>
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>

@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="category page ui complete"
+title="worked on product detail page ui"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`

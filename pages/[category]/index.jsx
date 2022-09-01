@@ -1,15 +1,18 @@
 import Link from "next/link";
 import { useSelector } from "react-redux";
-import ProductCards from "../components/ProductCards/ProductCards";
+import ProductCards from "../../components/ProductCards/ProductCards";
+import { useRouter } from "next/router";
 
-const Iphone = () => {
+const Category = () => {
+  const router = useRouter();
   const products = useSelector((state) => state.products);
+  const { category } = router.query;
 
   return (
     <div className="container-xxl mt-2">
       <div className="sub-heading">
         <h2>
-          <span>All iPad models. </span>Take your pick.
+          <span>All {category} models. </span>Take your pick.
         </h2>
 
         <div className="support">
@@ -104,4 +107,4 @@ const Iphone = () => {
   );
 };
 
-export default Iphone;
+export default Category;
