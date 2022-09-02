@@ -104,6 +104,9 @@ body {
   margin-top: 2rem;
 }
 
+.m-1 {
+  margin: 1rem;
+}
 .m-2 {
   margin: 2rem;
 }
@@ -113,4 +116,32 @@ body {
 }
 .pt-2 {
   padding-top: 2rem;
+}
+
+.primary-btn {
+  width: 200px;
+  height: 44px;
+
+  background: #0066cc;
+  border-radius: 10px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #ffffff;
+}
+.secondary-btn {
+  width: 200px;
+  height: 44px;
+
+  background: #ffffff;
+  border: 2px solid #0066cc;
+  border-radius: 10px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #0066cc;
 }

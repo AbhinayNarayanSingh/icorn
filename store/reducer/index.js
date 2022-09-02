@@ -8,6 +8,7 @@ export const initialState = {
     productImages: productImages,
     productPrice: productPrice,
     productAccessories: productAccessories,
+    bag: [[], []]
 
 }
 

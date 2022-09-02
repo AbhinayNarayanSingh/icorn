@@ -140,7 +140,7 @@ export const product = {
         ["Bluetooth", "Bluetooth 5.0"],
         ["Battery Life", "Up to 10 Hours of Surfing the Web on Wi-Fi or Watching Video, Built-in 28.65 WHr Rechargeable Battery"],
         ["Connector", "USB Type-C | 20 Watts Fast Charging, Charging Via Power Adapter or USB-C to Computer System"],
-        ["Dimensions in Inches (WxDxH)", "7.02 x 0.23 x 9.74"],
+        ["Dimensions", "7.02 x 0.23 x 9.74 Inches"],
         ["Weight", "466 g"],
         ["In the Box", "1 U Tablet | Power Adapter | USB Cable | Quick Start Guide | Warranty Card"],
         ["Warranty", "12 Months | International Travellers | Carry-In"]

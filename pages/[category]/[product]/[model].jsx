@@ -34,298 +34,414 @@ const Model = () => {
   };
 
   return (
-    <div className="container-xxl">
-      <div className="row align-items-start">
-        <div className="col-12 col-md-6 product-image-container">
-          <div className="main-product-image">
-            <img src={selectedProductImage} alt={product["name"]} />
+    <>
+      <div className="product-page-container">
+        <div className="row align-items-start product-page">
+          <div className="col-12 col-md-6 product-image-container">
+            <div className="product-image-section">
+              <div className="main-product-image">
+                <img src={selectedProductImage} alt={product["name"]} />
+              </div>
+              <div className="product-images hide-scrollbar">
+                {productImages.map((i, index) => {
+                  return (
+                    <img
+                      src={i}
+                      alt={product["name"]}
+                      key={index}
+                      onClick={() =>
+                        setSelectedProductImage(productImages[index])
+                      }
+                    />
+                  );
+                })}
+              </div>
+            </div>
           </div>
-          <div className="product-images hide-scrollbar">
-            {productImages.map((i, index) => {
-              return (
-                <img
-                  src={i}
-                  alt={product["name"]}
-                  key={index}
-                  onClick={() => setSelectedProductImage(productImages[index])}
-                />
-              );
-            })}
-          </div>
-          <style jsx>{`
-            .product-image-container {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-            }
-            .main-product-image {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              background: white;
-              margin: 3rem 0 1rem;
-              padding: 3rem;
-            }
-            .main-product-image img {
-              width: 100%;
-            }
-            .product-images {
-              overflow: scroll;
-              display: flex;
-              margin: 0 1rem 2rem;
-            }
-            .product-images img {
-              background: white;
-              height: 70px;
-              width: 70px;
-              margin-right: 1rem;
-              padding: 1rem;
-            }
-          `}</style>
-        </div>
-        <div className="col-12 col-md-6">
-          <div className="m-2">
-            <div className="delivery-estimate pt-2">
-              <img src={LOCATION_ICON[0]} alt={LOCATION_ICON[1]} />
-              <p>
-                Delivery at:{" "}
-                <span>Sahibzada Ajit Singh Nagar, Punjab, 160062</span>
+
+          <div className="col-12 col-md-6 product-details-container">
+            <div className="product-details">
+              <div className="delivery-estimate">
+                <img src={LOCATION_ICON[0]} alt={LOCATION_ICON[1]} />
+                <p>
+                  Delivery at:{" "}
+                  <span>Sahibzada Ajit Singh Nagar, Punjab, 160062</span>
+                </p>
+              </div>
+
+              <h2>{product["name"]}</h2>
+
+              <div className="product-price">
+                <h3>
+                  ₹ {INR_STYLE_HELPER(productPrice["sellingPrice"])}
+                  <span>(Inclusive of all taxes)</span>
+                </h3>
+
+                <h4>
+                  <span>MRP {INR_STYLE_HELPER(productPrice["mrp"])}</span>
+                  (Save ₹ {INR_STYLE_HELPER(productPrice["discount"])})
+                </h4>
+              </div>
+
+              <div className="delivery-estimate">
+                <img src={BOX_ICON[0]} alt={BOX_ICON[1]} />
+                <p>
+                  Order today, FREE delivery by <span>Tuesday, August 16.</span>
+                </p>
+              </div>
+
+              <p className="mt-2">
+                Colour : <span>{productsVariants["color"]}</span>
               </p>
-            </div>
 
-            <h2>{product["name"]}</h2>
+              <div className="product-variants">
+                {productVariants.map((variant, index) => {
+                  return (
+                    <span
+                      key={index}
+                      style={{ background: `${variant["colorCode"]}` }}
+                      onClick={() => setProductsVariants(variant)}
+                      className={
+                        productsVariants["colorCode"] == variant["colorCode"] &&
+                        "active"
+                      }
+                    ></span>
+                  );
+                })}
+              </div>
 
-            <div className="product-price">
-              <h3>
-                ₹ {INR_STYLE_HELPER(productPrice["sellingPrice"])}
-                <span>(Inclusive of all taxes)</span>
-              </h3>
-              <h4>
-                <span>MRP {INR_STYLE_HELPER(productPrice["mrp"])}</span>
-                (Save ₹ {INR_STYLE_HELPER(productPrice["discount"])})
-              </h4>
-            </div>
-
-            <div className="delivery-estimate">
-              <img src={BOX_ICON[0]} alt={BOX_ICON[1]} />
-              <p>
-                Order today, FREE delivery by <span>Tuesday, August 16.</span>
+              <p className="mt-2">
+                Size name : <span>{productSize}</span>
               </p>
-            </div>
 
-            <p className="mt-2">
-              Colour : <span>{productsVariants["color"]}</span>
-            </p>
+              <div className="product-size">
+                {size.map((size, index) => {
+                  return (
+                    <div
+                      key={index}
+                      onClick={() => setProductSize(size)}
+                      className={productSize === size && "active"}
+                    >
+                      <p>{size}</p>
+                    </div>
+                  );
+                })}
+              </div>
 
-            <div className="product-variants">
-              {productVariants.map((variant, index) => {
-                return (
-                  <span
-                    key={index}
-                    style={{ background: `${variant["colorCode"]}` }}
-                    onClick={() => setProductsVariants(variant)}
-                    className={
-                      productsVariants["colorCode"] == variant["colorCode"] &&
-                      "active"
-                    }
-                  ></span>
-                );
-              })}
-            </div>
+              <p className="mt-2">Product Accessories</p>
 
-            <p className="mt-2">
-              Size name : <span>{productSize}</span>
-            </p>
-
-            <div className="product-size">
-              {size.map((size, index) => {
-                return (
-                  <div
-                    key={index}
-                    onClick={() => setProductSize(size)}
-                    className={productSize === size && "active"}
-                  >
-                    <p>{size}</p>
-                  </div>
-                );
-              })}
-            </div>
-
-            <p className="mt-2">Product Accessories</p>
-
-            <div className="product-accessories hide-scrollbar">
-              {productAccessories.map((i, index) => {
-                return (
-                  <div
-                    key={index}
-                    onClick={() =>
-                      addOnAccessoriesFn(i["model"], addOnAccessories)
-                    }
-                  >
-                    <div className="accessories-container">
-                      <img
-                        src={
-                          addOnAccessories?.includes(i["model"])
-                            ? RADIO_CHECKED_ICON[0]
-                            : RADIO_ICON[0]
-                        }
-                        alt={RADIO_ICON[1]}
-                      />
-                      <div>
-                        <p>{i["name"]}</p>
-                        <h3>
-                          ₹ {INR_STYLE_HELPER(i["sellingPrice"])}
-                          <span>(Inclusive of all taxes)</span>
-                        </h3>
+              <div className="product-accessories hide-scrollbar">
+                {productAccessories.map((i, index) => {
+                  return (
+                    <div
+                      key={index}
+                      onClick={() =>
+                        addOnAccessoriesFn(i["model"], addOnAccessories)
+                      }
+                    >
+                      <div className="accessories-container">
+                        <img
+                          src={
+                            addOnAccessories?.includes(i["model"])
+                              ? RADIO_CHECKED_ICON[0]
+                              : RADIO_ICON[0]
+                          }
+                          alt={RADIO_ICON[1]}
+                        />
+                        <div>
+                          <p>{i["name"]}</p>
+                          <h3>
+                            ₹ {INR_STYLE_HELPER(i["sellingPrice"])}
+                            <span>(Inclusive of all taxes)</span>
+                          </h3>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
 
-            <h2 className="mt-2">Specifications</h2>
+              <h2 className="mt-2">Specifications</h2>
 
-            <div className="specifications-container">
-              {specifications.map((item, index) => {
-                return (
-                  <div key={index} className="row mb-1">
-                    <span className="key col-4">{item[0]}</span>
-                    <span className="value col-8">{item[1]}</span>
-                  </div>
-                );
-              })}
+              <div className="specifications-container">
+                {specifications.map((item, index) => {
+                  return (
+                    <div key={index} className="row mb-1">
+                      <span className="key col-4">{item[0]}</span>
+                      <span className="value col-8">{item[1]}</span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
-
-          <style jsx>{`
-            h2 {
-              font-weight: 600;
-              font-size: 32px;
-              line-height: 39px;
-              margin-bottom: 1rem;
-            }
-            h3 {
-              font-weight: 600;
-              font-size: 30px;
-            }
-            h3 span {
-              font-weight: 600;
-              font-size: 16px;
-              margin-left: 0.5rem;
-            }
-
-            h4 span {
-              font-weight: 600;
-              font-size: 20px;
-              text-decoration-line: line-through;
-              color: #6e6e73;
-              margin-right: 0.5rem;
-            }
-            h4 {
-              font-weight: 600;
-              font-size: 16px;
-              color: #6e6e73;
-            }
-            .product-price {
-              margin-bottom: 1rem;
-            }
-            .delivery-estimate {
-              display: flex;
-              align-items: center;
-              margin-bottom: 1rem;
-            }
-            .delivery-estimate img {
-              height: 20px;
-              margin-right: 0.5rem;
-            }
-            p span {
-              font-weight: 600;
-            }
-            .product-variants {
-              display: flex;
-            }
-            .product-variants span {
-              width: 32px;
-              height: 32px;
-              display: block;
-              border-radius: 50%;
-              margin: 1rem 1.25rem 0 0;
-              cursor: pointer;
-              box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.1);
-            }
-            .product-variants .active {
-            }
-
-            .product-size .active {
-              background: white;
-            }
-            .product-size {
-              display: flex;
-              margin-top: 1rem;
-            }
-            .product-size div {
-              width: 75px;
-              height: 30px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin-right: 1rem;
-              cursor: pointer;
-              box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-              background: #e8e8e8;
-            }
-            .product-accessories {
-              display: flex;
-              overflow: scroll;
-            }
-
-            .accessories-container {
-              width: 320px;
-              height: 75px;
-              margin: 1rem;
-
-              display: flex;
-              align-items: center;
-
-              background: #ffffff;
-              box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.15);
-              border-radius: 17px;
-              padding: 1rem;
-              cursor: pointer;
-            }
-            .accessories-container img {
-              height: 20px;
-              margin-right: 1rem;
-            }
-            .accessories-container p {
-              font-weight: 600;
-              font-size: 16px;
-              line-height: 20px;
-              color: #000000;
-              height: 50px;
-            }
-            .accessories-container h3 {
-              font-size: 20px;
-              font-weight: 600;
-            }
-            .accessories-container h3 span {
-              margin-left: 0.5rem;
-              font-size: 14px;
-            }
-
-            .key {
-              font-weight: 600;
-              margin-right: 1rem;
-            }
-            .value {
-              margin-right: -1rem;
-              line-height: 1.35rem;
-            }
-          `}</style>
         </div>
       </div>
-    </div>
+      <div className="user-action-container container-fluid">
+        <div className="container row user-action">
+          <div className="col-6">
+            <h2>
+              Your new {product["name"]}. <span>Just the way you want it.</span>
+            </h2>
+          </div>
+          <div className="col-6 action-btn">
+            <button className="secondary-btn">Add to Bag</button>
+            <button className="primary-btn">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+      <style jsx>
+        {`
+          // Col-1 ----------------------------------------------------------------
+
+          .product-image-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .product-image-container .main-product-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            padding: 3rem;
+            margin-bottom: 1rem;
+          }
+          .product-image-container .main-product-image img {
+            width: 100%;
+          }
+          .product-image-container .product-images {
+            overflow: scroll;
+            display: flex;
+            margin: 0 0 1rem;
+          }
+          .product-image-container .product-images img {
+            background: white;
+            height: 70px;
+            width: 70px;
+            padding: 1rem;
+            margin-right: 1rem;
+          }
+          .product-image-container .product-images img:nth-last-of-type(1) {
+            margin-right: 0;
+          }
+
+          // col-2  -------------------------------------------------------------------------
+
+          .product-details {
+            background-color: white;
+            padding: 1rem;
+          }
+          .product-details h2 {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 39px;
+            margin-bottom: 1rem;
+          }
+          .product-details h3 {
+            font-weight: 600;
+            font-size: 30px;
+          }
+          .product-details h3 span {
+            font-weight: 600;
+            font-size: 16px;
+            margin-left: 0.5rem;
+          }
+
+          .product-details h4 span {
+            font-weight: 600;
+            font-size: 20px;
+            text-decoration-line: line-through;
+            color: #6e6e73;
+            margin-right: 0.5rem;
+          }
+          .product-details h4 {
+            font-weight: 600;
+            font-size: 16px;
+            color: #6e6e73;
+          }
+          .product-details .product-price {
+            margin-bottom: 1rem;
+          }
+          .product-details .delivery-estimate {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+          }
+          .product-details .delivery-estimate img {
+            height: 20px;
+            margin-right: 0.5rem;
+          }
+          .product-details p span {
+            font-weight: 600;
+          }
+          .product-details .product-variants {
+            display: flex;
+          }
+          .product-details .product-variants span {
+            width: 32px;
+            height: 32px;
+            display: block;
+            border-radius: 50%;
+            margin: 1rem 1.25rem 0 0;
+            cursor: pointer;
+            box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.1);
+          }
+          .product-details .product-variants .active {
+          }
+
+          .product-details .product-size .active {
+            background: white;
+          }
+          .product-details .product-size {
+            display: flex;
+            margin-top: 1rem;
+          }
+          .product-details .product-size div {
+            width: 75px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1rem;
+            cursor: pointer;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            background: #e8e8e8;
+          }
+          .product-details .product-accessories {
+            display: flex;
+            overflow: scroll;
+          }
+
+          .product-details .accessories-container {
+            width: 320px;
+            height: 75px;
+            margin: 1rem;
+
+            display: flex;
+            align-items: center;
+
+            background: #ffffff;
+            box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.15);
+            border-radius: 17px;
+            padding: 1rem;
+            cursor: pointer;
+          }
+          .product-details .accessories-container img {
+            height: 20px;
+            margin-right: 1rem;
+          }
+          .product-details .accessories-container p {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+            height: 50px;
+          }
+          .product-details .accessories-container h3 {
+            font-size: 20px;
+            font-weight: 600;
+          }
+          .product-details .accessories-container h3 span {
+            margin-left: 0.5rem;
+            font-size: 14px;
+          }
+
+          .product-details .key {
+            font-weight: 600;
+          }
+          .product-details .value {
+            line-height: 1.35rem;
+          }
+
+          // row -------------------------------------------------
+          .product-page-container {
+            max-width: 1500px;
+            margin: auto;
+            margin-bottom: 1rem;
+          }
+
+          //  user action -----------------------------------------
+
+          .user-action-container {
+            position: sticky;
+            bottom: 0;
+            background: #f5f5f7;
+
+            box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
+          }
+          .user-action {
+            align-items: center;
+          }
+          .user-action h2 {
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 30px;
+
+            color: #000000;
+            padding: 1rem 0;
+          }
+          .user-action h2 span {
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 30px;
+
+            color: #6e6e73;
+            padding: 1rem 0;
+          }
+          .user-action .action-btn {
+            justify-content: end;
+            display: flex;
+          }
+          .user-action .action-btn button {
+            margin-left: 2rem;
+          }
+
+          @media only screen and (min-width: 600px) {
+            .product-page {
+              margin-top: 2rem;
+            }
+            .product-image-container {
+              position: sticky;
+              top: 2rem;
+            }
+            .product-details {
+              margin-bottom: 1rem;
+            }
+            .product-image-section {
+              margin-right: 2rem;
+            }
+          }
+
+          @media only screen and (max-width: 600px) {
+            .product-details .accessories-container {
+              width: 280px;
+              padding: 8px 16px;
+            }
+            .product-details .accessories-container p {
+              font-size: 14px;
+              line-height: 20px;
+              height: 40px;
+            }
+            .product-details .accessories-container h3 {
+              font-size: 15px;
+              margin-top: 5px;
+            }
+
+            .product-details h3 {
+              font-size: 24px;
+            }
+            .product-details h4 {
+              font-size: 14px;
+            }
+            .product-details span {
+              font-size: 15px;
+              line-height: 20px;
+            }
+          }
+        `}
+      </style>
+    </>
   );
 };
 

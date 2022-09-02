@@ -9,12 +9,13 @@ import {
   HAMBURGER_CLOSE_ICON,
   HAMBURGER_OPEN_ICON,
   PRIMARY_COLOUR,
-  SEARCH_ICON,
+  USER_ICON,
 } from "../../utils/Environment";
 
 const NavigationBar = () => {
   const [sidebarActive, setSidebarActive] = useState(false);
   const category = useSelector((state) => state.category);
+  const bag = useSelector((store) => store.bag);
 
   const categoryRoute = (path) => {
     setSidebarActive(false);
@@ -45,14 +46,20 @@ const NavigationBar = () => {
             </Link>
           </div>
 
-          <div></div>
           <div>
-            <img
-              src={SEARCH_ICON[0]}
-              alt={SEARCH_ICON[0]}
-              className="search-icon"
-            />
-            <img src={BAG_ICON[0]} alt={BAG_ICON[0]} className="bag-icon" />
+            <Link href="/sign">
+              <img
+                src={USER_ICON[0]}
+                alt={USER_ICON[0]}
+                className="search-icon"
+              />
+            </Link>
+            <Link href="/bag">
+              <div className="bag-container">
+                <img src={BAG_ICON[0]} alt={BAG_ICON[0]} className="bag-icon" />
+                {bag.length >= 1 && <span>{bag.length}</span>}
+              </div>
+            </Link>
           </div>
         </div>
 
@@ -73,9 +80,24 @@ const NavigationBar = () => {
             justify-content: space-between;
             align-items: center;
           }
-          .bag-icon {
+          .bag-container {
             margin-left: 3rem;
+            position: relative;
+            cursor: pointer;
           }
+          .bag-container span {
+            position: absolute;
+            background: white;
+            font-size: 10px;
+            padding: 4px;
+            font-weight: 600;
+            border-radius: 10px;
+            bottom: -6px;
+            right: -6px;
+            min-width: 12px;
+            text-align: center;
+          }
+
           .logo {
             height: 45px;
           }
@@ -84,6 +106,9 @@ const NavigationBar = () => {
           }
           .hamburger {
             margin-right: 1rem;
+          }
+          .navbar div {
+            display: flex;
           }
 
           @media only screen and (max-width: 600px) {
