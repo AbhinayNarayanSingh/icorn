@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="worked on product detail page ui"
+title="worked signup page ui"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`
@@ -72,7 +72,7 @@ then
     then
         git commit -m "Title: $title; Developer: $developer; Date: $currentdate;"
     else
-        git commit -m "Title: $title; Description: $description; Developer: $developer; Date: $currentdate;"
+        git commit -m "Title: $title; Developer: $developer; Date: $currentdate;"
     fi
     
     git push --set-upstream $remote $branch

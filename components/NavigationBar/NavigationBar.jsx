@@ -133,7 +133,7 @@ const NavigationBar = () => {
           <div className="navbar-active">
             {category.map((item, index) => {
               return (
-                <div onClick={() => categoryRoute(item["name"])} key={index}>
+                <div onClick={() => categoryRoute(item["slug"])} key={index}>
                   <div className="navbar-cat">
                     <img src={item["icon"]} alt="" />
                     <p>{item["name"]}</p>

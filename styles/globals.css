@@ -100,6 +100,9 @@ body {
   display: none;
 }
 
+.mt-1 {
+  margin-top: 1rem;
+}
 .mt-2 {
   margin-top: 2rem;
 }
@@ -109,6 +112,15 @@ body {
 }
 .m-2 {
   margin: 2rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.m-4 {
+  margin: 4rem;
+}
+.m-5 {
+  margin: 5rem;
 }
 
 .mb-1 {
@@ -144,4 +156,18 @@ body {
   line-height: 19px;
 
   color: #0066cc;
+}
+
+input {
+  padding: 1rem;
+  font-size: 1rem;
+
+  border: 1px solid #6e6e73;
+  border-radius: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }

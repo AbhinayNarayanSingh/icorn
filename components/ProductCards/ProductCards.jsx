@@ -7,9 +7,7 @@ const ProductCards = ({ type, data, index }) => {
     case "Hero":
       return (
         <div>
-          <div
-            className={`product-card ${index % 2 === 0 && "flex-row-reverse"}`}
-          >
+          <div className={`product-card ${index % 2 === 0 && "alter-product"}`}>
             <div className="col">
               <h2>{data["name"]}</h2>
               <h3>
@@ -95,7 +93,7 @@ const ProductCards = ({ type, data, index }) => {
 
               margin-top: 2rem;
             }
-            .flex-row-reverse {
+            .alter-product {
               flex-direction: row-reverse;
             }
             .product-color {
