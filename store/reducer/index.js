@@ -1,15 +1,15 @@
-import { category, product, productAccessories, productImages, productPrice, products, productVariants } from "../staticState"
+import { category, product, productAccessories, productImages, productPrice, products, relatedProducts } from "../staticState"
 
 export const initialState = {
     category: category,
     products: products,
     product: product,
-    productVariants: productVariants,
     productImages: productImages,
     productPrice: productPrice,
     productAccessories: productAccessories,
+    relatedProducts: relatedProducts,
     dialog: {
-        open: true,
+        open: false,
         type: "warning",
         key: "CONFIRM_MSG_DIALOGE"
     },

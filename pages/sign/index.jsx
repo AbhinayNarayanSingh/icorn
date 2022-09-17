@@ -1,3 +1,4 @@
+import Router from "next/router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import FormInputs from "../../components/Input";
@@ -62,48 +63,83 @@ const Sign = () => {
   ];
 
   return (
-    <div className="container-xxl d-flex align-items-center justify-content-center flex-column">
+    <div className="container-xxl d-flex align-items-center justify-content-center flex-column min-h-80vh">
       <h3>iCorn ID</h3>
-      <h2>
-        You don’t have an iCorn ID?{" "}
-        <span onClick={() => setActivePage("signin")}>Sign it here.</span>
-      </h2>
 
-      <form
-        onSubmit={handleSubmit(signUpHandler, errorHandler)}
-        className="col-11 col-md-7 col-lg-5 m-3"
-      >
-        {activePage === "signup" &&
-          signUpFormFeilds.map((item, index) => {
-            return (
-              <FormInputs
-                register={register}
-                key={index}
-                type={item.type}
-                name={item.name}
-                label={item.label}
-                className={"mt-1"}
-              />
-            );
-          })}
-        {activePage === "signin" &&
-          signInFormFeilds.map((item, index) => {
-            return (
-              <FormInputs
-                register={register}
-                key={index}
-                type={item.type}
-                name={item.name}
-                label={item.label}
-                className={"mt-1"}
-              />
-            );
-          })}
+      {activePage === "signup" && (
+        <>
+          <h2>
+            You already have an iCorn ID?{" "}
+            <span onClick={() => setActivePage("signin")} className="c-pointer">
+              Sign it here.
+            </span>
+          </h2>
 
-        <button type="submit" className="primary-btn mt-2">
-          Sign Up now
-        </button>
-      </form>
+          <form
+            onSubmit={handleSubmit(signUpHandler, errorHandler)}
+            className="col-11 col-md-7 col-lg-5 m-3"
+          >
+            {signUpFormFeilds.map((item, index) => {
+              return (
+                <FormInputs
+                  register={register}
+                  key={index}
+                  type={item.type}
+                  name={item.name}
+                  label={item.label}
+                  className={"mt-1"}
+                />
+              );
+            })}
+
+            <button type="submit" className="primary-btn mt-2">
+              Sign Up now
+            </button>
+          </form>
+        </>
+      )}
+
+      {activePage === "signin" && (
+        <>
+          <h2>
+            You don’t have an iCorn ID?{" "}
+            <span onClick={() => setActivePage("signup")} className="c-pointer">
+              Sign it here.
+            </span>
+          </h2>
+
+          <form
+            onSubmit={handleSubmit(signUpHandler, errorHandler)}
+            className="col-11 col-md-7 col-lg-5 m-3"
+          >
+            {signInFormFeilds.map((item, index) => {
+              return (
+                <FormInputs
+                  register={register}
+                  key={index}
+                  type={item.type}
+                  name={item.name}
+                  label={item.label}
+                  className={"mt-1"}
+                />
+              );
+            })}
+
+            <button type="submit" className="primary-btn mt-2">
+              Sign in now
+            </button>
+          </form>
+          <h2 className="text-center">
+            Couldn't remember iCorn ID password ?{" "}
+            <span
+              onClick={() => Router.push("/sign/account-recovery")}
+              className="c-pointer"
+            >
+              click here.
+            </span>
+          </h2>
+        </>
+      )}
 
       <style jsx>{`
         h3 {

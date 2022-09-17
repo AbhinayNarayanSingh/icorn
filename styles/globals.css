@@ -134,6 +134,17 @@ body {
   padding-top: 2rem;
 }
 
+.min-h-80vh {
+  min-height: 80vh;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+.text-center {
+  text-align: center;
+}
+
 .primary-btn {
   width: 200px;
   height: 44px;

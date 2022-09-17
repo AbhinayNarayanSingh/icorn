@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="worked signup sign up/in & recovery page & dialog box trigger system using redux"
+title="worked signup sign up/in & product page"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`

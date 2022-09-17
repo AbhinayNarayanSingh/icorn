@@ -9,8 +9,8 @@ const Category = () => {
   const { category } = router.query;
 
   return (
-    <div className="container-xxl mt-2">
-      <div className="sub-heading">
+    <div className="mt-2">
+      <div className="container-xxl sub-heading">
         <h2>
           <span>All {category} models. </span>Take your pick.
         </h2>
@@ -23,27 +23,29 @@ const Category = () => {
         </div>
       </div>
 
-      <div className="product-container-horizontal hide-scrollbar">
-        {products.map((product, index) => {
-          return <ProductCards data={product} index={index} key={index} />;
-        })}
-      </div>
+      <div className="container-xxl">
+        <div className="product-container-horizontal hide-scrollbar">
+          {products.map((product, index) => {
+            return <ProductCards data={product} index={index} key={index} />;
+          })}
+        </div>
 
-      <h2>
-        <span>Accessories. </span>That pairs perfectly with your favourite
-        devices.
-      </h2>
-      <div className="product-container-horizontal hide-scrollbar">
-        {products.map((product, index) => {
-          return (
-            <ProductCards
-              type={"He-ro"}
-              data={product}
-              index={index}
-              key={index}
-            />
-          );
-        })}
+        <h2>
+          <span>Accessories. </span>That pairs perfectly with your favourite
+          devices.
+        </h2>
+        <div className="product-container-horizontal hide-scrollbar">
+          {products.map((product, index) => {
+            return (
+              <ProductCards
+                type={"He-ro"}
+                data={product}
+                index={index}
+                key={index}
+              />
+            );
+          })}
+        </div>
       </div>
 
       <style jsx>

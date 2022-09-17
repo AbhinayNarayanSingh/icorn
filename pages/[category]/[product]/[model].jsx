@@ -9,19 +9,14 @@ import {
 import { INR_STYLE_HELPER } from "../../../utils/Helper";
 
 const Model = () => {
-  const {
-    product,
-    productImages,
-    productPrice,
-    productVariants,
-    productAccessories,
-  } = useSelector((state) => state);
+  const { product, productImages, productPrice, productAccessories } =
+    useSelector((state) => state);
   const { size, specifications } = product;
 
   const [selectedProductImage, setSelectedProductImage] = useState(
     productImages[0]
   );
-  const [productsVariants, setProductsVariants] = useState(productVariants[0]);
+  const [productsVariants, setProductsVariants] = useState(product["color"][0]);
   const [productSize, setProductSize] = useState(size[0]);
 
   const [addOnAccessories, setAddOnAccessories] = useState([]);
@@ -37,7 +32,7 @@ const Model = () => {
     <>
       <div className="product-page-container">
         <div className="row align-items-start product-page">
-          <div className="col-12 col-md-6 product-image-container">
+          <div className="col-12 col-md-5 product-image-container">
             <div className="product-image-section">
               <div className="main-product-image">
                 <img src={selectedProductImage} alt={product["name"]} />
@@ -59,7 +54,7 @@ const Model = () => {
             </div>
           </div>
 
-          <div className="col-12 col-md-6 product-details-container">
+          <div className="col-12 col-md-7 product-details-container">
             <div className="product-details">
               <div className="delivery-estimate">
                 <img src={LOCATION_ICON[0]} alt={LOCATION_ICON[1]} />
@@ -95,7 +90,7 @@ const Model = () => {
               </p>
 
               <div className="product-variants">
-                {productVariants.map((variant, index) => {
+                {product["color"].map((variant, index) => {
                   return (
                     <span
                       key={index}
@@ -177,19 +172,21 @@ const Model = () => {
           </div>
         </div>
       </div>
+
       <div className="user-action-container container-fluid">
         <div className="container row user-action">
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <h2>
               Your new {product["name"]}. <span>Just the way you want it.</span>
             </h2>
           </div>
-          <div className="col-6 action-btn">
+          <div className="col-12 col-md-6 action-btn">
             <button className="secondary-btn">Add to Bag</button>
             <button className="primary-btn">BUY NOW</button>
           </div>
         </div>
       </div>
+
       <style jsx>
         {`
           // Col-1 ----------------------------------------------------------------
@@ -437,6 +434,23 @@ const Model = () => {
             .product-details span {
               font-size: 15px;
               line-height: 20px;
+            }
+
+            .user-action h2 {
+              font-size: 20px;
+              line-height: 25px;
+              text-align: center;
+              padding: 1rem;
+            }
+            .user-action h2 span {
+              font-size: 20px;
+              line-height: 25px;
+            }
+            .user-action .action-btn {
+              padding-bottom: 1rem;
+            }
+            .user-action .action-btn button {
+              margin: 0 0.5rem;
             }
           }
         `}

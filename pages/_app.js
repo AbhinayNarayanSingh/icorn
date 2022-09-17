@@ -16,9 +16,9 @@ import Popup from '../hoc/Popup/Popup';
 function MyApp({ Component, pageProps }) {
   return <Provider store={store}>
     <Popup />
-    {/* <NavigationBar></NavigationBar> */}
+    <NavigationBar></NavigationBar>
     <Component {...pageProps} />
-    {/* <Footer></Footer> */}
+    <Footer></Footer>
 
   </Provider>
 }

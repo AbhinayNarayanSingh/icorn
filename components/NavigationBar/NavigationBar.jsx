@@ -57,7 +57,7 @@ const NavigationBar = () => {
             <Link href="/bag">
               <div className="bag-container">
                 <img src={BAG_ICON[0]} alt={BAG_ICON[0]} className="bag-icon" />
-                {bag.length >= 1 && <span>{bag.length}</span>}
+                {bag?.length >= 1 && <span>{bag.length}</span>}
               </div>
             </Link>
           </div>

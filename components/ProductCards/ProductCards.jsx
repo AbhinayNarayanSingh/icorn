@@ -133,13 +133,13 @@ const ProductCards = ({ type, data, index }) => {
                 font-size: 12px;
               }
               .col button {
-                width: 92px;
-                height: 28.11px;
-
-                font-size: 11px;
-                line-height: 13px;
+                width: 110px;
+                height: 30px;
 
                 margin-top: 1rem;
+
+                font-weight: 600;
+                font-size: 14px;
               }
             }
           `}</style>

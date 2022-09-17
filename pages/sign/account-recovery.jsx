@@ -45,11 +45,11 @@ const Sign = () => {
     <div className="container-xxl d-flex align-items-center justify-content-center flex-column">
       <h3>iCorn Recovery</h3>
 
-      {/* <h2 className="col-11 m-auto">
+      <h2 className="col-11 m-auto">
         To help keep your account safe, iCorn wants to make sure that it's
         really you trying to sign in
-      </h2> */}
-      <h2 className="col-11 m-auto">Create a new, strong password</h2>
+      </h2>
+      {/* <h2 className="col-11 m-auto">Create a new, strong password</h2> */}
 
       {/* <p>
         Confirm the recovery email that you provided in your security settings:
@@ -73,6 +73,7 @@ const Sign = () => {
               />
             );
           })}
+
         {activePage === "changePassword" &&
           changePasswordFormFeilds.map((item, index) => {
             return (

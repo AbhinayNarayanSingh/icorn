@@ -126,8 +126,38 @@ export const product = {
     "category": "iPhone",
     "name": "Apple iPhone 13",
     "storage": "128GB",
-    "color": "Blue",
-    "colorCode": "#286788",
+    "color": [
+        {
+            "model": "MLVF3H",
+            "color": "Blue",
+            "colorCode": "#286788",
+        },
+        {
+            "model": "MLVF3H",
+            "color": "Pink",
+            "colorCode": "#f8ddd7",
+        },
+        {
+            "model": "MLVF3H",
+            "color": "Green",
+            "colorCode": "#3a4c37",
+        },
+        {
+            "model": "MLVF3H",
+            "color": "Midnight",
+            "colorCode": "#232a31",
+        },
+        {
+            "model": "MLVF3H",
+            "color": "Starlight",
+            "colorCode": "#faf6f2",
+        },
+        {
+            "model": "MLVF3H",
+            "color": "Product RED",
+            "colorCode": "#c23e16",
+        },
+    ],
     "size": ["128GB", "256GB", "512GB"],
     "specifications": [
         ["Display", "11 Inches 120 Hz Liquid Retina Display"],
@@ -146,39 +176,6 @@ export const product = {
         ["Warranty", "12 Months | International Travellers | Carry-In"]
     ]
 }
-
-export const productVariants = [
-    {
-        "model": "MLVF3H",
-        "color": "Blue",
-        "colorCode": "#286788",
-    },
-    {
-        "model": "MLVF3H",
-        "color": "Pink",
-        "colorCode": "#f8ddd7",
-    },
-    {
-        "model": "MLVF3H",
-        "color": "Green",
-        "colorCode": "#3a4c37",
-    },
-    {
-        "model": "MLVF3H",
-        "color": "Midnight",
-        "colorCode": "#232a31",
-    },
-    {
-        "model": "MLVF3H",
-        "color": "Starlight",
-        "colorCode": "#faf6f2",
-    },
-    {
-        "model": "MLVF3H",
-        "color": "Product RED",
-        "colorCode": "#c23e16",
-    },
-]
 
 export const productImages = [
     "https://media.croma.com/image/upload/v1631776566/Croma%20Assets/Communication/Mobiles/Images/243463_wwwi8s.png",
@@ -217,5 +214,79 @@ export const productAccessories = [
         "name": "Apple PVC 1 Meter USB 3.0 (Type-C) to Lightning Charging Cable",
         "sellingPrice": 1900,
         "slug": "/accessories/apple-pvc-1-meter-usb-3-0-type-c-to-lightning-charging-cable/MHXH3ZMA"
+    },
+]
+
+export const relatedProducts = [
+    {
+        "brand": "Apple",
+        "category": "iPhone",
+        "slug": "iphone/iphone-13-pro/MLVF3H",
+        "name": "Apple iPhone 13 Pro",
+        "model": "MLVF3H",
+        "price": {
+            "currencyIso": "INR",
+            "discount": 5910,
+            "mrp": 129900,
+            "sellingPrice": 123990,
+        },
+        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
+    }, {
+        "brand": "Apple",
+        "category": "iPhone",
+        "slug": "iphone/iphone-13-pro/MLVF3H",
+        "name": "Apple iPhone 13 Pro",
+        "model": "MLVF3H",
+        "price": {
+            "currencyIso": "INR",
+            "discount": 5910,
+            "mrp": 129900,
+            "sellingPrice": 123990,
+        },
+        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
+    }, {
+        "brand": "Apple",
+        "category": "iPhone",
+        "slug": "iphone/iphone-13-pro/MLVF3H",
+        "name": "Apple iPhone 13 Pro",
+        "model": "MLVF3H",
+        "price": {
+            "currencyIso": "INR",
+            "discount": 5910,
+            "mrp": 129900,
+            "sellingPrice": 123990,
+        },
+        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
+    }, {
+        "brand": "Apple",
+        "category": "iPhone",
+        "slug": "iphone/iphone-13-pro/MLVF3H",
+        "name": "Apple iPhone 13 Pro",
+        "model": "MLVF3H",
+        "price": {
+            "currencyIso": "INR",
+            "discount": 5910,
+            "mrp": 129900,
+            "sellingPrice": 123990,
+        },
+        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
+    }, {
+        "brand": "Apple",
+        "category": "iPhone",
+        "slug": "iphone/iphone-13-pro/MLVF3H",
+        "name": "Apple iPhone 13 Pro",
+        "model": "MLVF3H",
+        "price": {
+            "currencyIso": "INR",
+            "discount": 5910,
+            "mrp": 129900,
+            "sellingPrice": 123990,
+        },
+        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
     },
 ]
