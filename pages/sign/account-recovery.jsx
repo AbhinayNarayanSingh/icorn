@@ -18,63 +18,50 @@ const Sign = () => {
     console.log(errors, "error");
   };
 
-  const [activePage, setActivePage] = useState("signup");
+  const [activePage, setActivePage] = useState("changePassword");
 
-  const signUpFormFeilds = [
+  const accountRecoveryFormFeilds = [
     {
       type: "text",
-      name: "fullname",
-      label: "Name",
-    },
-    {
-      type: "email",
       name: "email",
       label: "Email",
-    },
-    {
-      type: "password",
-      name: "password",
-      label: "Password",
-    },
-    {
-      type: "password",
-      name: "confirmPassword",
-      label: "Confirm password",
-    },
-    {
-      type: "text",
-      name: "mob",
-      label: "Mobile No.",
     },
   ];
 
-  const signInFormFeilds = [
-    {
-      type: "email",
-      name: "email",
-      label: "Email",
-    },
+  const changePasswordFormFeilds = [
     {
       type: "password",
       name: "password",
       label: "Password",
+    },
+    {
+      type: "password",
+      name: "confirm-password",
+      label: "Confirm password",
     },
   ];
 
   return (
     <div className="container-xxl d-flex align-items-center justify-content-center flex-column">
-      <h3>iCorn ID</h3>
-      <h2>
-        You don’t have an iCorn ID?{" "}
-        <span onClick={() => setActivePage("signin")}>Sign it here.</span>
-      </h2>
+      <h3>iCorn Recovery</h3>
+
+      {/* <h2 className="col-11 m-auto">
+        To help keep your account safe, iCorn wants to make sure that it's
+        really you trying to sign in
+      </h2> */}
+      <h2 className="col-11 m-auto">Create a new, strong password</h2>
+
+      {/* <p>
+        Confirm the recovery email that you provided in your security settings:
+        abh*********99@gmail.com
+      </p> */}
 
       <form
         onSubmit={handleSubmit(signUpHandler, errorHandler)}
         className="col-11 col-md-7 col-lg-5 m-3"
       >
-        {activePage === "signup" &&
-          signUpFormFeilds.map((item, index) => {
+        {activePage === "accountRecovery" &&
+          accountRecoveryFormFeilds.map((item, index) => {
             return (
               <FormInputs
                 register={register}
@@ -86,8 +73,8 @@ const Sign = () => {
               />
             );
           })}
-        {activePage === "signin" &&
-          signInFormFeilds.map((item, index) => {
+        {activePage === "changePassword" &&
+          changePasswordFormFeilds.map((item, index) => {
             return (
               <FormInputs
                 register={register}
@@ -101,7 +88,7 @@ const Sign = () => {
           })}
 
         <button type="submit" className="primary-btn mt-2">
-          Sign Up now
+          Next
         </button>
       </form>
 
@@ -118,6 +105,7 @@ const Sign = () => {
           margin-top: 1rem;
           font-weight: 600;
           color: #000000;
+          text-align: center;
         }
         h2 span {
           font-weight: 600;

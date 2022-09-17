@@ -8,15 +8,17 @@ import { wrapper, store } from "../store/store"
 // component
 import Footer from "../components/Footer/Footer";
 import NavigationBar from "../components/NavigationBar/NavigationBar";
+import Popup from '../hoc/Popup/Popup';
 
 
 
 
 function MyApp({ Component, pageProps }) {
   return <Provider store={store}>
-    <NavigationBar></NavigationBar>
+    <Popup />
+    {/* <NavigationBar></NavigationBar> */}
     <Component {...pageProps} />
-    <Footer></Footer>
+    {/* <Footer></Footer> */}
 
   </Provider>
 }

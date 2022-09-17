@@ -8,7 +8,13 @@ export const initialState = {
     productImages: productImages,
     productPrice: productPrice,
     productAccessories: productAccessories,
-    bag: [[], []]
+    dialog: {
+        open: true,
+        type: "warning",
+        key: "CONFIRM_MSG_DIALOGE"
+    },
+
+
 
 }
 
@@ -18,6 +24,14 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 status: true
+            }
+
+        case "close_dialoge":
+            return {
+                ...state,
+                dialog: {
+                    open: false
+                }
             }
 
         default: {
