@@ -3,6 +3,9 @@ import { useForm } from "react-hook-form";
 import FormInputs from "../../components/Input";
 
 const Sign = () => {
+  const [activePage, setActivePage] = useState("accountRecovery");
+  const [recoveryMail, setRecoveryMail] = useState();
+
   const {
     register,
     handleSubmit,
@@ -13,12 +16,17 @@ const Sign = () => {
   const signUpHandler = (data) => {
     console.log(data, "data");
     console.log(errors, "formState > errors");
+
+    if (data.email) {
+      setRecoveryMail(data.email);
+    }
+
+    setActivePage("changePassword");
   };
+
   const errorHandler = () => {
     console.log(errors, "error");
   };
-
-  const [activePage, setActivePage] = useState("changePassword");
 
   const accountRecoveryFormFeilds = [
     {
@@ -29,6 +37,11 @@ const Sign = () => {
   ];
 
   const changePasswordFormFeilds = [
+    {
+      type: "password",
+      name: "otp",
+      label: "Security code",
+    },
     {
       type: "password",
       name: "password",
@@ -45,53 +58,66 @@ const Sign = () => {
     <div className="container-xxl d-flex align-items-center justify-content-center flex-column">
       <h3>iCorn Recovery</h3>
 
-      <h2 className="col-11 m-auto">
-        To help keep your account safe, iCorn wants to make sure that it's
-        really you trying to sign in
-      </h2>
-      {/* <h2 className="col-11 m-auto">Create a new, strong password</h2> */}
+      {activePage == "accountRecovery" && (
+        <>
+          <h2 className="col-11 m-auto">
+            To help keep your account safe, iCorn wants to make sure that it's
+            really you trying to sign in
+          </h2>
+          <form
+            onSubmit={handleSubmit(signUpHandler, errorHandler)}
+            className="col-11 col-md-7 col-lg-5 m-3"
+          >
+            {accountRecoveryFormFeilds.map((item, index) => {
+              return (
+                <FormInputs
+                  register={register}
+                  key={index}
+                  type={item.type}
+                  name={item.name}
+                  label={item.label}
+                  className={"mt-1"}
+                />
+              );
+            })}
 
-      {/* <p>
-        Confirm the recovery email that you provided in your security settings:
-        abh*********99@gmail.com
-      </p> */}
+            <button type="submit" className="primary-btn mt-2">
+              Continue...
+            </button>
+          </form>
+        </>
+      )}
 
-      <form
-        onSubmit={handleSubmit(signUpHandler, errorHandler)}
-        className="col-11 col-md-7 col-lg-5 m-3"
-      >
-        {activePage === "accountRecovery" &&
-          accountRecoveryFormFeilds.map((item, index) => {
-            return (
-              <FormInputs
-                register={register}
-                key={index}
-                type={item.type}
-                name={item.name}
-                label={item.label}
-                className={"mt-1"}
-              />
-            );
-          })}
+      {activePage == "changePassword" && (
+        <>
+          <h2 className="col-11 m-auto">Create a new, strong password</h2>
+          <p className="mt-2">
+            Confirm your recovery email with security code that we provided :{" "}
+            {recoveryMail}
+          </p>
+          <form
+            onSubmit={handleSubmit(signUpHandler, errorHandler)}
+            className="col-11 col-md-7 col-lg-5 m-3"
+          >
+            {changePasswordFormFeilds.map((item, index) => {
+              return (
+                <FormInputs
+                  register={register}
+                  key={index}
+                  type={item.type}
+                  name={item.name}
+                  label={item.label}
+                  className={"mt-1"}
+                />
+              );
+            })}
 
-        {activePage === "changePassword" &&
-          changePasswordFormFeilds.map((item, index) => {
-            return (
-              <FormInputs
-                register={register}
-                key={index}
-                type={item.type}
-                name={item.name}
-                label={item.label}
-                className={"mt-1"}
-              />
-            );
-          })}
-
-        <button type="submit" className="primary-btn mt-2">
-          Next
-        </button>
-      </form>
+            <button type="submit" className="primary-btn mt-2">
+              Update password
+            </button>
+          </form>
+        </>
+      )}
 
       <style jsx>{`
         h3 {

@@ -1,4 +1,4 @@
-import { category, product, productAccessories, productImages, productPrice, products, relatedProducts } from "../staticState"
+import { category, product, productAccessories, productImages, productPrice, products, relatedProducts, bag } from "../staticState"
 
 export const initialState = {
     category: category,
@@ -8,14 +8,12 @@ export const initialState = {
     productPrice: productPrice,
     productAccessories: productAccessories,
     relatedProducts: relatedProducts,
+    bag: bag,
     dialog: {
         open: false,
         type: "warning",
         key: "CONFIRM_MSG_DIALOGE"
     },
-
-
-
 }
 
 const rootReducer = (state = initialState, action) => {

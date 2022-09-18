@@ -19,7 +19,7 @@ const Sign = () => {
     console.log(errors, "error");
   };
 
-  const [activePage, setActivePage] = useState("signup");
+  const [activePage, setActivePage] = useState("signin");
 
   const signUpFormFeilds = [
     {
@@ -130,7 +130,7 @@ const Sign = () => {
             </button>
           </form>
           <h2 className="text-center">
-            Couldn't remember iCorn ID password ?{" "}
+            If you've lost your password or wish to reset it.{" "}
             <span
               onClick={() => Router.push("/sign/account-recovery")}
               className="c-pointer"

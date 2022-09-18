@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { RADIO_CHECKED_ICON } from "../../utils/Environment";
 import { INR_STYLE_HELPER } from "../../utils/Helper";
 
 const ProductCards = ({ type, data, index }) => {
@@ -146,55 +145,98 @@ const ProductCards = ({ type, data, index }) => {
         </div>
       );
 
-    // case "Accessories":
-    //   return (
-    //     <div>
-    //       <div className="accessories-container">
-    //         <img src={RADIO_CHECKED_ICON[0]} alt={RADIO_CHECKED_ICON[1]} />
-    //         <div>
-    //           <p>{data["name"]}</p>
-    //           <h3>
-    //             ₹ {INR_STYLE_HELPER(data["sellingPrice"])}
-    //             <span>(Inclusive of all taxes)</span>
-    //           </h3>
-    //         </div>
-    //       </div>
-    //       <style jsx>{`
-    //         .accessories-container {
-    //           width: 320px;
-    //           height: 75px;
-    //           margin: 1rem;
+    case "Bag":
+      return (
+        <>
+          <div className="bag-product-container">
+            <h4 className="remove-product">Remove</h4>
+            <div className="d-flex">
+              <img
+                src={data["images"]}
+                alt={data["name"]}
+                className="product-image"
+              />
+              <div className="product-details">
+                <h2>{data["name"]}</h2>
+                <p>Wed 17 Aug — Free Delivery</p>
+              </div>
+            </div>
+            <h3 className="product-price">
+              ₹ {INR_STYLE_HELPER(data["price"]["sellingPrice"])}
+            </h3>
+          </div>
 
-    //           display: flex;
-    //           align-items: center;
-
-    //           background: #ffffff;
-    //           box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.15);
-    //           border-radius: 17px;
-    //           padding: 1rem;
-    //         }
-    //         img {
-    //           height: 20px;
-    //           margin-right: 0.75rem;
-    //         }
-    //         p {
-    //           font-weight: 600;
-    //           font-size: 16px;
-    //           line-height: 20px;
-    //           color: #000000;
-    //           height: 50px;
-    //         }
-    //         h3 {
-    //           font-size: 20px;
-    //           font-weight: 600;
-    //         }
-    //         h3 span {
-    //           margin-left: 0.5rem;
-    //           font-size: 14px;
-    //         }
-    //       `}</style>
-    //     </div>
-    //   );
+          <style jsx>{`
+            .bag-product-container {
+              display: flex;
+              justify-content: space-between;
+              background: white;
+              margin-bottom: 1rem;
+              position: relative;
+              width: 100%;
+            }
+            img {
+              height: 75px;
+              width: 75px;
+              object-fit: contain;
+              padding: 1rem;
+              margin-right: 1rem;
+            }
+            h2 {
+              font-weight: 600;
+              font-size: 16px;
+              color: #000000;
+              margin-bottom: 0.25rem;
+              line-height: 125%;
+              margin-top: 1rem;
+            }
+            p {
+              font-weight: 600;
+              font-size: 12px;
+            }
+            .product-price {
+              display: none;
+            }
+            .remove-product {
+              position: absolute;
+              right: 1rem;
+              bottom: 1rem;
+              cursor: pointer;
+              font-weight: 600;
+              font-size: 14px;
+              color: #0066cc;
+            }
+            @media only screen and (min-width: 600px) {
+              img {
+                height: 100px;
+                width: 100px;
+                padding: 2rem;
+                margin-right: 2rem;
+              }
+              h2 {
+                font-size: 20px;
+                margin-bottom: 0.5rem;
+                line-height: 125%;
+                margin-top: 2rem;
+              }
+              p {
+                font-weight: 600;
+                font-size: 14px;
+              }
+              .product-price {
+                display: block;
+                margin: 2rem 1rem;
+                font-weight: 600;
+                font-size: 20px;
+              }
+              .remove-product {
+                bottom: 2rem;
+                font-size: 16px;
+              }
+            }
+          `}</style>
+        </>
+      );
 
     default:
       return (

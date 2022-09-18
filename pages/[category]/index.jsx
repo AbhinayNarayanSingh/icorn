@@ -102,6 +102,9 @@ const Category = () => {
               line-height: 28px;
               text-align: center;
             }
+            h2 {
+              padding: 0 1rem;
+            }
           }
         `}
       </style>

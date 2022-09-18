@@ -290,3 +290,41 @@ export const relatedProducts = [
         "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
     },
 ]
+
+export const bag = {
+    bagTotal: 145489,
+    bagSubTotal: 123295,
+    bagSubTotalTax: 22194,
+    shipping: "FREE",
+    items: [
+
+        {
+            "brand": "Apple",
+            "category": "iPhone",
+            "slug": "iphone/iphone-13-pro/MLVF3H",
+            "name": "Apple iPhone 13 Pro 512GB Product RED",
+            "model": "MLVF3H",
+            "price": {
+                "currencyIso": "INR",
+                "discount": 5910,
+                "mrp": 129900,
+                "sellingPrice": 123990,
+            },
+            "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        },
+        {
+            "brand": "Apple",
+            "category": "AirPods",
+            "slug": "airpods",
+            "name": "Apple AirPods Pro",
+            "model": "MLWK3HN/A",
+            "price": {
+                "currencyIso": "INR",
+                "discount": 4801,
+                "mrp": 26300,
+                "sellingPrice": 21499,
+            },
+            "images": "https://media.croma.com/image/upload/v1651838583/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/251322_qd8g3s.png",
+        },
+    ]
+}
