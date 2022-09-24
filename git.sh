@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="worked cart page 7 improve inr_style_helper function"
+title="worked css fixes"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`

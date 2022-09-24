@@ -88,6 +88,7 @@ const Sign = () => {
                   name={item.name}
                   label={item.label}
                   className={"mt-1"}
+                  inputCaseType={"input"}
                 />
               );
             })}
@@ -121,6 +122,7 @@ const Sign = () => {
                   name={item.name}
                   label={item.label}
                   className={"mt-1"}
+                  inputCaseType={"input"}
                 />
               );
             })}
@@ -129,7 +131,7 @@ const Sign = () => {
               Sign in now
             </button>
           </form>
-          <h2 className="text-center">
+          <h2 className="text-center reset-password">
             If you've lost your password or wish to reset it.{" "}
             <span
               onClick={() => Router.push("/sign/account-recovery")}
@@ -148,7 +150,6 @@ const Sign = () => {
           line-height: 48px;
 
           color: #000000;
-          margin-top: 3rem;
         }
         h2 {
           margin-top: 1rem;
@@ -158,6 +159,9 @@ const Sign = () => {
         h2 span {
           font-weight: 600;
           color: #0066cc;
+        }
+        .reset-password {
+          font-weight: 400;
         }
       `}</style>
     </div>

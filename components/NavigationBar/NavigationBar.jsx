@@ -10,10 +10,14 @@ import {
   HAMBURGER_OPEN_ICON,
   PRIMARY_COLOUR,
   USER_ICON,
+  SEARCH_ICON,
 } from "../../utils/Environment";
+
+import FormInputs from "../Input";
 
 const NavigationBar = () => {
   const [sidebarActive, setSidebarActive] = useState(false);
+  const [searchBarActive, setSearchBarActive] = useState(false);
   const category = useSelector((state) => state.category);
   const bag = useSelector((store) => store.bag);
 
@@ -46,12 +50,29 @@ const NavigationBar = () => {
             </Link>
           </div>
 
+          <Link href="/">
+            <img src={APP_LOGO[0]} alt={APP_LOGO[1]} className="mobile-logo" />
+          </Link>
+
+          {searchBarActive && (
+            <form>
+              <FormInputs inputCaseType={"search_input"} type={"text"} />
+            </form>
+          )}
+
           <div>
+            <img
+              src={SEARCH_ICON[0]}
+              alt={SEARCH_ICON[0]}
+              className="search-icon"
+              onClick={() => setSearchBarActive((state) => !state)}
+            />
+
             <Link href="/sign">
               <img
                 src={USER_ICON[0]}
                 alt={USER_ICON[0]}
-                className="search-icon"
+                className="user-icon"
               />
             </Link>
             <Link href="/bag">
@@ -85,6 +106,11 @@ const NavigationBar = () => {
             position: relative;
             cursor: pointer;
           }
+          .user-icon {
+            margin-left: 3rem;
+            position: relative;
+            cursor: pointer;
+          }
           .bag-container span {
             position: absolute;
             background: white;
@@ -110,19 +136,31 @@ const NavigationBar = () => {
           .navbar div {
             display: flex;
           }
+          .mobile-logo {
+            display: none;
+          }
 
           @media only screen and (max-width: 600px) {
+            .mobile-logo {
+              display: block;
+              height: 32px;
+            }
+            .navbar-container {
+              padding: 10px;
+            }
             .hamburger {
               display: block;
             }
             .logo {
-              height: 35px;
-            }
-            .search-icon {
               display: none;
             }
-            .bag-icon {
+            .bag-container,
+            .search-icon {
+              display: none !important;
+            }
+            .user-icon {
               height: 25px;
+              margin-left: 0;
             }
           }
         `}</style>

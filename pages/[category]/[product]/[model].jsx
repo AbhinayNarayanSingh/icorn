@@ -452,6 +452,12 @@ const Model = () => {
             .user-action .action-btn button {
               margin: 0 0.5rem;
             }
+            .product-image-container .product-images img:nth-of-type(1) {
+              margin-left: 1rem;
+            }
+            .product-image-container .product-images img:nth-last-of-type(1) {
+              margin-right: 1rem;
+            }
           }
         `}
       </style>
