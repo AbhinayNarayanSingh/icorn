@@ -94,7 +94,7 @@ const NavigationBar = () => {
             padding: 10px;
           }
           .navbar {
-            max-width: 1512px;
+            max-width: 1700px;
             padding: 0 1rem;
             margin: auto;
             display: flex;

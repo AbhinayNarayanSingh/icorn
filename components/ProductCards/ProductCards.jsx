@@ -41,10 +41,11 @@ const ProductCards = ({ type, data, index }) => {
             .product-card {
               display: flex;
               justify-content: center;
+              max-width: 1400px;
 
               height: 500px;
               background: white;
-              margin: 2rem 0;
+              margin: 2rem auto;
               padding: 1.5rem 0;
             }
 
@@ -180,7 +181,6 @@ const ProductCards = ({ type, data, index }) => {
               width: 75px;
               object-fit: contain;
               padding: 1rem;
-              margin-right: 1rem;
             }
             h2 {
               font-weight: 600;

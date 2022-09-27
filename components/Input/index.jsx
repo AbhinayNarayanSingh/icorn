@@ -11,7 +11,10 @@ const FormInputs = ({
       return (
         <>
           <div className="search_input">
-            <input type={type} placeholder="Search iCorn | Authorised Seller" />
+            <input
+              type={type}
+              placeholder="Search iCorn | Authorised Reseller"
+            />
           </div>
           <style jsx>{`
             .search_input input {

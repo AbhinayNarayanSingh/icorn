@@ -7,8 +7,8 @@ const Bag = () => {
     useSelector((state) => state.bag);
 
   return (
-    <div className="container-xxl min-h-70vh">
-      <div className="col-12  col-xl-8 m-auto">
+    <div className="container-xxl">
+      <div className="col-12  col-xl-8 m-auto min-h-80vh">
         <h2 className="bag-total">
           Your bag total is ₹{INR_STYLE_HELPER(bagTotal)}
         </h2>

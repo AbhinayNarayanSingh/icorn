@@ -43,12 +43,16 @@ const Footer = () => {
           @media only screen and (max-width: 600px) {
             p {
               font-size: 0.8rem;
+              line-height: 18px;
             }
             .footer-container {
               padding: 1rem;
             }
             .footer {
               padding: 2rem 0;
+            }
+            .logo {
+              height: 40px;
             }
           }
         `}</style>

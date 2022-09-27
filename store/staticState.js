@@ -118,6 +118,21 @@ export const products = [
         },
         "images": "https://media.croma.com/image/upload/v1651838583/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/251322_qd8g3s.png",
     },
+    {
+        "brand": "Apple",
+        "category": "Mac",
+        "slug": "mac",
+        "name": "Apple MacBook Pro",
+        "model": "MLVF3H",
+        "price": {
+            "currencyIso": "INR",
+            "discount": 19910,
+            "mrp": 239900,
+            "sellingPrice": 219990,
+        },
+        "images": "https://media.croma.com/image/upload/v1647427408/Croma%20Assets/Computers%20Peripherals/Laptop/Images/245235_hcqtej.png",
+        "color": ['#2e3642', '#f0e5d2', '#7d7e80', '#e3e4e6']
+    },
 ]
 
 
@@ -325,6 +340,21 @@ export const bag = {
                 "sellingPrice": 21499,
             },
             "images": "https://media.croma.com/image/upload/v1651838583/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/251322_qd8g3s.png",
+        },
+        {
+            "brand": "Apple",
+            "category": "Mac",
+            "slug": "mac",
+            "name": "Apple MacBook Pro",
+            "model": "MLVF3H",
+            "price": {
+                "currencyIso": "INR",
+                "discount": 19910,
+                "mrp": 239900,
+                "sellingPrice": 219990,
+            },
+            "images": "https://media.croma.com/image/upload/v1647427408/Croma%20Assets/Computers%20Peripherals/Laptop/Images/245235_hcqtej.png",
+            "color": ['#2e3642', '#f0e5d2', '#7d7e80', '#e3e4e6']
         },
     ]
 }

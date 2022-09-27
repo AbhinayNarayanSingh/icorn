@@ -72,7 +72,7 @@ const Model = () => {
                   <span>(Inclusive of all taxes)</span>
                 </h3>
 
-                <h4>
+                <h4 className="mt-05">
                   <span>MRP {INR_STYLE_HELPER(productPrice["mrp"])}</span>
                   (Save ₹ {INR_STYLE_HELPER(productPrice["discount"])})
                 </h4>
@@ -81,7 +81,7 @@ const Model = () => {
               <div className="delivery-estimate">
                 <img src={BOX_ICON[0]} alt={BOX_ICON[1]} />
                 <p>
-                  Order today, FREE delivery by <span>Tuesday, August 16.</span>
+                  Order today, FREE delivery by <span>Tuesday.</span>
                 </p>
               </div>
 
@@ -247,7 +247,7 @@ const Model = () => {
 
           .product-details h4 span {
             font-weight: 600;
-            font-size: 20px;
+            font-size: 1rem;
             text-decoration-line: line-through;
             color: #6e6e73;
             margin-right: 0.5rem;
@@ -353,7 +353,7 @@ const Model = () => {
 
           // row -------------------------------------------------
           .product-page-container {
-            max-width: 1500px;
+            max-width: 1700px;
             margin: auto;
             margin-bottom: 1rem;
           }
@@ -437,13 +437,13 @@ const Model = () => {
             }
 
             .user-action h2 {
-              font-size: 20px;
+              font-size: 18px;
               line-height: 25px;
               text-align: center;
               padding: 1rem;
             }
             .user-action h2 span {
-              font-size: 20px;
+              font-size: 18px;
               line-height: 25px;
             }
             .user-action .action-btn {

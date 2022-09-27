@@ -4,7 +4,8 @@
 .container-md,
 .container-sm,
 .container-xl,
-.container-xxl {
+.container-xxl,
+.container-xxxl {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -47,6 +48,12 @@
   .container-xl,
   .container-xxl {
     max-width: 1400px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .container-xxxl {
+    max-width: 1700px;
   }
 }
 
