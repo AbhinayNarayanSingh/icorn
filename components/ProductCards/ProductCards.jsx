@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BLACK, BLUE, BOX_SHADOW_C3, WHITE } from "../../utils/Environment";
 import { INR_STYLE_HELPER } from "../../utils/Helper";
 
 const ProductCards = ({ type, data, index }) => {
@@ -44,7 +45,7 @@ const ProductCards = ({ type, data, index }) => {
               max-width: 1400px;
 
               height: 500px;
-              background: white;
+              background: ${WHITE};
               margin: 2rem auto;
               padding: 1.5rem 0;
             }
@@ -81,11 +82,11 @@ const ProductCards = ({ type, data, index }) => {
               color: rgba(0, 0, 0, 0.8);
             }
             .col button {
-              background: #0066cc;
+              background: ${BLUE};
               border-radius: 35px;
               width: 144px;
               height: 44px;
-              color: white;
+              color: ${WHITE};
 
               display: flex;
               justify-content: center;
@@ -103,7 +104,7 @@ const ProductCards = ({ type, data, index }) => {
               border-radius: 50%;
               margin: 1rem 0.5rem;
               cursor: pointer;
-              box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.1);
+              box-shadow: ${BOX_SHADOW_C3};
             }
 
             @media only screen and (max-width: 600px) {
@@ -171,7 +172,7 @@ const ProductCards = ({ type, data, index }) => {
             .bag-product-container {
               display: flex;
               justify-content: space-between;
-              background: white;
+              background: ${WHITE};
               margin-bottom: 1rem;
               position: relative;
               width: 100%;
@@ -185,7 +186,7 @@ const ProductCards = ({ type, data, index }) => {
             h2 {
               font-weight: 600;
               font-size: 16px;
-              color: #000000;
+              color: ${BLACK};
               margin-bottom: 0.25rem;
               line-height: 125%;
               margin-top: 1rem;
@@ -295,7 +296,7 @@ const ProductCards = ({ type, data, index }) => {
                   border-radius: 50%;
                   margin: 1rem 0.25rem;
                   cursor: pointer;
-                  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.1);
+                  box-shadow: ${BOX_SHADOW_C3};
                 }
               `}
             </style>

@@ -11,6 +11,7 @@ import {
   PRIMARY_COLOUR,
   USER_ICON,
   SEARCH_ICON,
+  WHITE,
 } from "../../utils/Environment";
 
 import FormInputs from "../Input";
@@ -18,8 +19,7 @@ import FormInputs from "../Input";
 const NavigationBar = () => {
   const [sidebarActive, setSidebarActive] = useState(false);
   const [searchBarActive, setSearchBarActive] = useState(false);
-  const category = useSelector((state) => state.category);
-  const bag = useSelector((store) => store.bag);
+  const {category, bag, user} = useSelector((state) => state);
 
   const categoryRoute = (path) => {
     setSidebarActive(false);
@@ -68,7 +68,7 @@ const NavigationBar = () => {
               onClick={() => setSearchBarActive((state) => !state)}
             />
 
-            <Link href="/sign">
+            <Link href={user?.Token ? "/profile" :"/sign"}>
               <img
                 src={USER_ICON[0]}
                 alt={USER_ICON[0]}
@@ -113,7 +113,7 @@ const NavigationBar = () => {
           }
           .bag-container span {
             position: absolute;
-            background: white;
+            background: ${WHITE};
             font-size: 10px;
             padding: 4px;
             font-weight: 600;
@@ -214,7 +214,7 @@ const NavigationBar = () => {
             .navbar-cat p {
               font-size: 13px;
               padding-top: 1rem;
-              color: white;
+              color: ${WHITE};
             }
             @media only screen and (min-width: 1375px) {
               .navbar-active {

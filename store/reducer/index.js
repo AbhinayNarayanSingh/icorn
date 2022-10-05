@@ -1,4 +1,4 @@
-import { category, product, productAccessories, productImages, productPrice, products, relatedProducts, bag } from "../staticState"
+import { user, category, product, productAccessories, productImages, productPrice, products, relatedProducts, bag } from "../staticState"
 
 export const initialState = {
     category: category,
@@ -14,6 +14,7 @@ export const initialState = {
         type: "warning",
         key: "CONFIRM_MSG_DIALOGE"
     },
+    user : user,
 }
 
 const rootReducer = (state = initialState, action) => {

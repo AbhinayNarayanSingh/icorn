@@ -1,3 +1,5 @@
+import { WHITE } from "../../utils/Environment";
+
 const FormInputs = ({
   inputCaseType,
   type,
@@ -26,7 +28,7 @@ const FormInputs = ({
               background: rgba(255, 255, 255, 0.05);
               border-radius: 52px;
               border: none;
-              color: white;
+              color: ${WHITE};
             }
           `}</style>
         </>

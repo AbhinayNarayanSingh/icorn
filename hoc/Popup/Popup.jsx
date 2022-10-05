@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { DIALOG_CROSS_ICON } from "../../utils/Environment";
+import { DIALOG_CROSS_ICON, WHITE } from "../../utils/Environment";
 
 // dialogs
 import Alert from "./Alert/Alert";
@@ -55,7 +55,7 @@ const Popup = () => {
             }
             .dialog-content {
               position: relative;
-              background: white;
+              background: ${WHITE};
               border-radius: 20px;
               padding: 1rem;
               min-width: 500px;

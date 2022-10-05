@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import FormInputs from "../../components/Input";
+import { BLACK, BLUE } from "../../utils/Environment";
 
 const Sign = () => {
   const [activePage, setActivePage] = useState("accountRecovery");
@@ -128,17 +129,17 @@ const Sign = () => {
             font-size: 40px;
             line-height: 48px;
 
-            color: #000000;
+            color: ${BLACK};
           }
           h2 {
             margin-top: 1rem;
             font-weight: 600;
-            color: #000000;
+            color: ${BLACK};
             text-align: center;
           }
           h2 span {
             font-weight: 600;
-            color: #0066cc;
+            color: ${BLUE};
           }
         `}</style>
       </>

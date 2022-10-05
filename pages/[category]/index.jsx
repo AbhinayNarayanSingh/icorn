@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useSelector } from "react-redux";
 import ProductCards from "../../components/ProductCards/ProductCards";
 import { useRouter } from "next/router";
+import { BLUE } from "../../utils/Environment";
 
 const Category = () => {
   const router = useRouter();
@@ -69,7 +70,7 @@ const Category = () => {
             margin-bottom: 0.35rem;
           }
           .sub-heading h3 {
-            color: #0066cc;
+            color: ${BLUE};
             font-weight: 600;
             cursor: pointer;
           }

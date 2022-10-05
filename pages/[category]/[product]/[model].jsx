@@ -1,10 +1,16 @@
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import {
+  BLACK,
+  BLUE,
   BOX_ICON,
+  BOX_SHADOW_C1,
+  BOX_SHADOW_C2,
+  BOX_SHADOW_C3,
   LOCATION_ICON,
   RADIO_CHECKED_ICON,
   RADIO_ICON,
+  WHITE,
 } from "../../../utils/Environment";
 import { INR_STYLE_HELPER } from "../../../utils/Helper";
 
@@ -81,7 +87,7 @@ const Model = () => {
               <div className="delivery-estimate">
                 <img src={BOX_ICON[0]} alt={BOX_ICON[1]} />
                 <p>
-                  Order today, FREE delivery by <span>Tuesday.</span>
+                  FREE delivery <span>Sunday, 2 October</span>.
                 </p>
               </div>
 
@@ -90,17 +96,19 @@ const Model = () => {
               </p>
 
               <div className="product-variants">
+
                 {product["color"].map((variant, index) => {
                   return (
-                    <span
-                      key={index}
-                      style={{ background: `${variant["colorCode"]}` }}
-                      onClick={() => setProductsVariants(variant)}
-                      className={
-                        productsVariants["colorCode"] == variant["colorCode"] &&
-                        "active"
-                      }
-                    ></span>
+                    <div className={productsVariants["colorCode"] == variant["colorCode"] &&
+                      "active" + " " + "color-container"
+                    }
+                    >
+                      <span
+                        key={index}
+                        style={{ background: `${variant["colorCode"]}` }}
+                        onClick={() => setProductsVariants(variant)}
+                      ></span>
+                    </div>
                   );
                 })}
               </div>
@@ -162,7 +170,7 @@ const Model = () => {
                 {specifications.map((item, index) => {
                   return (
                     <div key={index} className="row mb-1">
-                      <span className="key col-4">{item[0]}</span>
+                      <span className="key col-4 col-md-3">{item[0]}</span>
                       <span className="value col-8">{item[1]}</span>
                     </div>
                   );
@@ -200,7 +208,7 @@ const Model = () => {
             display: flex;
             justify-content: center;
             align-items: center;
-            background: white;
+            background: ${WHITE};
             padding: 3rem;
             margin-bottom: 1rem;
           }
@@ -213,7 +221,7 @@ const Model = () => {
             margin: 0 0 1rem;
           }
           .product-image-container .product-images img {
-            background: white;
+            background: ${WHITE};
             height: 70px;
             width: 70px;
             padding: 1rem;
@@ -226,7 +234,7 @@ const Model = () => {
           // col-2  -------------------------------------------------------------------------
 
           .product-details {
-            background-color: white;
+            background-color: ${WHITE};
             padding: 1rem;
           }
           .product-details h2 {
@@ -274,27 +282,36 @@ const Model = () => {
           }
           .product-details .product-variants {
             display: flex;
+            margin: 1rem 0 0;
           }
           .product-details .product-variants span {
             width: 32px;
             height: 32px;
             display: block;
             border-radius: 50%;
-            margin: 1rem 1.25rem 0 0;
             cursor: pointer;
-            box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: ${BOX_SHADOW_C3};
           }
-          .product-details .product-variants .active {
+          .product-details .product-variants div {
+            border: 2px solid transparent;
+            border-radius: 50%;
+            padding: 4px;
+            margin-right: 10px;
+          }
+          .product-details .product-variants .active{
+            border: 2px solid #0066cc;
           }
 
           .product-details .product-size .active {
-            background: white;
+            background: ${WHITE};
+            border-color: ${BLUE};
           }
           .product-details .product-size {
             display: flex;
             margin-top: 1rem;
           }
           .product-details .product-size div {
+            border: 2px solid #80808030;
             width: 75px;
             height: 30px;
             display: flex;
@@ -302,9 +319,8 @@ const Model = () => {
             align-items: center;
             margin-right: 1rem;
             cursor: pointer;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-            background: #e8e8e8;
           }
+
           .product-details .product-accessories {
             display: flex;
             overflow: scroll;
@@ -319,7 +335,7 @@ const Model = () => {
             align-items: center;
 
             background: #ffffff;
-            box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.15);
+            box-shadow: ${BOX_SHADOW_C1};
             border-radius: 17px;
             padding: 1rem;
             cursor: pointer;
@@ -332,7 +348,7 @@ const Model = () => {
             font-weight: 600;
             font-size: 16px;
             line-height: 20px;
-            color: #000000;
+            color: ${BLACK};
             height: 50px;
           }
           .product-details .accessories-container h3 {
@@ -365,7 +381,7 @@ const Model = () => {
             bottom: 0;
             background: #f5f5f7;
 
-            box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: ${BOX_SHADOW_C2};
           }
           .user-action {
             align-items: center;
@@ -375,7 +391,7 @@ const Model = () => {
             font-size: 26px;
             line-height: 30px;
 
-            color: #000000;
+            color: ${BLACK};
             padding: 1rem 0;
           }
           .user-action h2 span {

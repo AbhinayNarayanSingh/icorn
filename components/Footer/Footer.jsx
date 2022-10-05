@@ -1,4 +1,4 @@
-import { APP_LOGO, PRIMARY_COLOUR } from "../../utils/Environment";
+import { APP_LOGO, LIGHT_GREY_FONT, PRIMARY_COLOUR } from "../../utils/Environment";
 import Link from "next/link";
 
 const Footer = () => {
@@ -31,7 +31,7 @@ const Footer = () => {
             justify-content: center;
           }
           p {
-            color: rgba(255, 255, 255, 0.5);
+            color: ${LIGHT_GREY_FONT};
             margin: 0.5rem 0 0;
             font-size: 1rem;
             text-align: center;

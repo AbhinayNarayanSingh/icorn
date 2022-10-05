@@ -148,13 +148,10 @@ const Sign = () => {
           font-weight: 600;
           font-size: 40px;
           line-height: 48px;
-
-          color: #000000;
         }
         h2 {
           margin-top: 1rem;
           font-weight: 600;
-          color: #000000;
         }
         h2 span {
           font-weight: 600;
