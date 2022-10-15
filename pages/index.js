@@ -20,7 +20,7 @@ export default function Home() {
         <div className="product-container-horizontal hide-scrollbar">
           {products.map((product, index) => {
             return (
-              <ProductCards type={"He-ro"} data={product} index={index} key={index} />
+              <ProductCards type={"He-ro"} data={product} index={index} key={index} variant={"LANDING_PAGE"}/>
             )
           })}
         </div>

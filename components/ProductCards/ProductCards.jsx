@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { BLACK, BLUE, BOX_SHADOW_C3, WHITE } from "../../utils/Environment";
+import { BLACK, BLUE, BOX_SHADOW_C3, BOX_SHADOW_LIGHT, WHITE, WHITE_BCK } from "../../utils/Environment";
 import { INR_STYLE_HELPER } from "../../utils/Helper";
 
-const ProductCards = ({ type, data, index }) => {
+const ProductCards = ({ type, data, index, variant }) => {
   switch (type) {
     case "Hero":
       return (
@@ -150,7 +150,7 @@ const ProductCards = ({ type, data, index }) => {
     case "Bag":
       return (
         <>
-          <div className="bag-product-container">
+          <div className={`bag-product-container ${variant && "variant"}`}>
             <h4 className="remove-product">Remove</h4>
             <div className="d-flex">
               <img
@@ -172,10 +172,15 @@ const ProductCards = ({ type, data, index }) => {
             .bag-product-container {
               display: flex;
               justify-content: space-between;
-              background: ${WHITE};
+              background: ${WHITE_BCK};
+              border-radius: 8px;
               margin-bottom: 1rem;
               position: relative;
               width: 100%;
+              cursor: pointer;
+            }
+            .bag-product-container:hover{
+              BOX-SHADOW: ${BOX_SHADOW_LIGHT};
             }
             img {
               height: 75px;
@@ -242,29 +247,31 @@ const ProductCards = ({ type, data, index }) => {
     default:
       return (
         <Link href={data["slug"]}>
-          <div className={`product-card`}>
-            <img
-              src={data["images"]}
-              alt={data["name"]}
-              className="product-image"
-            />
-            <h4 className="d-flex">
-              {data["color"] &&
-                data["color"].map((i, index) => {
-                  return (
-                    <span
-                      key={index}
-                      style={{ background: `${i}` }}
-                      className="product-color"
-                    ></span>
-                  );
-                })}
-            </h4>
-            <h2 className={!data["color"] && `mt-2`}>{data["name"]}</h2>
+          <div className="product-card-container">
+            <div className={`product-card ${variant != "LANDING_PAGE" && "product-card-bck"}`}>
+              <img
+                src={data["images"]}
+                alt={data["name"]}
+                className="product-image"
+              />
+              <h4 className="d-flex">
+                {data["color"] &&
+                  data["color"].slice(0,5).map((i, index) => {
+                    return (
+                      <span
+                        key={index}
+                        style={{ background: `${i}` }}
+                        className="product-color"
+                      ></span>
+                    );
+                  })}
+              </h4>
+              <h2>{data["name"]}</h2>
+            </div>
             <style jsx>
               {`
                 .product-card {
-                  min-width: 288px;
+                  min-width: 325px;
                   width: 288px;
                   height: 375px;
                   filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.05));
@@ -276,6 +283,14 @@ const ProductCards = ({ type, data, index }) => {
                   align-items: center;
                   flex-direction: column;
                   margin: 2rem 0 2rem 2rem;
+
+                  cursor: pointer;
+                }
+                .product-card-bck{
+                  background: ${WHITE_BCK};
+                }
+                .product-card-bck:hover{
+                  BOX-SHADOW: ${BOX_SHADOW_LIGHT};
                 }
                 .product-card:nth-last-of-type(1) {
                   margin: 2rem;
@@ -297,6 +312,17 @@ const ProductCards = ({ type, data, index }) => {
                   margin: 1rem 0.25rem;
                   cursor: pointer;
                   box-shadow: ${BOX_SHADOW_C3};
+                }
+                h4{
+                  min-height: 48px;
+                }
+                @media only screen and (max-width: 600px) {
+                  .product-card-container {
+                    min-width: 100vw;
+                    display: flex;
+                    justify-content: center;
+                    margin: 0;
+                  }
                 }
               `}
             </style>

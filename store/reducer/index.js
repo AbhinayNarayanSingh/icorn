@@ -1,4 +1,4 @@
-import { user, category, product, productAccessories, productImages, productPrice, products, relatedProducts, bag } from "../staticState"
+import { user, category, product, productAccessories, productImages, productPrice, products, relatedProducts, bag, orders } from "../staticState"
 
 export const initialState = {
     category: category,
@@ -9,6 +9,7 @@ export const initialState = {
     productAccessories: productAccessories,
     relatedProducts: relatedProducts,
     bag: bag,
+    orders: orders,
     dialog: {
         open: false,
         type: "warning",

@@ -117,6 +117,65 @@ export const products = [
             "sellingPrice": 21499,
         },
         "images": "https://media.croma.com/image/upload/v1651838583/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/251322_qd8g3s.png",
+    },
+    {
+        "brand": "Apple",
+        "category": "iPhone",
+        "slug": "iphone/iphone-13-pro/MLVF3H",
+        "name": "Apple iPhone 13 Pro",
+        "model": "MLVF3H",
+        "price": {
+            "currencyIso": "INR",
+            "discount": 5910,
+            "mrp": 129900,
+            "sellingPrice": 123990,
+        },
+        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
+    },
+    {
+        "brand": "Apple",
+        "category": "iPad",
+        "slug": "ipad",
+        "name": "Apple iPad Pro",
+        "model": "MHNG3HN/A",
+        "price": {
+            "currencyIso": "INR",
+            "discount": 19910,
+            "mrp": 239900,
+            "sellingPrice": 219990,
+        },
+        "images": "https://media.croma.com/image/upload/v1619272147/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/234301_9_vxz8o4.png",
+        "color": ['#eaebed', '#7f8084']
+    },
+    {
+        "brand": "Apple",
+        "category": "Watch",
+        "slug": "watch",
+        "name": "Apple Watch Series 7",
+        "model": "MKN53HN/A",
+        "price": {
+            "currencyIso": "INR",
+            "discount": 3000,
+            "mrp": 44900,
+            "sellingPrice": 41900,
+        },
+        "images": "https://media.croma.com/image/upload/v1633696522/Croma%20Assets/Wearable/Wearable%20Devices/Images/244886_ipofha.png",
+        "color": ['#1a2531', '#ded6d1', '#35382c', '#6d8dba', '#aa393b', '#3e3a35', '#e6e6e6', '#e5caad', '#4c4845', '#d1cdca']
+    },
+    {
+        "brand": "Apple",
+        "category": "AirPods",
+        "slug": "airpods",
+        "name": "Apple AirPods Pro ",
+        "model": "MLWK3HN/A",
+        "price": {
+            "currencyIso": "INR",
+            "discount": 4801,
+            "mrp": 26300,
+            "sellingPrice": 21499,
+        },
+        "images": "https://media.croma.com/image/upload/v1651838583/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/251322_qd8g3s.png",
     }
 ]
 
@@ -254,7 +313,11 @@ export const relatedProducts = [
         },
         "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
         "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
-    }, {
+    }
+]
+
+export const orders = [
+    {
         "brand": "Apple",
         "category": "iPhone",
         "slug": "iphone/iphone-13-pro/MLVF3H",
@@ -282,21 +345,7 @@ export const relatedProducts = [
         },
         "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
         "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
-    }, {
-        "brand": "Apple",
-        "category": "iPhone",
-        "slug": "iphone/iphone-13-pro/MLVF3H",
-        "name": "Apple iPhone 13 Pro",
-        "model": "MLVF3H",
-        "price": {
-            "currencyIso": "INR",
-            "discount": 5910,
-            "mrp": 129900,
-            "sellingPrice": 123990,
-        },
-        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
-        "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
-    },
+    }
 ]
 
 export const bag = {

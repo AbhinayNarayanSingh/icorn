@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="popup scroll diable"
+title="worked on product card"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`

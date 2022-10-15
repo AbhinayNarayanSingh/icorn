@@ -1,4 +1,4 @@
-import {BOX_SHADOW_DARK, BOX_SHADOW_LIGHT, WHITE } from "../../utils/Environment"
+import {BOX_SHADOW_DARK, BOX_SHADOW_LIGHT, WHITE, WHITE_BCK } from "../../utils/Environment"
 
 const ManageAddresses = () => {
 
@@ -42,12 +42,13 @@ const ManageAddresses = () => {
           padding: 1rem;
           margin-top: 1rem;
           border-radius: 5px;
-          BOX-SHADOW: ${BOX_SHADOW_LIGHT};
           position: relative;
           cursor: pointer;
+          background: ${WHITE_BCK};
+          border-radius: 8px;
         }
         .address-card:hover{
-          BOX-SHADOW: ${BOX_SHADOW_DARK};
+          BOX-SHADOW: ${BOX_SHADOW_LIGHT};
         }
         .address-card h2 {
           font-weight:600;

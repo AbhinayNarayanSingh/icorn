@@ -1,19 +1,23 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { BLUE, PRIMARY_COLOUR, USER_AVATAR, WHITE } from '../../utils/Environment'
-import ManageAddresses from './Manage-Addresses'
-import ManageCards from './Manage-Cards'
+
+// sub-components src /components/Profile
+import ManageAddresses from '../../components/Profile/Manage-Addresses'
+import ManageCards from '../../components/Profile/Manage-Cards'
+import SavedProducts from '../../components/Profile/Saved-Products'
+import Orders from '../../components/Profile/Orders'
 
 const ProfilePageActiveSection = (ActiveSection) => {
     switch (ActiveSection) {
         case "Saved Product":
-            return <div>Saved Product</div>
+            return <SavedProducts/>
         case "Manage Address":
             return <ManageAddresses/>
         case "Manage Cards":
             return <ManageCards/>
         case "Orders":
-            return <div>Orders</div>
+            return <Orders/>
         case "Setting":
             return <div>Setting</div>
     }
@@ -39,6 +43,7 @@ const Profile = () => {
                 {profileSections.map((i, index) => 
                     <h2 className={ActiveSection == i && "active"} key={index} onClick={() => setActiveSection(i)}>{i}</h2>
                 )}
+                <h2>Bag</h2>
                 <h2>Logout</h2>
             </div>
             <div className="col-md-9 col-12">

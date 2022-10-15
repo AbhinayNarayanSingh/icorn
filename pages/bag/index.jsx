@@ -12,11 +12,8 @@ const Bag = () => {
         <h2 className="bag-total">
           Your bag total is ₹{INR_STYLE_HELPER(bagTotal)}
         </h2>
-        {items.map((item, index) => {
-          return (
-            <ProductCards type={"Bag"} data={item} index={index} key={index} />
-          );
-        })}
+        
+        {items.map((item, index) => <ProductCards type={"Bag"} data={item} index={index} key={index} variant={true}/>)}
 
         <div className="product-subtotals-container">
           <div className="product-subtotals col-12 col-md-6">

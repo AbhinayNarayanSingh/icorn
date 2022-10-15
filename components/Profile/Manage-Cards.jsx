@@ -12,7 +12,7 @@ const ManageCards = () => {
         <div className="cards-list-container">
 
             <div className="card-container">
-                <div className="card VISA">
+                <div className="card">
                     <div className="card-details">
                         <h2>ABHINAY NARAYAN SINGH</h2>    
                         <p>XXXX-XXXX-XXXX-1902</p>
@@ -24,7 +24,7 @@ const ManageCards = () => {
             </div>
 
             <div className="card-container card-selected">
-                <div className="card MASTERCARD">
+                <div className="card">
                     <div className="card-details">
                         <h2>ABHINAY NARAYAN SINGH</h2>    
                         <p>XXXX-XXXX-XXXX-1902</p>
@@ -36,7 +36,7 @@ const ManageCards = () => {
             </div>
 
             <div className="card-container">
-                <div className="card RUPAY">
+                <div className="card">
                     <div className="card-details">
                         <h2>ABHINAY NARAYAN SINGH</h2>    
                         <p>XXXX-XXXX-XXXX-1902</p>
@@ -67,9 +67,9 @@ const ManageCards = () => {
 
             cursor: pointer;
         }
-        .card-selected {
-            // border-color: ${BLUE};
-        }
+        .card-container:hover{
+            BOX-SHADOW: ${BOX_SHADOW_LIGHT};
+          }
         .card {
             padding: 1rem;
             padding: 1rem 0;

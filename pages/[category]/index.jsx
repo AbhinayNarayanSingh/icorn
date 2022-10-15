@@ -24,7 +24,7 @@ const Category = () => {
         </div>
       </div>
 
-      <div className="container-xxl">
+      <div className="product-cat-container container-xxl">
         <div className="product-container-horizontal hide-scrollbar">
           {products.map((product, index) => {
             return <ProductCards data={product} index={index} key={index} />;
@@ -51,6 +51,10 @@ const Category = () => {
 
       <style jsx>
         {`
+          .product-cat-container{
+            max-width: 1920px;
+            margin: auto;
+          }
           .product-container-horizontal {
             display: flex;
             overflow: scroll;
@@ -61,6 +65,7 @@ const Category = () => {
             font-size: 32px;
             line-height: 39px;
             color: #6e6e73;
+            text-align: center;
           }
           h2 span {
             color: #1d1d1f;
@@ -78,6 +83,14 @@ const Category = () => {
             display: flex;
             justify-content: space-between;
             align-items: center;
+          }
+          @media only screen and (min-width: 600px) {
+            .sub-heading h2{
+              padding-left: 1rem;
+            }
+            .sub-heading div{
+              padding-right: 1rem;
+            }
           }
           @media only screen and (max-width: 600px) {
             .sub-heading {
@@ -105,6 +118,16 @@ const Category = () => {
             }
             h2 {
               padding: 0 1rem;
+            }
+          }
+          @media only screen and (max-width: 2000px) and (min-width: 1700px){
+            .product-container-horizontal {
+              padding-left: 10rem;
+            }
+          }
+          @media only screen and (max-width: 1700px) and (min-width: 1400px){
+            .product-container-horizontal {
+              padding-left: 5rem;
             }
           }
         `}
