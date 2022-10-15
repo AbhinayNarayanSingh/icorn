@@ -7,6 +7,7 @@ export const PRIMARY_COLOUR = "rgba(0, 0, 0, 0.8)";
 export const LIGHT_GREY_FONT = "rgba(255, 255, 255, 0.5)"
 export const BLUE = "#0066cc"
 export const WHITE = "white"
+export const WHITE_BCK = "#f5f5f7"
 export const BLACK = "black"
 export const VISA_BCK = "rgba(14, 69, 149, 0.25)" // save cards background color 
 export const RUPAY_BCK = "rgba(16, 129, 71, 0.25)" // save cards background color 

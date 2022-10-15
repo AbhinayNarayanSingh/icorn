@@ -117,22 +117,7 @@ export const products = [
             "sellingPrice": 21499,
         },
         "images": "https://media.croma.com/image/upload/v1651838583/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/251322_qd8g3s.png",
-    },
-    {
-        "brand": "Apple",
-        "category": "Mac",
-        "slug": "mac",
-        "name": "Apple MacBook Pro",
-        "model": "MLVF3H",
-        "price": {
-            "currencyIso": "INR",
-            "discount": 19910,
-            "mrp": 239900,
-            "sellingPrice": 219990,
-        },
-        "images": "https://media.croma.com/image/upload/v1647427408/Croma%20Assets/Computers%20Peripherals/Laptop/Images/245235_hcqtej.png",
-        "color": ['#2e3642', '#f0e5d2', '#7d7e80', '#e3e4e6']
-    },
+    }
 ]
 
 
@@ -140,7 +125,11 @@ export const products = [
 export const product = {
     "category": "iPhone",
     "name": "Apple iPhone 13",
-    "storage": "128GB",
+    "storage": [
+        {"size": "128GB", "price" : 0}, 
+        {"size": "256GB", "price" : 10000}, 
+        {"size": "512GB", "price" : 20000}
+    ],
     "color": [
         {
             "model": "MLVF3H",
@@ -189,6 +178,10 @@ export const product = {
         ["Weight", "466 g"],
         ["In the Box", "1 U Tablet | Power Adapter | USB Cable | Quick Start Guide | Warranty Card"],
         ["Warranty", "12 Months | International Travellers | Carry-In"]
+    ],
+    "model": [
+        {"name": "iPhone 13 mini", "description" : "13.7 cm (5.4-inch) display", "price" : 0}, 
+        {"name": "iPhone 13", "description" : "15.4 cm (6.1-inch) display", "price" : 10000}
     ]
 }
 
@@ -206,9 +199,9 @@ export const productImages = [
 
 export const productPrice = {
     "currencyIso": "INR",
-    "discount": 6910,
-    "mrp": 79900,
-    "sellingPrice": 72990,
+    "discount": 5000,
+    "mrp": 64900,
+    "sellingPrice": 59900,
 }
 
 export const productAccessories = [
