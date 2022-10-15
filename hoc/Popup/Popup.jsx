@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { DIALOG_CROSS_ICON, WHITE } from "../../utils/Environment";
@@ -8,6 +9,23 @@ import Alert from "./Alert/Alert";
 const Popup = () => {
   const { open, type, key } = useSelector((state) => state.dialog);
   const dispatch = useDispatch();
+
+  // call this to Disable
+  const disableScroll = () => {
+    document.body.style.overflow = "hidden"
+  }
+
+  // call this to Enable
+  const enableScroll = () => {
+    document.body.style.overflow = "auto"
+  }
+
+  useEffect(() => {
+    if(open){
+      disableScroll()
+    }
+  }, [open])
+  
 
   let dialogContent = null;
   switch (key) {
@@ -30,7 +48,10 @@ const Popup = () => {
                   src={DIALOG_CROSS_ICON[0]}
                   alt={DIALOG_CROSS_ICON[1]}
                   className="close-dialoge"
-                  onClick={() => dispatch({ type: "close_dialoge" })}
+                  onClick={() => {
+                    enableScroll();
+                    dispatch({ type: "close_dialoge" })
+                  }}
                 />
                 {dialogContent}
               </div>

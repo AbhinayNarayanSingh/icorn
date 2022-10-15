@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="improve profile page"
+title="popup scroll diable"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`
