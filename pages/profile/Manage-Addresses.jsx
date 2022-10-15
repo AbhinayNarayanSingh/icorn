@@ -4,7 +4,7 @@ const ManageAddresses = () => {
 
   const dummy = [1,2,3]
   return (
-    <div className="mt-2 manage-address-component-container">
+    <div className="manage-address-component-container">
         <div className="d-flex justify-content-between align-items-center">
             <h2 className="f-w-600">Manage Addresses</h2>
             <button className="link-btn add-address-link-btn">+ Add New Address</button>
@@ -15,8 +15,7 @@ const ManageAddresses = () => {
               <h2>Abhinay Narayan Singh</h2>
 
               <div className="row">
-                <p className="col-2">Address</p>
-                <h3 className="col-12 col-md-10">Aashirvad Niketan, Seer Goverdhanpur, Near Chaura Mata Mandir, Banaras Hindu University, Varanasi, Uttar Pradesh, India - 221005</h3>
+                <h3>Aashirvad Niketan, Seer Goverdhanpur, Near Chaura Mata Mandir, Banaras Hindu University, Varanasi, Uttar Pradesh, India - 221005</h3>
               </div>
 
               <div className="row address-card-email">
@@ -26,7 +25,7 @@ const ManageAddresses = () => {
 
               <div className="row address-card-phone">
                 <p className="col-2">Phone</p>
-                <h3 className="col-10">+91 8795675599 +91 7905770569</h3>
+                <h3 className="col-10">+91 8795675599</h3>
               </div>
 
               <div className="address-action-link-btn flex">
@@ -39,10 +38,6 @@ const ManageAddresses = () => {
 
 
         <style jsx>{`
-        .manage-address-component-container{
-          background: ${WHITE};
-          padding: 2rem;
-        }
         .address-card{
           padding: 1rem;
           margin-top: 1rem;
@@ -65,6 +60,7 @@ const ManageAddresses = () => {
         }
         .address-card h3{
           margin-top: .5rem;
+          line-height: 1.25rem;
         }
         .full-address{
           line-height: 140%;
@@ -80,11 +76,17 @@ const ManageAddresses = () => {
         }
         @media only screen and (max-width: 600px){
           .manage-address-component-container{
-            padding: 1rem;
+            padding: 1rem 0;
           }
           .manage-address-component-container p,
           .manage-address-component-container h3{
             font-size: 15px;
+          }
+          .address-card{
+            padding: 1rem 1rem 1.5rem;
+          }
+          .address-card-email{
+            margin-top: .25rem;
           }
           .address-card-email,
           .address-card-phone,

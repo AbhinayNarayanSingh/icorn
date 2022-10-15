@@ -1,11 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { PRIMARY_COLOUR, USER_AVATAR, WHITE } from '../../utils/Environment'
+import { BLUE, PRIMARY_COLOUR, USER_AVATAR, WHITE } from '../../utils/Environment'
 import ManageAddresses from './Manage-Addresses'
 import ManageCards from './Manage-Cards'
 
+const ProfilePageActiveSection = (ActiveSection) => {
+    switch (ActiveSection) {
+        case "Saved Product":
+            return <div>Saved Product</div>
+        case "Manage Address":
+            return <ManageAddresses/>
+        case "Manage Cards":
+            return <ManageCards/>
+        case "Orders":
+            return <div>Orders</div>
+        case "Setting":
+            return <div>Setting</div>
+    }
+}
+
 const Profile = () => {
     const {user} = useSelector((state)=> state)
+    const [ActiveSection, setActiveSection] = useState("Manage Address")
+    const profileSections = ["Manage Address", "Saved Product", "Manage Cards", "Orders", "Setting"]
+
+
   return (
     <div className="container-md min-h-80vh mt-2 profile-container">
         <div className="user-card-container">
@@ -14,15 +33,24 @@ const Profile = () => {
                 <h2>{user?.FirstName + " " + user?.LastName}</h2>
             </div>
         </div>   
-        <ManageAddresses/> 
-        <ManageCards/>
+
+        <div className="row profile-sections">
+            <div className="profile-sections-header col-12 col-md-3">
+                {profileSections.map((i, index) => 
+                    <h2 className={ActiveSection == i && "active"} key={index} onClick={() => setActiveSection(i)}>{i}</h2>
+                )}
+                <h2>Logout</h2>
+            </div>
+            <div className="col-md-9 col-12">
+                {ProfilePageActiveSection(ActiveSection)}
+            </div>
+        </div>
         
         <style jsx>{`
             .profile-container{
                 max-width: 1000px;
             }
             .user-card-container{
-                background : ${WHITE};
                 padding:2rem;
             }
             .user-profile{
@@ -37,7 +65,21 @@ const Profile = () => {
                 font-weight: 600;
                 font-size:1.1rem;
             }
-
+            .profile-sections-header h2{
+                padding: 0 1rem 1rem;
+                cursor: pointer;
+                font-weight: 600;
+            }
+            h2.active{
+                color: ${BLUE};
+            }
+            // .profile-sections-header{
+            //     display: flex;
+            //     overflow: scroll;
+            // }
+            .profile-sections{
+                margin: 1rem;
+            }
         `}</style>
     </div>
   )

@@ -50,7 +50,7 @@ const Model = () => {
   // };
 
   return (
-    <div className="container-fluid pdp-conatiner-fluid">
+    <>
       <div className="container-xxl">
         <div className="row align-items-start justify-content-between product-page">
 
@@ -171,10 +171,6 @@ const Model = () => {
 
       <style jsx>
         {`
-        .pdp-conatiner-fluid {
-          background: ${WHITE};
-        }
-
         .product-varient{
           font-size: 1.5rem;
           font-weight: 600;
@@ -206,7 +202,6 @@ const Model = () => {
             margin: 0 0 1rem;
           }
           .product-image-container .product-images img {
-            // background: ${WHITE_BCK};
             height: 70px;
             width: 70px;
             padding: 1rem;
@@ -368,7 +363,7 @@ const Model = () => {
           }
         `}
       </style>
-    </div>
+    </>
   );
 };
 

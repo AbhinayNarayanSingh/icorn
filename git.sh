@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="improve product detail page"
+title="improve profile page"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`
