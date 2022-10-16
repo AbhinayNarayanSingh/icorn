@@ -7,6 +7,7 @@ import ManageAddresses from '../../components/Profile/Manage-Addresses'
 import ManageCards from '../../components/Profile/Manage-Cards'
 import SavedProducts from '../../components/Profile/Saved-Products'
 import Orders from '../../components/Profile/Orders'
+import AccountSettings from '../../components/Profile/AccountSettings'
 
 const ProfilePageActiveSection = (ActiveSection) => {
     switch (ActiveSection) {
@@ -18,15 +19,15 @@ const ProfilePageActiveSection = (ActiveSection) => {
             return <ManageCards/>
         case "Orders":
             return <Orders/>
-        case "Setting":
-            return <div>Setting</div>
+        case "Account Settings":
+            return <AccountSettings/>
     }
 }
 
 const Profile = () => {
     const {user} = useSelector((state)=> state)
     const [ActiveSection, setActiveSection] = useState("Manage Address")
-    const profileSections = ["Manage Address", "Saved Product", "Manage Cards", "Orders", "Setting"]
+    const profileSections = ["Manage Address", "Saved Product", "Manage Cards", "Orders", "Account Settings"]
 
 
   return (
