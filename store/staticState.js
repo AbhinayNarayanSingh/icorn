@@ -41,8 +41,6 @@ export const category = [
     },
 ]
 
-
-
 export const products = [
     {
         "brand": "Apple",
@@ -179,11 +177,10 @@ export const products = [
     }
 ]
 
-
-
 export const product = {
     "category": "iPhone",
     "name": "Apple iPhone 14",
+    "base_price" : 79900,
     "specifications": [
         ["Display", "11 Inches 120 Hz Liquid Retina Display"],
         ["Capacity", "128GB, 256GB, 512GB, 1TB, 2TB"],
@@ -200,70 +197,6 @@ export const product = {
         ["In the Box", "1 U Tablet | Power Adapter | USB Cable | Quick Start Guide | Warranty Card"],
         ["Warranty", "12 Months | International Travellers | Carry-In"]
     ],
-
-
-    "storage": [
-        {"size": "128GB", "price" : 0}, 
-        {"size": "256GB", "price" : 10000}, 
-        {"size": "512GB", "price" : 20000}
-    ],
-    "finish": [
-        {
-            "price" : 1000,
-            "color": "Blue",
-            "colorCode": "#286788",
-        },
-        {
-            "price" : 0,
-            "color": "Pink",
-            "colorCode": "#f8ddd7",
-        },
-        {
-            "price" : 2500,
-            "color": "Green",
-            "colorCode": "#3a4c37",
-        },
-        {
-            "price" : 0,
-            "color": "Midnight",
-            "colorCode": "#232a31",
-        },
-        {
-            "price" : 5000,
-            "color": "Starlight",
-            "colorCode": "#faf6f2",
-        },
-        {
-            "price" : 0,
-            "color": "Product RED",
-            "colorCode": "#c23e16",
-        },
-    ],
-    "model": [
-        {"name": "iPhone 13", "description" : "15.4 cm (6.1-inch) display", "price" : 10000},
-        {"name": "iPhone 13 mini", "description" : "13.7 cm (5.4-inch) display", "price" : 0}, 
-    ],
-    "memory": [
-        {
-            "name": "4GB unified memory",
-            "price": 0
-        },
-        {
-            "name": "6GB unified memory",
-            "price": 5000
-        }
-    ],
-    "processor" : [
-        {
-            "name" : "Apple A15 Bionic",
-            "price" : 0
-        },
-        {
-            "name" : "Apple A16 Bionic",
-            "price" : 10000
-        }
-    ]
-
 }
 
 export const productImages = [
@@ -277,13 +210,6 @@ export const productImages = [
     "https://media.croma.com/image/upload/v1631776569/Croma%20Assets/Communication/Mobiles/Images/243463_9_wvszxc.png",
     "https://media.croma.com/image/upload/v1631776568/Croma%20Assets/Communication/Mobiles/Images/243463_10_inn3ck.png",
 ]
-
-export const productPrice = {
-    "currencyIso": "INR",
-    "discount": 5000,
-    "mrp": 64900,
-    "sellingPrice": 59900,
-}
 
 export const productAccessories = [
     {
@@ -436,3 +362,89 @@ export const user = {
     Last_login: "2022-09-28T13:04:08Z",
     Token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6IjYzMzAxODJkN2VjODZiNWIwZGE4NzIyYyIsIkZpcnN0TmFtZSI6IkFiaGluYXkiLCJMYXN0TmFtZSI6IlNpbmdoIiwiRW1haWwiOiJhYmhpbmF5QGFkbWluLmNvbSIsIlBob25lIjoiODc5NTY3NTU5OSIsIklzQWRtaW4iOnRydWUsIklzQWN0aXZlIjp0cnVlLCJleHAiOjE2NjQ1MzM5NjN9.uwXnV1AiMTbXovECEdemBeoKXRL77_p5kp4MR0fqN8g"
   }
+
+export const varient = {
+    "storage": [
+            {  
+                "varientName" : "128GB",
+                "varientDiscription" : "",
+                "varientAddonPrice" : 0
+            },
+            {  
+                "varientName" : "256GB",
+                "varientDiscription" : "",
+                "varientAddonPrice" : 10000
+            },
+            {  
+                "varientName" : "512GB",
+                "varientDiscription" : "",
+                "varientAddonPrice" : 20000
+            },
+        ],
+    "finish": [
+        {
+            "varientAddonPrice" : 0,
+            "varientName": "Blue",
+            "varientAdditionalDetails": "#286788",
+        },
+        {
+            "varientAddonPrice" : 0,
+            "varientName": "Pink",
+            "varientAdditionalDetails": "#f8ddd7",
+        },
+        {
+            "varientAddonPrice" : 10000,
+            "varientName": "Green",
+            "varientAdditionalDetails": "#3a4c37",
+        },
+        {
+            "varientAddonPrice" : 0,
+            "varientName": "Midnight",
+            "varientAdditionalDetails": "#232a31",
+        },
+        {
+            "varientAddonPrice" : 10000,
+            "varientName": "Starlight",
+            "varientAdditionalDetails": "#faf6f2",
+        },
+        {
+            "varientAddonPrice" : 0,
+            "varientName": "Product RED",
+            "varientAdditionalDetails": "#c23e16",
+        },
+    ],
+    "model": [
+        {"varientName": "iPhone 14", "varientDiscription" : "15.4 cm (6.1-inch) display", "varientAddonPrice" : 79900},
+        {"varientName": "iPhone 14 Plus", "varientDiscription" : "13.7 cm (5.4-inch) display", "varientAddonPrice" : 89900}, 
+    ],
+    "memory": [
+        {
+            "varientName": "4GB",
+            "varientAddonPrice": 0
+        },
+        {
+            "varientName": "6GB",
+            "varientAddonPrice": 10000
+        }
+    ],
+    "processor" : [
+        {
+            "varientName" : "A15 Bionic",
+            "varientAddonPrice" : 0
+        },
+        {
+            "varientName" : "A16 Bionic",
+            "varientAddonPrice" : 10000
+        }
+    ],
+    "connectivity" : [
+        {
+            "varientName" : "5G",
+            "varientAddonPrice" : 0
+        },
+        {
+            "varientName" : "6G",
+            "varientAddonPrice" : 10000
+        }
+    ],
+}
