@@ -8,7 +8,7 @@ export default function Home() {
   const products = useSelector((state) => state.products)
   return (
     <div className="container-fluid landing-page-container">
-      <div className="landing-page">
+      <div>
         <h2><span>The latest. </span>Take a look at what’s new right now.</h2>
         {products.map((product, index) => {
           return (
@@ -29,10 +29,6 @@ export default function Home() {
           .landing-page-container{
             background: ${WHITE_BCK};
             padding-top: 2rem;
-          }
-          .landing-page{
-            max-width: 1600px;
-            margin:auto;
           }
           .product-container-horizontal{
             display: flex;
@@ -56,6 +52,11 @@ export default function Home() {
               font-size: 20px;
               line-height: 28px;
               }
+          }
+          @media only screen and (max-width: 2000px) and (min-width: 1400px){
+            .product-container-horizontal{
+              padding-left: calc(50vw - 700px);
+            } 
           }
           `}
         </style>

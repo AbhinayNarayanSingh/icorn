@@ -282,7 +282,7 @@ const Cards = ({ type, data, index, variant }) => {
                   justify-content: center;
                   align-items: center;
                   flex-direction: column;
-                  margin: 2rem 0 2rem 2rem;
+                  margin: 2rem 2rem 2rem 0;
 
                   cursor: pointer;
                 }
