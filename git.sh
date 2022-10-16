@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="worked on product card"
+title="worked on dynamic padding on product list page & code refactoring"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`

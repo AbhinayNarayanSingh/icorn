@@ -43,8 +43,6 @@ const Profile = () => {
                 {profileSections.map((i, index) => 
                     <h2 className={ActiveSection == i && "active"} key={index} onClick={() => setActiveSection(i)}>{i}</h2>
                 )}
-                <h2>Bag</h2>
-                <h2>Logout</h2>
             </div>
             <div className="col-md-9 col-12">
                 {ProfilePageActiveSection(ActiveSection)}
@@ -78,12 +76,14 @@ const Profile = () => {
             h2.active{
                 color: ${BLUE};
             }
-            // .profile-sections-header{
-            //     display: flex;
-            //     overflow: scroll;
-            // }
             .profile-sections{
                 margin: 1rem;
+            }
+            @media only screen and (max-width: 600px) {
+              .profile-sections-header{
+                  display: flex;
+                  flex-wrap: wrap;
+              }
             }
         `}</style>
     </div>

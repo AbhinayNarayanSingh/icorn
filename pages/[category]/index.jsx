@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useSelector } from "react-redux";
-import ProductCards from "../../components/ProductCards/ProductCards";
+import Cards from "../../hoc/Cards/Cards";
 import { useRouter } from "next/router";
 import { BLUE } from "../../utils/Environment";
 
@@ -27,7 +27,7 @@ const Category = () => {
       <div className="product-cat-container container-xxl">
         <div className="product-container-horizontal hide-scrollbar">
           {products.map((product, index) => {
-            return <ProductCards data={product} index={index} key={index} />;
+            return <Cards data={product} index={index} key={index} />;
           })}
         </div>
 
@@ -38,7 +38,7 @@ const Category = () => {
         <div className="product-container-horizontal hide-scrollbar">
           {products.map((product, index) => {
             return (
-              <ProductCards
+              <Cards
                 type={"He-ro"}
                 data={product}
                 index={index}
@@ -120,14 +120,9 @@ const Category = () => {
               padding: 0 1rem;
             }
           }
-          @media only screen and (max-width: 2000px) and (min-width: 1700px){
+          @media only screen and (max-width: 2000px) and (min-width: 1400px){
             .product-container-horizontal {
-              padding-left: 10rem;
-            }
-          }
-          @media only screen and (max-width: 1700px) and (min-width: 1400px){
-            .product-container-horizontal {
-              padding-left: 5rem;
+              padding-left: calc(50vw - 700px);
             }
           }
         `}

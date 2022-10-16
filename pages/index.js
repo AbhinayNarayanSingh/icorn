@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import ProductCards from "../components/ProductCards/ProductCards";
 import { WHITE_BCK } from "../utils/Environment";
+import Cards from "../hoc/Cards/Cards"
 
 
 
@@ -12,7 +12,7 @@ export default function Home() {
         <h2><span>The latest. </span>Take a look at what’s new right now.</h2>
         {products.map((product, index) => {
           return (
-            <ProductCards type={"Hero"} data={product} index={index} key={index} />
+            <Cards type={"Hero"} data={product} index={index} key={index} />
           )
         })}
 
@@ -20,7 +20,7 @@ export default function Home() {
         <div className="product-container-horizontal hide-scrollbar">
           {products.map((product, index) => {
             return (
-              <ProductCards type={"He-ro"} data={product} index={index} key={index} variant={"LANDING_PAGE"}/>
+              <Cards type={"He-ro"} data={product} index={index} key={index} variant={"LANDING_PAGE"}/>
             )
           })}
         </div>

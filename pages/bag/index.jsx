@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import ProductCards from "../../components/ProductCards/ProductCards";
 import { INR_STYLE_HELPER } from "../../utils/Helper";
+import Cards from "../../hoc/Cards/Cards"
 
 const Bag = () => {
   const { items, bagTotal, bagSubTotal, bagSubTotalTax, shipping } =
@@ -13,7 +13,7 @@ const Bag = () => {
           Your bag total is ₹{INR_STYLE_HELPER(bagTotal)}
         </h2>
         
-        {items.map((item, index) => <ProductCards type={"Bag"} data={item} index={index} key={index} variant={true}/>)}
+        {items.map((item, index) => <Cards type={"Bag"} data={item} index={index} key={index} variant={true}/>)}
 
         <div className="product-subtotals-container">
           <div className="product-subtotals col-12 col-md-6">

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BLACK, BLUE, BOX_SHADOW_C3, BOX_SHADOW_LIGHT, WHITE, WHITE_BCK } from "../../utils/Environment";
 import { INR_STYLE_HELPER } from "../../utils/Helper";
 
-const ProductCards = ({ type, data, index, variant }) => {
+const Cards = ({ type, data, index, variant }) => {
   switch (type) {
     case "Hero":
       return (
@@ -271,7 +271,7 @@ const ProductCards = ({ type, data, index, variant }) => {
             <style jsx>
               {`
                 .product-card {
-                  min-width: 325px;
+                  min-width: 300px;
                   width: 288px;
                   height: 375px;
                   filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.05));
@@ -291,9 +291,6 @@ const ProductCards = ({ type, data, index, variant }) => {
                 }
                 .product-card-bck:hover{
                   BOX-SHADOW: ${BOX_SHADOW_LIGHT};
-                }
-                .product-card:nth-last-of-type(1) {
-                  margin: 2rem;
                 }
                 .product-card img {
                   height: 225px;
@@ -323,6 +320,9 @@ const ProductCards = ({ type, data, index, variant }) => {
                     justify-content: center;
                     margin: 0;
                   }
+                  .product-card{
+                    margin: 2rem 0;
+                  }
                 }
               `}
             </style>
@@ -331,4 +331,4 @@ const ProductCards = ({ type, data, index, variant }) => {
       );
   }
 };
-export default ProductCards;
+export default Cards;

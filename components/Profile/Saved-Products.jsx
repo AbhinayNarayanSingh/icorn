@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import ProductCards from '../ProductCards/ProductCards'
+import Cards from "../../hoc/Cards/Cards"
 
 const SavedProducts = () => {
 
@@ -10,7 +10,7 @@ const SavedProducts = () => {
     <div>
         <h2 className="f-w-600 mb-1">Saved Product ({relatedProducts.length})</h2>
 
-        {relatedProducts.map((item, index) => <ProductCards type={"Bag"} data={item} index={index} key={index} variant={true}/>)}
+        {relatedProducts.map((item, index) => <Cards type={"Bag"} data={item} index={index} key={index} variant={true}/>)}
     </div>
   )
 }
