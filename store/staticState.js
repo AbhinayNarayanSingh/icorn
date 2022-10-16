@@ -183,45 +183,7 @@ export const products = [
 
 export const product = {
     "category": "iPhone",
-    "name": "Apple iPhone 13",
-    "storage": [
-        {"size": "128GB", "price" : 0}, 
-        {"size": "256GB", "price" : 10000}, 
-        {"size": "512GB", "price" : 20000}
-    ],
-    "color": [
-        {
-            "model": "MLVF3H",
-            "color": "Blue",
-            "colorCode": "#286788",
-        },
-        {
-            "model": "MLVF3H",
-            "color": "Pink",
-            "colorCode": "#f8ddd7",
-        },
-        {
-            "model": "MLVF3H",
-            "color": "Green",
-            "colorCode": "#3a4c37",
-        },
-        {
-            "model": "MLVF3H",
-            "color": "Midnight",
-            "colorCode": "#232a31",
-        },
-        {
-            "model": "MLVF3H",
-            "color": "Starlight",
-            "colorCode": "#faf6f2",
-        },
-        {
-            "model": "MLVF3H",
-            "color": "Product RED",
-            "colorCode": "#c23e16",
-        },
-    ],
-    "size": ["128GB", "256GB", "512GB"],
+    "name": "Apple iPhone 14",
     "specifications": [
         ["Display", "11 Inches 120 Hz Liquid Retina Display"],
         ["Capacity", "128GB, 256GB, 512GB, 1TB, 2TB"],
@@ -238,10 +200,70 @@ export const product = {
         ["In the Box", "1 U Tablet | Power Adapter | USB Cable | Quick Start Guide | Warranty Card"],
         ["Warranty", "12 Months | International Travellers | Carry-In"]
     ],
+
+
+    "storage": [
+        {"size": "128GB", "price" : 0}, 
+        {"size": "256GB", "price" : 10000}, 
+        {"size": "512GB", "price" : 20000}
+    ],
+    "finish": [
+        {
+            "price" : 1000,
+            "color": "Blue",
+            "colorCode": "#286788",
+        },
+        {
+            "price" : 0,
+            "color": "Pink",
+            "colorCode": "#f8ddd7",
+        },
+        {
+            "price" : 2500,
+            "color": "Green",
+            "colorCode": "#3a4c37",
+        },
+        {
+            "price" : 0,
+            "color": "Midnight",
+            "colorCode": "#232a31",
+        },
+        {
+            "price" : 5000,
+            "color": "Starlight",
+            "colorCode": "#faf6f2",
+        },
+        {
+            "price" : 0,
+            "color": "Product RED",
+            "colorCode": "#c23e16",
+        },
+    ],
     "model": [
+        {"name": "iPhone 13", "description" : "15.4 cm (6.1-inch) display", "price" : 10000},
         {"name": "iPhone 13 mini", "description" : "13.7 cm (5.4-inch) display", "price" : 0}, 
-        {"name": "iPhone 13", "description" : "15.4 cm (6.1-inch) display", "price" : 10000}
+    ],
+    "memory": [
+        {
+            "name": "4GB unified memory",
+            "price": 0
+        },
+        {
+            "name": "6GB unified memory",
+            "price": 5000
+        }
+    ],
+    "processor" : [
+        {
+            "name" : "Apple A15 Bionic",
+            "price" : 0
+        },
+        {
+            "name" : "Apple A16 Bionic",
+            "price" : 10000
+        }
     ]
+
 }
 
 export const productImages = [

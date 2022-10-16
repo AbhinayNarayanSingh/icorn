@@ -9,9 +9,6 @@ export const BLUE = "#0066cc"
 export const WHITE = "white"
 export const WHITE_BCK = "#f5f5f7"
 export const BLACK = "black"
-export const VISA_BCK = "rgba(14, 69, 149, 0.25)" // save cards background color 
-export const RUPAY_BCK = "rgba(16, 129, 71, 0.25)" // save cards background color 
-export const MASTER_BCK = "rgba(238, 159, 45, 0.25)" // save cards background color 
 
 //      img/user
 export const USER_AVATAR = ["/img/user/user-avatar.svg", "user"]
@@ -35,7 +32,4 @@ export const RUPAY_ICON = ["/img/payment/Rupay.svg", "Rupay"]
 
 // css box shadow
 export const BOX_SHADOW_LIGHT = "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
-export const BOX_SHADOW_DARK = "rgba(0, 0, 0, 0.24) 0px 3px 8px"
-export const BOX_SHADOW_C1 = "0px 1px 13px rgba(0, 0, 0, 0.15)"
-export const BOX_SHADOW_C2 = "0px 0px 5px rgba(0, 0, 0, 0.1)"
 export const BOX_SHADOW_C3 = "inset 1px 1px 4px rgba(0, 0, 0, 0.1)"

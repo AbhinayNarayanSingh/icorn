@@ -1,31 +1,31 @@
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
-  BLACK,
   BLUE,
   BOX_SHADOW_C3,
   WHITE,
-  WHITE_BCK,
 } from "../../../utils/Environment";
 import { INR_STYLE_HELPER } from "../../../utils/Helper";
 
 const Model = () => {
   const { product, productImages, productPrice, productAccessories } =
     useSelector((state) => state);
-  const { storage, specifications, model } = product;
+  const { storage, specifications, model, finish, connectivity } = product;
 
   const [selectedProductImage, setSelectedProductImage] = useState(productImages[0]);
   const [selectedModelBasePrice, setSelectedModelBasePrice] = useState(productPrice["sellingPrice"])
   
   const [productModel, setProductModel] = useState(model[0].name)
   const [productSize, setProductSize] = useState(storage[0].size);
-  const [productsVariantsColour, setProductsVariants] = useState(product["color"][0]);
+  const [productsVariantsColour, setProductsVariants] = useState(finish[0]);
 
   const [finalPrice, setFinalPrice] = useState(productPrice["sellingPrice"])
   const [addOnState, setAddOnState] = useState({
-      "basePrice" : productPrice['sellingPrice'],
-      "model" : 0,
-      "storage" : 0,
+      "basePrice" : selectedModelBasePrice,
+      "model" : model[0].price || 0,
+      "storage" : storage[0].price || 0,
+      "finish" :  finish[0].price || 0,
+      "connectivity" : connectivity?.[0] || 0,
     })
 
   const updatedPrice = (key, value) => {
@@ -38,7 +38,13 @@ const Model = () => {
     const updatedPrice = Object.values(addOn).reduce((a, b) => a + b) 
     setFinalPrice(updatedPrice)
     setAddOnState(addOn)
-    }
+  }
+  
+  useEffect(() => {
+    const updatedPrice = Object.values(addOnState).reduce((a, b) => a + b) 
+    setFinalPrice(updatedPrice)
+  }, [])
+  
 
   // const [addOnAccessories, setAddOnAccessories] = useState([]);
 
@@ -86,7 +92,7 @@ const Model = () => {
               </div>
 
               <p>Model. <span>Which is best for you.</span></p>
-              <div className="product-model mt-1">
+              <div className="product-variants-001 mt-1">
                 {model.map((i, index) => {
                   return (
                     <div
@@ -95,7 +101,7 @@ const Model = () => {
                         setProductModel(i.name)
                         updatedPrice("model", i.price)
                       }}
-                      className={`${productModel === i.name && "active"} model-card-container col-12`}
+                      className={`${productModel === i.name && "active"} card-container col-12`}
                     >
                       <h2>{i.name}</h2>
                       <p>{i.description} - From ₹{INR_STYLE_HELPER(productPrice['sellingPrice'] + i.price)}‡</p>
@@ -105,25 +111,28 @@ const Model = () => {
               </div>
 
               <p className="mt-2">Finish. <span>Pick your favourite.</span></p>
-              <div className="product-variants">
-                {product["color"].map((variant, index) => {
+              <div className="product-variants-002">
+                {finish.map((variant, index) => {
                   return (
-                    <div className={productsVariantsColour["colorCode"] == variant["colorCode"] &&
-                      "active" + " " + "color-container"
-                    }
+                    <div className={`${productsVariantsColour["colorCode"] == variant["colorCode"] && "active"} color-container`}
+                    onClick={() => {
+                      setProductsVariants(variant)
+                      updatedPrice("finish", variant.price)
+                    }}
                     >
                       <span
                         key={index}
                         style={{ background: `${variant["colorCode"]}` }}
-                        onClick={() => setProductsVariants(variant)}
                       ></span>
+                      <h2 className="mt-05">{variant["color"]}</h2>
+                      <p>MRP ₹{INR_STYLE_HELPER(selectedModelBasePrice + variant.price)}‡</p>
                     </div>
                   );
                 })}
               </div>
 
               <p className="mt-2">Storage. <span>How much space do you need.</span></p>
-              <div className="product-size mt-1">
+              <div className="product-variants-001 mt-1">
                 {storage.map((i, index) => {
                   return (
                     <div
@@ -132,10 +141,10 @@ const Model = () => {
                         setProductSize(i.size)
                         updatedPrice("storage", i.price)
                       }}
-                      className={`price-card-container ${productSize === i.size && "active"}`}
+                      className={`card-container ${productSize === i.size && "active"}`}
                     >
                       <h2>{i.size}</h2>
-                      <p>MRP ₹{INR_STYLE_HELPER(selectedModelBasePrice + i.price)}‡ (Incl. of all taxes)</p>
+                      <p>MRP ₹{INR_STYLE_HELPER(selectedModelBasePrice + productsVariantsColour["price"] + i.price)}‡ (Incl. of all taxes)</p>
                     </div>
                   );
                 })}
@@ -253,44 +262,38 @@ const Model = () => {
             font-weight: 600;
             color: #6e6e73;
           }
-          .product-details .product-variants {
-            display: flex;
-            margin: 1rem 0 0;
+          .product-details .product-variants-002 {
+            margin-top: 1rem;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
           }
-          .product-details .product-variants span {
-            width: 32px;
-            height: 32px;
+          .product-details .product-variants-002 span {
+            width: 2.25rem;
+            height: 2.25rem;
             display: block;
             border-radius: 50%;
-            cursor: pointer;
             box-shadow: ${BOX_SHADOW_C3};
           }
-          .product-details .product-variants div {
-            border: 2px solid transparent;
-            border-radius: 50%;
-            padding: 4px;
-            margin-right: 10px;
-          }
-          .product-details .product-variants .active{
-            border: 2px solid #0066cc;
-          }
-
-          .active {
-            border-color : ${BLUE} !important;
-          }
-          .product-details .product-size .price-card-container {
+          .product-details .product-variants-002 div {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            cursor: pointer;
-            padding: 1rem;
-            min-width: 150px;
+
+            border-radius: 10px;
             border: 2px solid #80808030;
-            border-radius: 15px;
-            margin-top: .5rem;
+            cursor: pointer;
+            padding: 1rem 0;
+
+            margin: 0 .25rem .5rem ;
           }
-          .product-details .product-model .model-card-container{
+          .active {
+            border-color : ${BLUE} !important;
+          }
+          .product-details .product-variants-001 .card-container
+           {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -301,19 +304,17 @@ const Model = () => {
             border-radius: 15px;
             margin-top: .5rem;
           }
-          .product-details .product-size h2,
-          .product-details .product-model h2 {
+          .product-details .product-variants-001 h2 {
             font-size: 1.2rem;
             line-height: 1.5rem;
             margin: 0;
           }
-          .product-details .product-size p,
-          .product-details .product-model p {
+          .product-details .product-variants-001 p {
             margin: .15rem 0 0;
             font-size: 12px;
           }
-          .product-details .product-model p,
-          .product-details .product-size p {
+          .product-details .product-variants-001 p,
+          .product-details .product-variants-002 p {
             margin: .15rem 0 0;
             font-size: 12px;
             font-weight: 400;

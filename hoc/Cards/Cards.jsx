@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BLACK, BLUE, BOX_SHADOW_C3, BOX_SHADOW_LIGHT, WHITE, WHITE_BCK } from "../../utils/Environment";
 import { INR_STYLE_HELPER } from "../../utils/Helper";
 
-const Cards = ({ type, data, index, variant }) => {
+const Cards = ({ type, data, index, variant, onClickFn}) => {
   switch (type) {
     case "Hero":
       return (

@@ -1,4 +1,4 @@
-import {BOX_SHADOW_DARK, BOX_SHADOW_LIGHT, WHITE, WHITE_BCK } from "../../utils/Environment"
+import {BOX_SHADOW_LIGHT, WHITE_BCK } from "../../utils/Environment"
 
 const ManageAddresses = () => {
 
