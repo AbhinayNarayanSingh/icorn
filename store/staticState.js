@@ -182,20 +182,20 @@ export const product = {
     "name": "Apple iPhone 14",
     "base_price" : 79900,
     "specifications": [
-        ["Display", "11 Inches 120 Hz Liquid Retina Display"],
-        ["Capacity", "128GB, 256GB, 512GB, 1TB, 2TB"],
-        ["Chip", "Apple M1 Chip"],
-        ["Front Camera", "12 MP : TrueDepth Camera, ƒ/2.4, 122 Degree Field of View, Animoji and Memoji, Lens Correction"],
-        ["Rear Camera", "12 MP : Wide Camera, ƒ/1.8, Five‑Element Lens, Autofocus with Focus Pixels | 10 MP : Ultra-Wide Camera, ƒ/2.4, 125 Degree Field of View, Five‑Element Lens, Lens Correction | 12MP Telephoto Camera: ƒ/2.8 Aperture"],
-        ["Sound", "Quad Speakers | AAC‑LC, HE‑AAC, HE‑AAC v2, Protected AAC, MP3, Linear PCM, Apple Lossless, FLAC, Dolby Digital (AC‑3), Dolby Digital Plus (E‑AC‑3), Dolby Atmos and Audible (formats 2, 3, 4, Audible Enhanced Audio, AAX and AAX+)"],
-        ["WiFi", "IEEE 802.11a/b/g/n/ac/ax | Dual Band (2.4 GHz and 5 GHz), HT80 with MIMO"],
-        ["Bluetooth", "Bluetooth 5.0"],
-        ["Battery Life", "Up to 10 Hours of Surfing the Web on Wi-Fi or Watching Video, Built-in 28.65 WHr Rechargeable Battery"],
-        ["Connector", "USB Type-C | 20 Watts Fast Charging, Charging Via Power Adapter or USB-C to Computer System"],
-        ["Dimensions", "7.02 x 0.23 x 9.74 Inches"],
-        ["Weight", "466 g"],
-        ["In the Box", "1 U Tablet | Power Adapter | USB Cable | Quick Start Guide | Warranty Card"],
-        ["Warranty", "12 Months | International Travellers | Carry-In"]
+        {"name": "Display",  "description" : "11 Inches 120 Hz Liquid Retina Display"},
+        {"name": "Capacity", "description" :  "128GB, 256GB, 512GB, 1TB, 2TB"},
+        {"name": "Chip", "description" :  "Apple M1 Chip"},
+        {"name": "Front Camera", "description" :  "12 MP : TrueDepth Camera, ƒ/2.4, 122 Degree Field of View, Animoji and Memoji, Lens Correction"},
+        {"name": "Rear Camera", "description" :  "12 MP : Wide Camera, ƒ/1.8, Five‑Element Lens, Autofocus with Focus Pixels | 10 MP : Ultra-Wide Camera, ƒ/2.4, 125 Degree Field of View, Five‑Element Lens, Lens Correction | 12MP Telephoto Camera: ƒ/2.8 Aperture"},
+        {"name": "Sound",  "description" : "Quad Speakers | AAC‑LC, HE‑AAC, HE‑AAC v2, Protected AAC, MP3, Linear PCM, Apple Lossless, FLAC, Dolby Digital (AC‑3), Dolby Digital Plus (E‑AC‑3), Dolby Atmos and Audible (formats 2, 3, 4, Audible Enhanced Audio, AAX and AAX+)"},
+        {"name": "WiFi", "description" :  "IEEE 802.11a/b/g/n/ac/ax | Dual Band (2.4 GHz and 5 GHz), HT80 with MIMO"},
+        {"name": "Bluetooth", "description" :  "Bluetooth 5.0"},
+        {"name": "Battery Life", "description" :  "Up to 10 Hours of Surfing the Web on Wi-Fi or Watching Video, Built-in 28.65 WHr Rechargeable Battery"},
+        {"name": "Connector", "description" :  "USB Type-C | 20 Watts Fast Charging, Charging Via Power Adapter or USB-C to Computer System"},
+        {"name": "Dimensions", "description" :  "7.02 x 0.23 x 9.74 Inches"},
+        {"name": "Weight", "description" :  "466 g"},
+        {"name": "In the Box", "description" :  "1 U Tablet | Power Adapter | USB Cable | Quick Start Guide | Warranty Card"},
+        {"name": "Warranty", "description" :  "12 Months | International Travellers | Carry-In"}
     ],
 }
 
@@ -366,85 +366,85 @@ export const user = {
 export const varient = {
     "storage": [
             {  
-                "varientName" : "128GB",
-                "varientDiscription" : "",
-                "varientAddonPrice" : 0
+                "name" : "128GB",
+                "description" : "",
+                "addonPrice" : 0
             },
             {  
-                "varientName" : "256GB",
-                "varientDiscription" : "",
-                "varientAddonPrice" : 10000
+                "name" : "256GB",
+                "description" : "",
+                "addonPrice" : 10000
             },
             {  
-                "varientName" : "512GB",
-                "varientDiscription" : "",
-                "varientAddonPrice" : 20000
+                "name" : "512GB",
+                "description" : "",
+                "addonPrice" : 20000
             },
         ],
     "finish": [
         {
-            "varientAddonPrice" : 0,
-            "varientName": "Blue",
-            "varientAdditionalDetails": "#286788",
+            "addonPrice" : 0,
+            "name": "Blue",
+            "additionalDetails": "#286788",
         },
         {
-            "varientAddonPrice" : 0,
-            "varientName": "Pink",
-            "varientAdditionalDetails": "#f8ddd7",
+            "addonPrice" : 0,
+            "name": "Pink",
+            "additionalDetails": "#f8ddd7",
         },
         {
-            "varientAddonPrice" : 10000,
-            "varientName": "Green",
-            "varientAdditionalDetails": "#3a4c37",
+            "addonPrice" : 10000,
+            "name": "Green",
+            "additionalDetails": "#3a4c37",
         },
         {
-            "varientAddonPrice" : 0,
-            "varientName": "Midnight",
-            "varientAdditionalDetails": "#232a31",
+            "addonPrice" : 0,
+            "name": "Midnight",
+            "additionalDetails": "#232a31",
         },
         {
-            "varientAddonPrice" : 10000,
-            "varientName": "Starlight",
-            "varientAdditionalDetails": "#faf6f2",
+            "addonPrice" : 10000,
+            "name": "Starlight",
+            "additionalDetails": "#faf6f2",
         },
         {
-            "varientAddonPrice" : 0,
-            "varientName": "Product RED",
-            "varientAdditionalDetails": "#c23e16",
+            "addonPrice" : 0,
+            "name": "Product RED",
+            "additionalDetails": "#c23e16",
         },
     ],
     "model": [
-        {"varientName": "iPhone 14", "varientDiscription" : "15.4 cm (6.1-inch) display", "varientAddonPrice" : 79900},
-        {"varientName": "iPhone 14 Plus", "varientDiscription" : "13.7 cm (5.4-inch) display", "varientAddonPrice" : 89900}, 
+        {"name": "iPhone 14", "description" : "15.4 cm (6.1-inch) display", "addonPrice" : 79900},
+        {"name": "iPhone 14 Plus", "description" : "13.7 cm (5.4-inch) display", "addonPrice" : 89900}, 
     ],
     "memory": [
         {
-            "varientName": "4GB",
-            "varientAddonPrice": 0
+            "name": "4GB",
+            "addonPrice": 0
         },
         {
-            "varientName": "6GB",
-            "varientAddonPrice": 10000
+            "name": "6GB",
+            "addonPrice": 10000
         }
     ],
     "processor" : [
         {
-            "varientName" : "A15 Bionic",
-            "varientAddonPrice" : 0
+            "name" : "A15 Bionic",
+            "addonPrice" : 0
         },
         {
-            "varientName" : "A16 Bionic",
-            "varientAddonPrice" : 10000
+            "name" : "A16 Bionic",
+            "addonPrice" : 10000
         }
     ],
     "connectivity" : [
         {
-            "varientName" : "5G",
-            "varientAddonPrice" : 0
+            "name" : "5G",
+            "addonPrice" : 0
         },
         {
-            "varientName" : "6G",
-            "varientAddonPrice" : 10000
+            "name" : "6G",
+            "addonPrice" : 10000
         }
     ],
 }

@@ -12,8 +12,8 @@ const Model = () => {
   const { specifications, base_price:base } = product;
   const { storage, model, finish, connectivity, memory, processor } = varients
 
-  const voidPrice = {varientAddonPrice : 0}
-  const voidModelPrice = {varientAddonPrice : base}
+  const voidPrice = {addonPrice : 0}
+  const voidModelPrice = {addonPrice : base}
 
   const [selectedProductImage, setSelectedProductImage] = useState(productImages[0]);
   const [finalPrice, setFinalPrice] = useState(base)
@@ -26,16 +26,16 @@ const Model = () => {
   const [productProcessor, setProductProcessor] = useState(processor?.[0] || voidPrice);
   const [productConnectivity, setProductConnectivity] = useState(connectivity?.[0] || voidPrice);
 
-  // productProcessor.[varientAddonPrice]
+  // productProcessor.[addonPrice]
 
 
   const [addOnState, setAddOnState] = useState({
-      "model" : model?.[0].varientAddonPrice || base || 0,
-      "storage" : storage?.[0].varientAddonPrice || 0,
-      "finish" :  finish?.[0].varientAddonPrice || 0,
-      "connectivity" : connectivity?.[0].varientAddonPrice || 0,
-      "memory" : memory?.[0].varientAddonPrice || 0,
-      "processor" : processor?.[0].varientAddonPrice || 0,
+      "model" : model?.[0].addonPrice || base || 0,
+      "storage" : storage?.[0].addonPrice || 0,
+      "finish" :  finish?.[0].addonPrice || 0,
+      "connectivity" : connectivity?.[0].addonPrice || 0,
+      "memory" : memory?.[0].addonPrice || 0,
+      "processor" : processor?.[0].addonPrice || 0,
     })
 
   const updatedPrice = (key, value) => {
@@ -106,10 +106,10 @@ const Model = () => {
                       return (
                         <div key={index} onClick={() => {
                             setProductModel(i)
-                            updatedPrice("model", i.varientAddonPrice)
-                          }} className={`${productModel.varientName === i.varientName && "active"} card-container col-12`} >
-                          <h2>{i.varientName}</h2>
-                          <p>{i.varientDiscription} - From ₹{INR_STYLE_HELPER(i.varientAddonPrice)}‡</p>
+                            updatedPrice("model", i.addonPrice)
+                          }} className={`${productModel.name === i.name && "active"} card-container col-12`} >
+                          <h2>{i.name}</h2>
+                          <p>{i.description} - From ₹{INR_STYLE_HELPER(i.addonPrice)}‡</p>
                         </div>
                       );
                     })}
@@ -123,18 +123,18 @@ const Model = () => {
                 <div className="product-variants-002">
                   {finish.map((i, index) => {
                     return (
-                      <div className={`${productFinish["varientAdditionalDetails"] == i["varientAdditionalDetails"] && "active"} color-container`}
+                      <div className={`${productFinish["additionalDetails"] == i["additionalDetails"] && "active"} color-container`}
                       onClick={() => {
                         setProductFinish(i)
-                        updatedPrice("finish", i.varientAddonPrice)
+                        updatedPrice("finish", i.addonPrice)
                       }}
                       >
                         <span
                           key={index}
-                          style={{ background: `${i["varientAdditionalDetails"]}` }}
+                          style={{ background: `${i["additionalDetails"]}` }}
                         ></span>
-                        <h2 className="mt-05">{i["varientName"]}</h2>
-                        <p>MRP ₹{INR_STYLE_HELPER(productModel["varientAddonPrice"] + i.varientAddonPrice)}‡</p>
+                        <h2 className="mt-05">{i["name"]}</h2>
+                        <p>MRP ₹{INR_STYLE_HELPER(productModel["addonPrice"] + i.addonPrice)}‡</p>
                       </div>
                     );
                   })}
@@ -150,10 +150,10 @@ const Model = () => {
                       return (
                         <div key={index} onClick={() => {
                             setProductProcessor(i)
-                            updatedPrice("processor", i.varientAddonPrice)
-                          }} className={`card-container ${productProcessor.varientName === i.varientName && "active"}`} >
-                          <h2>{i.varientName}</h2>
-                          <p>MRP ₹{INR_STYLE_HELPER(productModel["varientAddonPrice"] + productFinish["varientAddonPrice"] + i.varientAddonPrice)}‡ (Incl. of all taxes)</p>
+                            updatedPrice("processor", i.addonPrice)
+                          }} className={`card-container ${productProcessor.name === i.name && "active"}`} >
+                          <h2>{i.name}</h2>
+                          <p>MRP ₹{INR_STYLE_HELPER(productModel["addonPrice"] + productFinish["addonPrice"] + i.addonPrice)}‡ (Incl. of all taxes)</p>
 
                         </div>
                       );
@@ -170,10 +170,10 @@ const Model = () => {
                     return (
                       <div key={index} onClick={() => {
                           setProductMemory(i)
-                          updatedPrice("memory", i.varientAddonPrice)
-                        }} className={`card-container ${productMemory.varientName === i.varientName && "active"}`} >
-                        <h2>{i.varientName}</h2>
-                        <p>MRP ₹{INR_STYLE_HELPER(productModel["varientAddonPrice"] + productFinish["varientAddonPrice"] + productProcessor["varientAddonPrice"] + i.varientAddonPrice)}‡ (Incl. of all taxes)</p>
+                          updatedPrice("memory", i.addonPrice)
+                        }} className={`card-container ${productMemory.name === i.name && "active"}`} >
+                        <h2>{i.name}</h2>
+                        <p>MRP ₹{INR_STYLE_HELPER(productModel["addonPrice"] + productFinish["addonPrice"] + productProcessor["addonPrice"] + i.addonPrice)}‡ (Incl. of all taxes)</p>
                       </div>
                     );
                   })}
@@ -189,10 +189,10 @@ const Model = () => {
                       return (
                         <div key={index} onClick={() => {
                             setProductStorage(i)
-                            updatedPrice("storage", i.varientAddonPrice)
-                          }} className={`card-container ${productStorage.varientName === i.varientName && "active"}`} >
-                          <h2>{i.varientName}</h2>
-                          <p>MRP ₹{INR_STYLE_HELPER(productModel["varientAddonPrice"] + productFinish["varientAddonPrice"] + productProcessor["varientAddonPrice"] + productMemory["varientAddonPrice"] + i.varientAddonPrice)}‡ (Incl. of all taxes)</p>
+                            updatedPrice("storage", i.addonPrice)
+                          }} className={`card-container ${productStorage.name === i.name && "active"}`} >
+                          <h2>{i.name}</h2>
+                          <p>MRP ₹{INR_STYLE_HELPER(productModel["addonPrice"] + productFinish["addonPrice"] + productProcessor["addonPrice"] + productMemory["addonPrice"] + i.addonPrice)}‡ (Incl. of all taxes)</p>
                         </div>
                       );
                     })}
@@ -208,10 +208,10 @@ const Model = () => {
                       return (
                         <div key={index} onClick={() => {
                           setProductConnectivity(i)
-                            updatedPrice("connectivity", i.varientAddonPrice)
-                          }} className={`card-container ${productConnectivity.varientName === i.varientName && "active"}`} >
-                          <h2>{i.varientName}</h2>
-                          <p>MRP ₹{INR_STYLE_HELPER(productModel["varientAddonPrice"] + productFinish["varientAddonPrice"] + productProcessor["varientAddonPrice"] + productMemory["varientAddonPrice"] + productStorage["varientAddonPrice"] + i.varientAddonPrice)}‡ (Incl. of all taxes)</p>
+                            updatedPrice("connectivity", i.addonPrice)
+                          }} className={`card-container ${productConnectivity.name === i.name && "active"}`} >
+                          <h2>{i.name}</h2>
+                          <p>MRP ₹{INR_STYLE_HELPER(productModel["addonPrice"] + productFinish["addonPrice"] + productProcessor["addonPrice"] + productMemory["addonPrice"] + productStorage["addonPrice"] + i.addonPrice)}‡ (Incl. of all taxes)</p>
                         </div>
                       );
                     })}
@@ -239,8 +239,8 @@ const Model = () => {
             {specifications.map((item, index) => {
               return (
                 <div key={index} className="row mb-1">
-                  <span className="key col-4 col-md-2">{item[0]}</span>
-                  <span className="value col-8 col-md-9">{item[1]}</span>
+                  <span className="key col-4 col-md-2">{item.name}</span>
+                  <span className="value col-8 col-md-9">{item.description}</span>
                 </div>
               );
             })}

@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="worked on product detail page & add all possible variants"
+title="change in nameing conventions"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`
