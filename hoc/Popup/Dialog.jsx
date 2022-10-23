@@ -1,45 +1,38 @@
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { DIALOG_CROSS_ICON, WHITE } from "../../utils/Environment";
-
-// dialogs
 import Alert from "./Alert/Alert";
+import Address from "./Address/Address";
+import { close_dialog } from "../../store/saga/Dialog";
 
-const Popup = () => {
-  const { open, type, key } = useSelector((state) => state.dialog);
+const Dialog = () => {
+  const { open, props } = useSelector((state) => state.dialog);
   const dispatch = useDispatch();
 
-  // call this to Disable
-  const disableScroll = () => {
-    document.body.style.overflow = "hidden"
-  }
-
-  // call this to Enable
-  const enableScroll = () => {
-    document.body.style.overflow = "auto"
-  }
+  const disableScroll = () => document.body.style.overflow = "hidden"
+  const enableScroll = () => document.body.style.overflow = "auto"
 
   useEffect(() => {
-    if(open){
+    if(open && props?.key){
       disableScroll()
     }
   }, [open])
   
 
   let dialogContent = null;
-  switch (key) {
+  switch (props?.key) {
     case "CONFIRM_MSG_DIALOGE":
-      dialogContent = <Alert />;
+      dialogContent = <Alert/>;
+      break;
+    case "ADDRESS_FORM":
+      dialogContent = <Address/>;
       break;
 
-    default:
-      break;
   }
 
   return (
     <>
-      {open && (
+      {open && props?.key && (
         <div>
           <div className="dialog-container">
             <div className="dialog-content-container">
@@ -50,7 +43,7 @@ const Popup = () => {
                   className="close-dialoge"
                   onClick={() => {
                     enableScroll();
-                    dispatch({ type: "close_dialoge" })
+                    dispatch(close_dialog())
                   }}
                 />
                 {dialogContent}
@@ -95,4 +88,4 @@ const Popup = () => {
   );
 };
 
-export default Popup;
+export default Dialog;

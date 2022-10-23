@@ -1,17 +1,20 @@
+import { useDispatch } from "react-redux"
+import { open_dialog } from "../../store/saga/Dialog"
 import {BOX_SHADOW_LIGHT, WHITE_BCK } from "../../utils/Environment"
 
 const ManageAddresses = () => {
+  const dispatch = useDispatch()
 
   const dummy = [1,2,3]
   return (
     <div className="manage-address-component-container">
         <div className="d-flex justify-content-between align-items-center">
             <h2 className="f-w-600">Manage Addresses</h2>
-            <button className="link-btn add-address-link-btn">+ Add New Address</button>
+            <button className="link-btn add-address-link-btn" onClick={() => dispatch(open_dialog({key:"CONFIRM_MSG_DIALOGE"}))}>+ Add New Address</button>
         </div>
 
-        {dummy.map((i) => {return (
-          <div className="address-card">
+        {dummy.map((i, index) => {return (
+          <div className="address-card" key={index}>
               <h2>Abhinay Narayan Singh</h2>
 
               <div className="row">

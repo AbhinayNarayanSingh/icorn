@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="change in nameing conventions"
+title="worked on saga & define folder structure"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`

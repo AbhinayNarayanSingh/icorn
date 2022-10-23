@@ -1,4 +1,5 @@
 import { user, varient, category, product, productAccessories, productImages, products, relatedProducts, bag, orders } from "../staticState"
+import { OPEN_DIALOG_WORKER, CLOSE_DIALOG_WORKER } from "../constants"
 
 export const initialState = {
     category: category,
@@ -10,23 +11,21 @@ export const initialState = {
     bag: bag,
     orders: orders,
     varients: varient,
-    dialog: {
-        open: false,
-        type: "warning",
-        key: "CONFIRM_MSG_DIALOGE"
-    },
+    dialog: {},
     user : user,
 }
 
 const rootReducer = (state = initialState, action) => {
     switch (action.type) {
-        case "value":
+        case OPEN_DIALOG_WORKER:
             return {
                 ...state,
-                status: true
+                dialog: {
+                    open: true,
+                    props: action.payload
+                }
             }
-
-        case "close_dialoge":
+        case CLOSE_DIALOG_WORKER:
             return {
                 ...state,
                 dialog: {
