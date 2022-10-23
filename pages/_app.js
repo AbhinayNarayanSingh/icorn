@@ -6,9 +6,9 @@ import { Provider } from "react-redux";
 import { wrapper, store } from "../store/store"
 
 // component
-import Footer from "../components/Footer/Footer";
-import NavigationBar from "../components/NavigationBar/NavigationBar";
 import Dialog from '../hoc/Popup/Dialog';
+import NavigationBar from '../components/Layout/NavigationBar/NavigationBar';
+import Footer from '../components/Layout/Footer/Footer';
 
 
 

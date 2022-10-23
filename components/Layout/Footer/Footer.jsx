@@ -1,4 +1,4 @@
-import { APP_LOGO, LIGHT_GREY_FONT, PRIMARY_COLOUR } from "../../utils/Environment";
+import { APP_LOGO, LIGHT_GREY_FONT, PRIMARY_COLOUR } from "../../../utils/Environment";
 import Link from "next/link";
 
 const Footer = () => {

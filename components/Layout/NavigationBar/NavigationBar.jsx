@@ -12,9 +12,9 @@ import {
   USER_ICON,
   SEARCH_ICON,
   WHITE,
-} from "../../utils/Environment";
+} from "../../../utils/Environment";
 
-import FormInputs from "../Input";
+import FormInputs from "../../Input";
 
 const NavigationBar = () => {
   const [sidebarActive, setSidebarActive] = useState(false);

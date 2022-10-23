@@ -80,3 +80,7 @@ then
 else
     echo "script execution terminated ..."
 fi
+
+sleep 2
+clear
+exit()
