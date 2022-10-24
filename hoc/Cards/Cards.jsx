@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { BLACK, BLUE, BOX_SHADOW_C3, BOX_SHADOW_LIGHT, WHITE, WHITE_BCK } from "../../utils/Environment";
 import { INR_STYLE_HELPER } from "../../utils/Helper";
 
 const Cards = ({ type, data, index, variant, onClickFn}) => {
+  const router = useRouter()
   switch (type) {
     case "Hero":
       return (
@@ -10,14 +12,10 @@ const Cards = ({ type, data, index, variant, onClickFn}) => {
           <div className={`product-card ${index % 2 === 0 && "alter-product"}`}>
             <div className="col">
               <h2>{data["name"]}</h2>
-              <h3>
-                ₹ {INR_STYLE_HELPER(data["price"]["sellingPrice"])}
-                <span>MRP {INR_STYLE_HELPER(data["price"]["mrp"])}</span>
-              </h3>
-
+              <h3>From ₹{INR_STYLE_HELPER(data["price"]["mrp"])}‡</h3>
               <h4 className="d-flex">
                 {data["color"] &&
-                  data["color"].map((i, index) => {
+                  data["color"].slice(0,5).map((i, index) => {
                     return (
                       <span
                         key={index}
@@ -28,7 +26,7 @@ const Cards = ({ type, data, index, variant, onClickFn}) => {
                   })}
               </h4>
 
-              <button>Buy Now</button>
+              <button onClick={() => router.push(data.slug)}>Buy Now</button>
             </div>
             <div className="col">
               <img
@@ -68,9 +66,7 @@ const Cards = ({ type, data, index, variant, onClickFn}) => {
               margin-bottom: 1rem;
             }
             .col h3 {
-              font-weight: 600;
-              font-size: 32px;
-              line-height: 39px;
+              margin-bottom: .5rem;
             }
             .col h3 span {
               font-weight: 600;
@@ -125,13 +121,6 @@ const Cards = ({ type, data, index, variant, onClickFn}) => {
               .col h2 {
                 font-size: 24px;
                 line-height: 29px;
-              }
-              .col h3 {
-                font-size: 20px;
-                line-height: 19px;
-              }
-              .col h3 span {
-                font-size: 12px;
               }
               .col button {
                 width: 110px;

@@ -13,7 +13,7 @@ export const close_dialog = (data) => {
 }
 
 // watcher -> worker
-export function* open_dialog_watcher(){
+export function* dialog_watcher(){
     yield takeEvery(OPEN_DIALOG, open_dialog_worker)
     yield takeEvery(CLOSE_DIALOG, close_dialog_worker)
 }

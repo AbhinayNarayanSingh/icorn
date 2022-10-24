@@ -9,12 +9,14 @@ import { wrapper, store } from "../store/store"
 import Dialog from '../hoc/Popup/Dialog';
 import NavigationBar from '../components/Layout/NavigationBar/NavigationBar';
 import Footer from '../components/Layout/Footer/Footer';
+import Loader from '../hoc/Loader/Loader';
 
 
 
 
 function MyApp({ Component, pageProps }) {
   return <Provider store={store}>
+    <Loader />
     <Dialog />
     <NavigationBar></NavigationBar>
     <Component {...pageProps} />

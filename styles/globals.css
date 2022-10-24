@@ -226,3 +226,37 @@ input {
 .f-w-600{
   font-weight: 600;
 }
+
+
+
+#apple {
+  width: 150px;
+  height: 150px;
+}
+#apple #apple-path {
+  fill: rgba(0, 0, 0, 0.911);
+  stroke: url(#linear);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 572;
+  stroke-dashoffset: 572;
+  -webkit-animation: write 5s linear forwards;
+          animation: write 5s linear forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes write {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes write {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

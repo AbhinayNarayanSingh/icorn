@@ -1,5 +1,5 @@
 import { user, varient, category, product, productAccessories, productImages, products, relatedProducts, bag, orders } from "../staticState"
-import { OPEN_DIALOG_WORKER, CLOSE_DIALOG_WORKER } from "../constants"
+import { OPEN_DIALOG_WORKER, CLOSE_DIALOG_WORKER, OPEN_LOADER_WORKER, CLOSE_LOADER_WORKER } from "../constants"
 
 export const initialState = {
     category: category,
@@ -11,8 +11,9 @@ export const initialState = {
     bag: bag,
     orders: orders,
     varients: varient,
-    dialog: {},
     user : user,
+    dialog: {},
+    loader: {},
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -25,14 +26,28 @@ const rootReducer = (state = initialState, action) => {
                     props: action.payload
                 }
             }
-        case CLOSE_DIALOG_WORKER:
-            return {
-                ...state,
-                dialog: {
-                    open: false
+            case CLOSE_DIALOG_WORKER:
+                return {
+                    ...state,
+                    dialog: {
+                        open: false
+                    }
                 }
+            case OPEN_LOADER_WORKER:
+                return {
+                    ...state,
+                    loader: {
+                        open: true,
+                    }
+                }
+            case CLOSE_LOADER_WORKER:
+                return {
+                    ...state,
+                    loader: {
+                        open: false,
+                    }
             }
-
+                
         default: {
             return { ...state }
         }

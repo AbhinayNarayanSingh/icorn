@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="worked on saga & define folder structure"
+title="worked on implimentation of dialog & loader"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`

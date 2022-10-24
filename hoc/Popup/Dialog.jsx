@@ -1,12 +1,17 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { DIALOG_CROSS_ICON, WHITE } from "../../utils/Environment";
-import Alert from "./Alert/Alert";
-import Address from "./Address/Address";
+
+// Actions
 import { close_dialog } from "../../store/saga/Dialog";
+
+// DialogComponents
+import Alert from "./Alert/Alert";
+import ManageAddressDialog from "./Profile/ManageAddressDialog/ManageAddressDialog";
 
 const Dialog = () => {
   const { open, props } = useSelector((state) => state.dialog);
+  const { open: isLoaderActive } = useSelector((state) => state.loader);
   const dispatch = useDispatch();
 
   const disableScroll = () => document.body.style.overflow = "hidden"
@@ -25,7 +30,7 @@ const Dialog = () => {
       dialogContent = <Alert/>;
       break;
     case "ADDRESS_FORM":
-      dialogContent = <Address/>;
+      dialogContent = <ManageAddressDialog/>;
       break;
 
   }
@@ -80,6 +85,15 @@ const Dialog = () => {
               right: 1rem;
               top: 1rem;
               z-index: 99;
+            }
+            @media only screen and (max-width: 600px) {
+              .dialog-content{
+                min-width: calc(100vw - 3rem);
+                max-width: 100vw;
+                max-height: 70vh;
+                height: 81vh;
+                padding: 1rem;
+              } 
             }
           `}</style>
         </div>
