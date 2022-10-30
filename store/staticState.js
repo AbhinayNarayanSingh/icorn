@@ -7,7 +7,7 @@ export const category = [
     {
         icon: "/img/category_icon/shop_iphone.svg",
         name: "iPhone",
-        slug: "/iphone/"
+        slug: "/iphone/",
     },
     {
         icon: "/img/category_icon/shop_ipad.svg",
@@ -32,12 +32,50 @@ export const category = [
     {
         icon: "/img/category_icon/home_accessories_light.svg",
         name: "Accessories",
-        slug: "/accessories/"
+        slug: "/accessories/",
+        _id: "111",
+        subCat: [
+            {
+                icon: "/img/category_icon/mac_shop.svg",
+                name: "Mac",
+                slug: "/mac/"
+            },
+            {
+                icon: "/img/category_icon/shop_iphone.svg",
+                name: "iPhone",
+                slug: "/iphone/",
+            },
+            {
+                icon: "/img/category_icon/shop_ipad.svg",
+                name: "iPad",
+                slug: "/ipad/"
+            },
+            {
+                icon: "/img/category_icon/airpods.svg",
+                name: "AirPods",
+                slug: "/airpods/"
+            },
+            {
+                icon: "/img/category_icon/watch_nav_shop_watch.svg",
+                name: "Watch",
+                slug: "/watch/"
+            },
+            {
+                icon: "/img/category_icon/apple_tv.svg",
+                name: "TV & Home",
+                slug: "/tv-and-home/"
+            },
+        ]
     },
     {
         icon: "/img/category_icon/support.svg",
         name: "iSupport",
-        slug: "/isupport/"
+        slug: "/admin/support/"
+    },
+    {
+        icon: "/img/category_icon/admin.svg",
+        name: "Admin",
+        slug: "/admin/dashboard/"
     },
 ]
 
@@ -56,65 +94,6 @@ export const products = [
         },
         "images": "https://media.croma.com/image/upload/v1647427408/Croma%20Assets/Computers%20Peripherals/Laptop/Images/245235_hcqtej.png",
         "color": ['#2e3642', '#f0e5d2', '#7d7e80', '#e3e4e6']
-    },
-    {
-        "brand": "Apple",
-        "category": "iPhone",
-        "slug": "iphone/iphone-13-pro/MLVF3H",
-        "name": "Apple iPhone 13 Pro",
-        "model": "MLVF3H",
-        "price": {
-            "currencyIso": "INR",
-            "discount": 5910,
-            "mrp": 129900,
-            "sellingPrice": 123990,
-        },
-        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
-        "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
-    },
-    {
-        "brand": "Apple",
-        "category": "iPad",
-        "slug": "ipad",
-        "name": "Apple iPad Pro",
-        "model": "MHNG3HN/A",
-        "price": {
-            "currencyIso": "INR",
-            "discount": 19910,
-            "mrp": 239900,
-            "sellingPrice": 219990,
-        },
-        "images": "https://media.croma.com/image/upload/v1619272147/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/234301_9_vxz8o4.png",
-        "color": ['#eaebed', '#7f8084']
-    },
-    {
-        "brand": "Apple",
-        "category": "Watch",
-        "slug": "watch",
-        "name": "Apple Watch Series 7",
-        "model": "MKN53HN/A",
-        "price": {
-            "currencyIso": "INR",
-            "discount": 3000,
-            "mrp": 44900,
-            "sellingPrice": 41900,
-        },
-        "images": "https://media.croma.com/image/upload/v1633696522/Croma%20Assets/Wearable/Wearable%20Devices/Images/244886_ipofha.png",
-        "color": ['#1a2531', '#ded6d1', '#35382c', '#6d8dba', '#aa393b', '#3e3a35', '#e6e6e6', '#e5caad', '#4c4845', '#d1cdca']
-    },
-    {
-        "brand": "Apple",
-        "category": "AirPods",
-        "slug": "airpods",
-        "name": "Apple AirPods Pro ",
-        "model": "MLWK3HN/A",
-        "price": {
-            "currencyIso": "INR",
-            "discount": 4801,
-            "mrp": 26300,
-            "sellingPrice": 21499,
-        },
-        "images": "https://media.croma.com/image/upload/v1651838583/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/251322_qd8g3s.png",
     },
     {
         "brand": "Apple",
@@ -448,3 +427,96 @@ export const varient = {
         }
     ],
 }
+
+export const hero = [
+    {
+        "theme" : "dark",
+        "cover" : "https://www.apple.com/v/mac/home/br/images/overview/hero/macbook_pro_13__e3r46kd69eoi_large.jpg",
+        "name" : "MacBook Pro",
+        "catchLine": "",
+        "detail" : "Pro anywhere.",
+        "url" : "",
+        "BackgroundColorCode" : "#000000"
+    },
+    {
+        "theme" : "light",
+        "cover" : "https://www.apple.com/v/airpods/s/images/overview/airpods_max__f265q4g4ddym_large.png",
+        "name" : "AirPods Pro",
+        "catchLine": "3rd generation",
+        "detail" : "Rebuilt from the sound up.",
+        "url" : "",
+        "BackgroundColorCode" : "#FFFFFF"
+    },
+    {
+        "theme" : "light",
+        "cover" : "https://www.apple.com/v/home/au/images/promos/apple-watch-ultra/promo_apple_watch_ultra__gnsqulvdc4a6_large.jpg",
+        "name" : "Watch",
+        "catchLine": "Ultra",
+        "detail" : "Adventure awaits.",
+        "url" : "",
+        "BackgroundColorCode" : "#FBFAFD"
+    },
+    {
+        "theme" : "dark",
+        "cover" : "https://www.apple.com/v/home/au/images/heroes/iphone-14-pro/hero_iphone14pro__e5xbgo5ffhg2_largetall.jpg",
+        "name" : "iPhone 14 Pro",
+        "catchLine": "",
+        "detail" : "Pro. Beyond.",
+        "url" : "",
+        "BackgroundColorCode" : "#000000"
+    },
+    {
+        "theme" : "light",
+        "cover" : "https://www.apple.com/v/home/au/images/promos/apple-tv-4k/promo_tv4k__d33vaocbii82_large.jpg",
+        "name" : "tv 4K",
+        "catchLine": "",
+        "detail" : "The Apple experience. Cinematic in every sense.",
+        "url" : "",
+        "BackgroundColorCode" : "#F5F4F7"
+    },
+    {
+        "theme" : "light",
+        "cover" : "https://www.apple.com/v/home/au/images/promos/iphone-14/promo_iphone14__b9mz75yhy02u_large.jpg",
+        "name" : "iPhone 14",
+        "catchLine": "",
+        "detail" : "Big and bigger.",
+        "url" : "",
+        "BackgroundColorCode" : "#FBFAFD"
+    },
+    {
+        "theme" : "dark",
+        "cover" : "https://www.apple.com/v/home/au/images/heroes/ipad-pro/hero_ipadpro__bpt7a9d8sh42_largetall.jpg",
+        "name" : "iPad Pro",
+        "catchLine": "",
+        "detail" : "Supercharged by M2.",
+        "url" : "",
+        "BackgroundColorCode" : "#000000"
+    },
+    {
+        "theme" : "light",
+        "cover" : "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-touch-id-blue-gallery-2?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1617741434000",
+        "name" : "iMac",
+        "catchLine": "",
+        "detail" : "Ready, set up, go.",
+        "url" : "",
+        "BackgroundColorCode" : "#FFFFFF"
+    },
+    {
+        "theme" : "light",
+        "cover" : "https://www.apple.com/v/home/au/images/heroes/ipad/hero_ipad__rh99l6c3yuyy_largetall.jpg",
+        "name" : "iPad",
+        "catchLine": "",
+        "detail" : "Lovable. Drawable. Magical.",
+        "url" : "",
+        "BackgroundColorCode" : "#FFFFFF"
+    },
+    {
+        "theme" : "light",
+        "cover" : "https://www.apple.com/v/watch/az/images/overview/se/tile-watch-se__knji2d25x8qe_large.jpg",
+        "name" : "Watch",
+        "catchLine": "se",
+        "detail" : "A great deal to love.",
+        "url" : "",
+        "BackgroundColorCode" : "#F5F4F7"
+    },
+]

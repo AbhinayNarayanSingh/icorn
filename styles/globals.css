@@ -202,7 +202,7 @@ a {
   color: #0066cc;
 }
 
-input {
+input, select, option {
   padding: 1rem;
   font-size: 1rem;
 

@@ -1,4 +1,4 @@
-import { user, varient, category, product, productAccessories, productImages, products, relatedProducts, bag, orders } from "../staticState"
+import { user, varient, category, product, productAccessories, productImages, products, relatedProducts, bag, orders, hero } from "../staticState"
 import { OPEN_DIALOG_WORKER, CLOSE_DIALOG_WORKER, OPEN_LOADER_WORKER, CLOSE_LOADER_WORKER } from "../constants"
 
 export const initialState = {
@@ -12,6 +12,7 @@ export const initialState = {
     orders: orders,
     varients: varient,
     user : user,
+    hero: hero,
     dialog: {},
     loader: {},
 }

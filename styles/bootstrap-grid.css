@@ -666,3 +666,7 @@
 .w-100 {
   width: 100% !important;
 }
+.row-gap-1{
+  display: flex;
+  gap: 1rem;
+}

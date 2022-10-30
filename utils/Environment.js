@@ -33,3 +33,8 @@ export const RUPAY_ICON = ["/img/payment/Rupay.svg", "Rupay"]
 // css box shadow
 export const BOX_SHADOW_LIGHT = "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
 export const BOX_SHADOW_C3 = "inset 1px 1px 4px rgba(0, 0, 0, 0.1)"
+
+// btn icon
+export const ROW_MOVE_DOWN_ICON = ["/img/button_icon/MoveDown.svg", "MoveDown"]
+export const ROW_MOVE_UP_ICON = ["/img/button_icon/MoveUp.svg", "MoveUp"]
+export const ROW_REMOVE_ICON = ["/img/button_icon/RowRemove.svg", "RowRemove"]

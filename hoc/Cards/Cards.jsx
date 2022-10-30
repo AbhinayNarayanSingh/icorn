@@ -136,6 +136,137 @@ const Cards = ({ type, data, index, variant, onClickFn}) => {
         </div>
       );
 
+    case "Category":
+      return (
+        <div>
+          <div className={`product-card ${index % 2 === 0 && "alter-product"}`}>
+            <div className="col">
+              <h2>{data["name"]}</h2>
+              <h3>From ₹{INR_STYLE_HELPER(data["price"]["mrp"])}‡</h3>
+              <h4 className="d-flex">
+                {data["color"] &&
+                  data["color"].slice(0,5).map((i, index) => {
+                    return (
+                      <span
+                        key={index}
+                        style={{ background: `${i}` }}
+                        className="product-color"
+                      ></span>
+                    );
+                  })}
+              </h4>
+
+              <button onClick={() => router.push(data.slug)}>Buy Now</button>
+            </div>
+            <div className="col">
+              <img
+                src={data["images"]}
+                alt={data["name"]}
+                className="product-image"
+              />
+            </div>
+          </div>
+          <style jsx>{`
+            .product-card {
+              display: flex;
+              justify-content: center;
+              max-width: 1400px;
+
+              height: 500px;
+              background: ${WHITE};
+              margin: 2rem auto;
+              padding: 1.5rem 0;
+            }
+
+            .col {
+              width: 45%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            }
+            .product-image {
+              height: 350px;
+            }
+            .col h2 {
+              font-weight: 600;
+              font-size: 40px;
+              line-height: 48px;
+              text-align: center;
+              margin-bottom: 1rem;
+            }
+            .col h3 {
+              margin-bottom: .5rem;
+            }
+            .col h3 span {
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 22px;
+              text-decoration-line: line-through;
+              padding-left: 0.5rem;
+
+              color: rgba(0, 0, 0, 0.8);
+            }
+            .col button {
+              background: ${BLUE};
+              border-radius: 35px;
+              width: 144px;
+              height: 44px;
+              color: ${WHITE};
+
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              margin-top: 2rem;
+            }
+            .alter-product {
+              flex-direction: row-reverse;
+            }
+            .product-color {
+              width: 18px;
+              height: 18px;
+              display: block;
+              border-radius: 50%;
+              margin: 1rem 0.5rem;
+              cursor: pointer;
+              box-shadow: ${BOX_SHADOW_C3};
+            }
+
+            @media only screen and (max-width: 600px) {
+              .product-card {
+                flex-direction: column;
+
+                height: 450px;
+                margin: 2rem 0;
+              }
+
+              .col {
+                width: 100%;
+              }
+              .product-image {
+                margin-top: 2rem;
+                height: 250px;
+              }
+              .col h2 {
+                font-size: 24px;
+                line-height: 29px;
+              }
+              .col button {
+                width: 110px;
+                height: 30px;
+
+                margin-top: 1rem;
+
+                font-weight: 600;
+                font-size: 14px;
+              }
+            }
+          `}</style>
+        </div>
+      );
+
+
     case "Bag":
       return (
         <>
