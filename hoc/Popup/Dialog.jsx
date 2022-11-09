@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { DIALOG_CROSS_ICON, WHITE } from "../../utils/Environment";
+import { DIALOG_CROSS_ICON, WHITE } from "../../Environment";
 
 // Actions
 import { close_dialog } from "../../store/saga/Dialog";

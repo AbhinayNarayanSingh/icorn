@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import {
   BLUE,
   BOX_SHADOW_C3,
+  LEFT_ARROW_ICON,
+  RIGHT_ARROW_ICON,
   WHITE,
-} from "../../../utils/Environment";
+} from "../../../Environment";
 import { INR_STYLE_HELPER } from "../../../utils/Helper";
 
 const Model = () => {
@@ -15,7 +17,7 @@ const Model = () => {
   const voidPrice = {addonPrice : 0}
   const voidModelPrice = {addonPrice : base}
 
-  const [selectedProductImage, setSelectedProductImage] = useState(productImages[0]);
+  const [selectedProductImage, setSelectedProductImage] = useState(0);
   const [finalPrice, setFinalPrice] = useState(base)
 
   
@@ -67,13 +69,22 @@ const Model = () => {
       <div className="container-xxl">
         <div className="row align-items-start justify-content-between product-page">
 
-          <div className="col-12 col-md-6 product-image-container">
+          <div className="col-12 col-md-7 product-image-container">
             <div>
               <div className="main-product-image">
-                <img src={selectedProductImage} alt={product["name"]} />
+                <img src={productImages[selectedProductImage]} alt={product["name"]} />
               </div>
 
-              <div className="product-images hide-scrollbar">
+              <div className="image-change-btn">
+                <button onClick={() => setSelectedProductImage((state) => state - 1)} disabled={selectedProductImage == 0}>
+                  <img src={LEFT_ARROW_ICON[0]} alt={LEFT_ARROW_ICON[1]} />
+                </button>
+                <button onClick={() => setSelectedProductImage((state) => state + 1)} disabled={selectedProductImage == productImages.length -1}>
+                  <img src={RIGHT_ARROW_ICON[0]} alt={RIGHT_ARROW_ICON[1]} />
+                </button>
+              </div>
+
+              {/* <div className="product-images hide-scrollbar">
                 {productImages.map((i, index) => {
                   return (
                     <img
@@ -86,11 +97,11 @@ const Model = () => {
                     />
                   );
                 })}
-              </div>
+              </div> */}
             </div>
           </div>
 
-          <div className="col-12 col-md-5 product-details-container">
+          <div className="col-12 col-md-4 product-details-container">
 
             <div className="product-details">
               <div>
@@ -220,7 +231,7 @@ const Model = () => {
               )}
 
 
-              <div className="action-btn justify-content-around row mt-2">
+              <div className="action-btn row-gap-1 mt-2">
                 <button className="secondary-btn w-48">Add to Bag</button>
                 <button className="primary-btn w-48">Buy Now</button>
               </div>
@@ -270,7 +281,9 @@ const Model = () => {
             justify-content: center;
             align-items: center;
             padding: 3rem;
-            margin-bottom: 1rem;
+
+            background: #F5F4F7;
+            border-radius: 1rem;
           }
           .product-image-container .main-product-image img {
             width: 100%;
@@ -394,6 +407,22 @@ const Model = () => {
           }
           .product-details .value {
             line-height: 1.35rem;
+          }
+          .image-change-btn{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+          }
+          .image-change-btn button {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 100%;
+            margin: 1rem;
           }
 
           @media only screen and (min-width: 600px) {

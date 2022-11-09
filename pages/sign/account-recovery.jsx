@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import FormInputs from "../../components/Input";
-import { BLACK, BLUE } from "../../utils/Environment";
+import { BLACK, BLUE } from "../../Environment";
 
 const Sign = () => {
   const [activePage, setActivePage] = useState("accountRecovery");

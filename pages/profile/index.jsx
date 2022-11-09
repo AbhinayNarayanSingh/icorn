@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { BLUE, PRIMARY_COLOUR, USER_AVATAR, WHITE } from '../../utils/Environment'
+import { BLUE, PRIMARY_COLOUR, USER_AVATAR, WHITE } from '../../Environment'
 
 // sub-components src /components/Profile
 import ManageAddresses from '../../components/Profile/Manage-Addresses'

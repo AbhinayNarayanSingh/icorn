@@ -12,7 +12,7 @@ import {
   USER_ICON,
   SEARCH_ICON,
   WHITE,
-} from "../../../utils/Environment";
+} from "../../../Environment";
 
 import FormInputs from "../../Input";
 

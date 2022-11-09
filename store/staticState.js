@@ -180,14 +180,9 @@ export const product = {
 
 export const productImages = [
     "https://media.croma.com/image/upload/v1631776566/Croma%20Assets/Communication/Mobiles/Images/243463_wwwi8s.png",
-    "https://media.croma.com/image/upload/v1634017335/Croma%20Assets/Communication/Mobiles/Images/243463_1_nfxdhu.png",
-    "https://media.croma.com/image/upload/v1635844291/Croma%20Assets/Communication/Mobiles/Images/243463_2_kiyp1i.png",
     "https://media.croma.com/image/upload/v1631776563/Croma%20Assets/Communication/Mobiles/Images/243463_3_pau5he.png",
     "https://media.croma.com/image/upload/v1631776562/Croma%20Assets/Communication/Mobiles/Images/243463_6_qepfxn.png",
     "https://media.croma.com/image/upload/v1631776565/Croma%20Assets/Communication/Mobiles/Images/243463_7_zzy5gw.png",
-    "https://media.croma.com/image/upload/v1631776561/Croma%20Assets/Communication/Mobiles/Images/243463_8_q8xwks.png",
-    "https://media.croma.com/image/upload/v1631776569/Croma%20Assets/Communication/Mobiles/Images/243463_9_wvszxc.png",
-    "https://media.croma.com/image/upload/v1631776568/Croma%20Assets/Communication/Mobiles/Images/243463_10_inn3ck.png",
 ]
 
 export const productAccessories = [
@@ -428,95 +423,4 @@ export const varient = {
     ],
 }
 
-export const hero = [
-    {
-        "theme" : "dark",
-        "cover" : "https://www.apple.com/v/mac/home/br/images/overview/hero/macbook_pro_13__e3r46kd69eoi_large.jpg",
-        "name" : "MacBook Pro",
-        "catchLine": "",
-        "detail" : "Pro anywhere.",
-        "url" : "",
-        "BackgroundColorCode" : "#000000"
-    },
-    {
-        "theme" : "light",
-        "cover" : "https://www.apple.com/v/airpods/s/images/overview/airpods_max__f265q4g4ddym_large.png",
-        "name" : "AirPods Pro",
-        "catchLine": "3rd generation",
-        "detail" : "Rebuilt from the sound up.",
-        "url" : "",
-        "BackgroundColorCode" : "#FFFFFF"
-    },
-    {
-        "theme" : "light",
-        "cover" : "https://www.apple.com/v/home/au/images/promos/apple-watch-ultra/promo_apple_watch_ultra__gnsqulvdc4a6_large.jpg",
-        "name" : "Watch",
-        "catchLine": "Ultra",
-        "detail" : "Adventure awaits.",
-        "url" : "",
-        "BackgroundColorCode" : "#FBFAFD"
-    },
-    {
-        "theme" : "dark",
-        "cover" : "https://www.apple.com/v/home/au/images/heroes/iphone-14-pro/hero_iphone14pro__e5xbgo5ffhg2_largetall.jpg",
-        "name" : "iPhone 14 Pro",
-        "catchLine": "",
-        "detail" : "Pro. Beyond.",
-        "url" : "",
-        "BackgroundColorCode" : "#000000"
-    },
-    {
-        "theme" : "light",
-        "cover" : "https://www.apple.com/v/home/au/images/promos/apple-tv-4k/promo_tv4k__d33vaocbii82_large.jpg",
-        "name" : "tv 4K",
-        "catchLine": "",
-        "detail" : "The Apple experience. Cinematic in every sense.",
-        "url" : "",
-        "BackgroundColorCode" : "#F5F4F7"
-    },
-    {
-        "theme" : "light",
-        "cover" : "https://www.apple.com/v/home/au/images/promos/iphone-14/promo_iphone14__b9mz75yhy02u_large.jpg",
-        "name" : "iPhone 14",
-        "catchLine": "",
-        "detail" : "Big and bigger.",
-        "url" : "",
-        "BackgroundColorCode" : "#FBFAFD"
-    },
-    {
-        "theme" : "dark",
-        "cover" : "https://www.apple.com/v/home/au/images/heroes/ipad-pro/hero_ipadpro__bpt7a9d8sh42_largetall.jpg",
-        "name" : "iPad Pro",
-        "catchLine": "",
-        "detail" : "Supercharged by M2.",
-        "url" : "",
-        "BackgroundColorCode" : "#000000"
-    },
-    {
-        "theme" : "light",
-        "cover" : "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-touch-id-blue-gallery-2?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1617741434000",
-        "name" : "iMac",
-        "catchLine": "",
-        "detail" : "Ready, set up, go.",
-        "url" : "",
-        "BackgroundColorCode" : "#FFFFFF"
-    },
-    {
-        "theme" : "light",
-        "cover" : "https://www.apple.com/v/home/au/images/heroes/ipad/hero_ipad__rh99l6c3yuyy_largetall.jpg",
-        "name" : "iPad",
-        "catchLine": "",
-        "detail" : "Lovable. Drawable. Magical.",
-        "url" : "",
-        "BackgroundColorCode" : "#FFFFFF"
-    },
-    {
-        "theme" : "light",
-        "cover" : "https://www.apple.com/v/watch/az/images/overview/se/tile-watch-se__knji2d25x8qe_large.jpg",
-        "name" : "Watch",
-        "catchLine": "se",
-        "detail" : "A great deal to love.",
-        "url" : "",
-        "BackgroundColorCode" : "#F5F4F7"
-    },
-]
+export const hero = []

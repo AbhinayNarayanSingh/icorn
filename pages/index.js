@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { WHITE_BCK } from "../utils/Environment";
+import { WHITE_BCK } from "../Environment";
 import Cards from "../hoc/Cards/Cards"
 
 

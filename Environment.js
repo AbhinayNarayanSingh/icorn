@@ -24,6 +24,8 @@ export const BOX_ICON = ["/img/icons/box.svg", "box"]
 export const RADIO_CHECKED_ICON = ["/img/icons/radio-selected.svg", "radio"]
 export const RADIO_ICON = ["/img/icons/radio.svg", "radio"]
 export const DIALOG_CROSS_ICON = ["/img/icons/dialog_cross.svg", "CLOSE"]
+export const LEFT_ARROW_ICON = ["/img/icons/arrow-left.svg", "PREVIOUS"]
+export const RIGHT_ARROW_ICON = ["/img/icons/arrow-right.svg", "NEXT"]
 
 //      img/payments
 export const VISA_ICON = ["/img/payment/Visa.svg", "visa"]

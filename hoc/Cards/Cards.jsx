@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { BLACK, BLUE, BOX_SHADOW_C3, BOX_SHADOW_LIGHT, WHITE, WHITE_BCK } from "../../utils/Environment";
+import { BLACK, BLUE, BOX_SHADOW_C3, BOX_SHADOW_LIGHT, WHITE, WHITE_BCK } from "../../Environment";
 import { INR_STYLE_HELPER } from "../../utils/Helper";
 
 const Cards = ({ type, data, index, variant, onClickFn}) => {

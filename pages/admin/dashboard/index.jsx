@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import ProductForm from '../../../components/Admin/ProductForm'
 import Products from '../../../components/Admin/Products'
-import { BLUE, PRIMARY_COLOUR } from '../../../utils/Environment'
+import { BLUE, PRIMARY_COLOUR } from '../../../Environment'
 
 // sub-components src /components/Profile
 

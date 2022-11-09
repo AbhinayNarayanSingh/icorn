@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { WHITE } from "../../utils/Environment";
+import { WHITE } from "../../Environment";
 
 const FormInputs = ({
   inputCaseType,

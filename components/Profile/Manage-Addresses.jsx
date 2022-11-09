@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux"
 import { open_dialog } from "../../store/saga/Dialog"
 import { open_loader } from "../../store/saga/Loader"
-import {BOX_SHADOW_LIGHT, WHITE_BCK } from "../../utils/Environment"
+import {BOX_SHADOW_LIGHT, WHITE_BCK } from "../../Environment"
 
 const ManageAddresses = () => {
   const dispatch = useDispatch()

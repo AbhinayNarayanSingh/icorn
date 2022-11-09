@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useFieldArray, useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
-import { ROW_MOVE_DOWN_ICON, ROW_MOVE_UP_ICON, ROW_REMOVE_ICON } from '../../utils/Environment';
+import { ROW_MOVE_DOWN_ICON, ROW_MOVE_UP_ICON, ROW_REMOVE_ICON } from '../../Environment';
 import FormInputs from '../Input';
 
 

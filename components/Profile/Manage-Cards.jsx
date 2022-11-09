@@ -1,4 +1,4 @@
-import {BOX_SHADOW_LIGHT, MASTERCARD_ICON, RUPAY_ICON, VISA_ICON, WHITE_BCK } from "../../utils/Environment"
+import {BOX_SHADOW_LIGHT, MASTERCARD_ICON, RUPAY_ICON, VISA_ICON, WHITE_BCK } from "../../Environment"
 
 const ManageCards = () => {
 
