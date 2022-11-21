@@ -68,7 +68,7 @@ const Sign = () => {
   ];
 
   return (
-    <div className="container-xxxl d-flex align-items-center justify-content-center flex-column min-h-80vh mt-2">
+    <div className="container-xxxl d-flex align-items-center justify-content-center flex-column min-h mt-2">
       <h3>iCorn ID</h3>
 
       {activePage === "signup" && <SignUp setActivePage={setActivePage}/>}

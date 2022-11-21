@@ -15,7 +15,7 @@ branch="main"
 
 prCommentResolverCommit=2
 
-title="worked on product detail page image action button & move to root enviroment.js file from utils"
+title="laptop crashed"
 description=""
 developer="Abhinay Narayan Singh"
 currentdate=`date +%d-%b-%Y`

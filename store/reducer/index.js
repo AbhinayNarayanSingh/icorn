@@ -15,6 +15,7 @@ export const initialState = {
     hero: hero,
     dialog: {},
     loader: {},
+    orders : orders
 }
 
 const rootReducer = (state = initialState, action) => {

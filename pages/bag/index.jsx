@@ -8,7 +8,7 @@ const Bag = () => {
 
   return (
     <div className="container-xxl">
-      <div className="col-12  col-xl-8 m-auto min-h-80vh">
+      <div className="col-12  col-xl-8 m-auto min-h">
         <h2 className="bag-total">
           Your bag total is ₹{INR_STYLE_HELPER(bagTotal)}
         </h2>

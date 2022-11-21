@@ -10,7 +10,7 @@ const Orders = () => {
     <div>
         <h2 className="f-w-600 mb-1">Your Orders</h2>
 
-        {orders.map((item, index) => <Cards type={"Bag"} data={item} index={index} key={index} variant={true}/>)}
+        {orders.map((item, index) => <Cards type={"Order"} data={item} index={index} key={index} variant={true}/>)}
     </div>
   )
 }

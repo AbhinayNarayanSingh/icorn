@@ -22,7 +22,7 @@ const Dashboard = () => {
 
 
   return (
-    <div className="min-h-80vh mt-2">
+    <div className="min-h mt-2">
       <div className="row container-xxl">
         <div className="dashboard-sections-header col-12 col-md-2">
             {dashboardSections.map((i, index) => 

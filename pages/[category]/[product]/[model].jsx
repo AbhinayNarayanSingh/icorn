@@ -70,7 +70,6 @@ const Model = () => {
         <div className="row align-items-start justify-content-between product-page">
 
           <div className="col-12 col-md-7 product-image-container">
-            <div>
               <div className="main-product-image">
                 <img src={productImages[selectedProductImage]} alt={product["name"]} />
               </div>
@@ -83,22 +82,6 @@ const Model = () => {
                   <img src={RIGHT_ARROW_ICON[0]} alt={RIGHT_ARROW_ICON[1]} />
                 </button>
               </div>
-
-              {/* <div className="product-images hide-scrollbar">
-                {productImages.map((i, index) => {
-                  return (
-                    <img
-                      src={i}
-                      alt={product["name"]}
-                      key={index}
-                      onClick={() =>
-                        setSelectedProductImage(productImages[index])
-                      }
-                    />
-                  );
-                })}
-              </div> */}
-            </div>
           </div>
 
           <div className="col-12 col-md-4 product-details-container">
@@ -275,6 +258,7 @@ const Model = () => {
             flex-direction: column;
             justify-content: center;
             background: ${WHITE};
+            position: relative;
           }
           .product-image-container .main-product-image {
             display: flex;
@@ -287,20 +271,6 @@ const Model = () => {
           }
           .product-image-container .main-product-image img {
             width: 100%;
-          }
-          .product-image-container .product-images {
-            overflow: scroll;
-            display: flex;
-            margin: 0 0 1rem;
-          }
-          .product-image-container .product-images img {
-            height: 70px;
-            width: 70px;
-            padding: 1rem;
-            margin-right: 1rem;
-          }
-          .product-image-container .product-images img:nth-last-of-type(1) {
-            margin-right: 0;
           }
 
           // col-2  -------------------------------------------------------------------------
@@ -449,12 +419,6 @@ const Model = () => {
             .product-details span {
               font-size: 15px;
               line-height: 20px;
-            }
-            .product-image-container .product-images img:nth-of-type(1) {
-              margin-left: 1rem;
-            }
-            .product-image-container .product-images img:nth-last-of-type(1) {
-              margin-right: 1rem;
             }
             .product-image-container .main-product-image {
               padding: 3rem 1rem;

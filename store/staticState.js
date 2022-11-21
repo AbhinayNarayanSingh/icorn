@@ -240,33 +240,42 @@ export const relatedProducts = [
 
 export const orders = [
     {
-        "brand": "Apple",
+        "orderNumber" : "403-4481972-2195557",
+
         "category": "iPhone",
-        "slug": "iphone/iphone-13-pro/MLVF3H",
         "name": "Apple iPhone 13 Pro",
-        "model": "MLVF3H",
-        "price": {
-            "currencyIso": "INR",
-            "discount": 5910,
-            "mrp": 129900,
-            "sellingPrice": 123990,
-        },
         "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
-        "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
-    }, {
-        "brand": "Apple",
-        "category": "iPhone",
-        "slug": "iphone/iphone-13-pro/MLVF3H",
-        "name": "Apple iPhone 13 Pro",
-        "model": "MLVF3H",
-        "price": {
-            "currencyIso": "INR",
-            "discount": 5910,
-            "mrp": 129900,
-            "sellingPrice": 123990,
+        "shipping" : 0,
+        "tax" : 999,
+        "total" : 99999,
+
+        "shippingAddress" : {
+            "firstname" : "Abhinay Narayan",
+            "lastname" : "Singh",
+            "address" : "Aashirvad Niketan, Seer Goverdhanpur, Near Chaura Mata Mandir, Banaras Hindu University",
+            "city" : "Varanasi",
+            "state" : "Uttar Pradesh",
+            "country" : "India",
+            "postalCode" : "221005",
+            "phoneNumber": "8368380854"
         },
-        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
-        "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
+        "billingAddress" : {
+            "firstname" : "Abhinay Narayan",
+            "lastname" : "Singh",
+            "address" : "Aashirvad Niketan, Seer Goverdhanpur, Near Chaura Mata Mandir, Banaras Hindu University",
+            "city" : "Varanasi",
+            "state" : "Uttar Pradesh",
+            "country" : "India",
+            "postalCode" : "221005",
+            "phoneNumber": "8368380854"
+        },
+        
+        "paymentMethod" : "BHIM UPI",
+        "rewardPoint" : 100,
+
+        "carrier" : {
+            "expectedDeliveryDate" : "Wed 17 Aug"
+        }
     }
 ]
 

@@ -31,7 +31,7 @@ const Profile = () => {
 
 
   return (
-    <div className="container-md min-h-80vh mt-2 profile-container">
+    <div className="container-md min-h mt-2 profile-container">
         <div className="user-card-container">
             <div className="user-profile-container flex-xy-center flex-column">
                 <img src={USER_AVATAR[0]} alt={USER_AVATAR[1]} className="user-profile"/>
@@ -40,7 +40,7 @@ const Profile = () => {
         </div>   
 
         <div className="row profile-sections">
-            <div className="profile-sections-header col-12 col-md-3">
+            <div className="profile-sections-header col-12 col-md-3 hide-scrollbar">
                 {profileSections.map((i, index) => 
                     <h2 className={ActiveSection == i && "active"} key={index} onClick={() => setActiveSection(i)}>{i}</h2>
                 )}
@@ -83,7 +83,7 @@ const Profile = () => {
             @media only screen and (max-width: 600px) {
               .profile-sections-header{
                   display: flex;
-                  flex-wrap: wrap;
+                  overflow: scroll;
               }
             }
         `}</style>

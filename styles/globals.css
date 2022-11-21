@@ -148,14 +148,8 @@ a {
   padding-top: 2rem;
 }
 
-.min-h-80vh {
-  min-height: 80vh;
-}
-.min-h-70vh {
-  min-height: 70vh;
-}
-.min-h-60vh {
-  min-height: 60vh;
+.min-h {
+  min-height: calc(100vh - 65px);
 }
 
 .c-pointer {
