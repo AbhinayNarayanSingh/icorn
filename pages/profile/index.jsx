@@ -26,7 +26,7 @@ const ProfilePageActiveSection = (ActiveSection) => {
 
 const Profile = () => {
     const {user} = useSelector((state)=> state)
-    const [ActiveSection, setActiveSection] = useState("Manage Address")
+    const [ActiveSection, setActiveSection] = useState("Orders")
     const profileSections = ["Manage Address", "Saved Product", "Manage Cards", "Orders", "Account Settings"]
 
 

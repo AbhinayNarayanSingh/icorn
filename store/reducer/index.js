@@ -1,4 +1,4 @@
-import { user, varient, category, product, productAccessories, productImages, products, relatedProducts, bag, orders, hero } from "../staticState"
+import { user, varient, category, product, productAccessories, productImages, products, relatedProducts, bag, orders,order, hero } from "../staticState"
 import { OPEN_DIALOG_WORKER, CLOSE_DIALOG_WORKER, OPEN_LOADER_WORKER, CLOSE_LOADER_WORKER } from "../constants"
 
 export const initialState = {
@@ -9,13 +9,13 @@ export const initialState = {
     productAccessories: productAccessories,
     relatedProducts: relatedProducts,
     bag: bag,
-    orders: orders,
     varients: varient,
-    user : user,
+    user : {},
     hero: hero,
     dialog: {},
     loader: {},
-    orders : orders
+    orders : orders,
+    order: order
 }
 
 const rootReducer = (state = initialState, action) => {

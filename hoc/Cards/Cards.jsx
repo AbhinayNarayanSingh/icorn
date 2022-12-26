@@ -1,3 +1,4 @@
+import moment from "moment";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { BLACK, BLUE, BOX_SHADOW_C3, BOX_SHADOW_LIGHT, WHITE, WHITE_BCK } from "../../Environment";
@@ -348,10 +349,10 @@ const Cards = ({ type, data, index, variant, onClickFn}) => {
           `}</style>
         </>
       );
-
-    case "Bag":
-      return (
-        <>
+      
+      case "Bag":
+        return (
+          <>
           <div className={`bag-product-container ${variant && "variant"}`}>
             <h4 className="remove-product">Remove</h4>
             <div className="d-flex">

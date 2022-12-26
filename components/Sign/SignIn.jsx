@@ -1,9 +1,11 @@
 import { useForm } from 'react-hook-form';
 import FormInputs from '../Input';
+import { useRouter } from "next/router";
 
 const SignIn = ({setActivePage}) => {
 
   const { register, handleSubmit, formState: { errors },} = useForm();
+  const router = useRouter()
 
   const signUpHandler = (data) => {
       console.log(data, "data");
@@ -60,7 +62,7 @@ const SignIn = ({setActivePage}) => {
     <h2 className="text-center reset-password">
       If you've lost your password or wish to reset it.{" "}
       <span
-        onClick={() => Router.push("/sign/account-recovery")}
+        onClick={() => router.push("/sign/account-recovery")}
         className="c-pointer"
       >
         click here.

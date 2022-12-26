@@ -279,6 +279,155 @@ export const orders = [
     }
 ]
 
+export const order = {
+        "orderNumber" : "403-4481972-2195557",
+
+        "category": "iPhone",
+        "name": "Apple iPhone 13 Pro",
+        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "shipping" : 0,
+        "tax" : 999,
+        "total" : 144998,
+        "isBillingAddressIsSame" : false,
+        "reward" : 100,
+        "isReturnWindowClosed" : false,
+        "item" : [
+            {
+                "name": "Apple iPhone 13 Pro",
+                "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+                "price" : 124999,
+                "varient" : {
+                    "model" : "iPhone 13 Pro",
+                    "finish" : "Green",
+                    "storage" : "256 GB"
+                }
+            },
+            {
+                "name": "Apple AirPods Pro ",
+                "images": "https://media.croma.com/image/upload/v1651838583/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/251322_qd8g3s.png",
+                "price" : 19999
+            },
+        ],
+        
+        "shippingAddress" : {
+            "firstname" : "Abhinay Narayan",
+            "lastname" : "Singh",
+            "address" : "Aashirvad Niketan, Seer Goverdhanpur, Near Chaura Mata Mandir, Banaras Hindu University",
+            "city" : "Varanasi",
+            "state" : "Uttar Pradesh",
+            "country" : "India",
+            "postalCode" : "221005",
+            "phoneNumber": "8368380854"
+        },
+        "billingAddress" : {
+            "firstname" : "Abhinay Narayan",
+            "lastname" : "Singh",
+            "address" : "Aashirvad Niketan, Seer Goverdhanpur, Near Chaura Mata Mandir, Banaras Hindu University",
+            "city" : "Varanasi",
+            "state" : "Uttar Pradesh",
+            "country" : "India",
+            "postalCode" : "221005",
+            "phoneNumber": "8368380854"
+        },        
+        "paymentMethod" : "BHIM UPI",
+        "rewardPoint" : 100,
+        
+        "carrier" : {
+            expectedDeliveryDate: 1668849812000,
+            carrierURL: "http://www.xpressbees.com/",
+            carrierLogo: "https://xinglian-dev-1254213275.cos.ap-guangzhou.myqcloud.com/provider/xpressbees.gif?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDObYFfogNnwoOimZ5KIzOYREk01lDOJyN%26q-sign-time%3D1669284364%3B1700820364%26q-key-time%3D1669284364%3B1700820364%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3Dd8385b480120b68ab095f3b4a9a984141a646057",
+        },
+        trackingDetails: [
+            {
+              date: 1668581626000,
+              city: "AGRA",
+              statusDetails: "Shipment Created"
+            },
+            {
+              date: 1668599670000,
+              city: "AGRA",
+              statusDetails: "Pickup From Seller"
+            },
+            {
+              date: 1668657805000,
+              city: "AGRA",
+              statusDetails: "Received at FKL_farukngr"
+            },
+            {
+              date: 1668581647000,
+              city: "Gurgaon",
+              statusDetails: "Dispatched to Motherhub_JKS"
+            },
+            {
+              date: 1668658462000,
+              city: "Farukhnagar",
+              statusDetails: "Received at MotherHub_FRK"
+            },
+            {
+              date: 1668697466000,
+              city: "Varanasi",
+              statusDetails: "Dispatched to Motherhub_VNI"
+            },
+            {
+              date: 1668773966000,
+              city: "Varanasi",
+              statusDetails: "Received at Motherhub_VNI"
+            },
+            {
+              date: 1668773967000,
+              city: "Varanasi",
+              statusDetails: "Received at Motherhub_VNI"
+            },
+            {
+              date: 1668801026000,
+              city: "Varanasi",
+              statusDetails: "Dispatched to BHUHub_VNS"
+            },
+            {
+              date: 1668822588000,
+              city: "Varanasi",
+              statusDetails: "Received at BHUHub_VNS"
+            },
+            {
+              date: 1668827546000,
+              city: "VARANASI",
+              statusDetails: "Dispatched to Ajit Genaral store"
+            },
+            {
+              date: 1668832597000,
+              city: "VARANASI",
+              statusDetails: "Received at Ajit Genaral store"
+            },
+            {
+              date: 1668832741000,
+              city: "VARANASI",
+              statusDetails: "Out For Delivery"
+            }
+          ],
+        "trackingStatus" : [
+            {
+              "name" : "Order Placed",
+              "timeStamp" : 1668581626000,
+            },
+            {
+              "name" : "Order Confirmed",
+              "timeStamp" : 1668581626000,
+            },
+            {
+              "name" : "In Transit",
+              "timeStamp" : 1668581626000,
+            },
+            {
+              "name" : "Out For Delivery",
+              "timeStamp" : 1668827546000,
+            },
+            {
+              "name" : "Delivered",
+            },
+          ]
+    }
+
+
 export const bag = {
     bagTotal: 145489,
     bagSubTotal: 123295,
