@@ -68,7 +68,7 @@ const NavigationBar = () => {
               onClick={() => setSearchBarActive((state) => !state)}
             />
 
-            <Link href={user?.Token ? "/profile" :"/sign"}>
+            <Link href={user?.Token ? "/gp/profile" :"/sign"}>
               <img
                 src={USER_ICON[0]}
                 alt={USER_ICON[0]}

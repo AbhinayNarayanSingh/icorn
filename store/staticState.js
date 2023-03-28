@@ -2,68 +2,68 @@ export const category = [
     {
         icon: "/img/category_icon/mac_shop.svg",
         name: "Mac",
-        slug: "/mac/"
+        slug: "/shop/mac/"
     },
     {
         icon: "/img/category_icon/shop_iphone.svg",
         name: "iPhone",
-        slug: "/iphone/",
+        slug: "/shop/iphone/",
     },
     {
         icon: "/img/category_icon/shop_ipad.svg",
         name: "iPad",
-        slug: "/ipad/"
+        slug: "/shop/ipad/"
     },
     {
         icon: "/img/category_icon/airpods.svg",
         name: "AirPods",
-        slug: "/airpods/"
+        slug: "/shop/airpods/"
     },
     {
         icon: "/img/category_icon/watch_nav_shop_watch.svg",
         name: "Watch",
-        slug: "/watch/"
+        slug: "/shop/watch/"
     },
     {
         icon: "/img/category_icon/apple_tv.svg",
         name: "TV & Home",
-        slug: "/tv-and-home/"
+        slug: "/shop/tv-and-home/"
     },
     {
         icon: "/img/category_icon/home_accessories_light.svg",
         name: "Accessories",
-        slug: "/accessories/",
+        slug: "/shop/accessories/",
         _id: "111",
         subCat: [
             {
                 icon: "/img/category_icon/mac_shop.svg",
                 name: "Mac",
-                slug: "/mac/"
+                slug: "/shop/mac/"
             },
             {
                 icon: "/img/category_icon/shop_iphone.svg",
                 name: "iPhone",
-                slug: "/iphone/",
+                slug: "/shop/iphone/",
             },
             {
                 icon: "/img/category_icon/shop_ipad.svg",
                 name: "iPad",
-                slug: "/ipad/"
+                slug: "/shop/ipad/"
             },
             {
                 icon: "/img/category_icon/airpods.svg",
                 name: "AirPods",
-                slug: "/airpods/"
+                slug: "/shop/airpods/"
             },
             {
                 icon: "/img/category_icon/watch_nav_shop_watch.svg",
                 name: "Watch",
-                slug: "/watch/"
+                slug: "/shop/watch/"
             },
             {
                 icon: "/img/category_icon/apple_tv.svg",
                 name: "TV & Home",
-                slug: "/tv-and-home/"
+                slug: "/shop/tv-and-home/"
             },
         ]
     },
@@ -83,7 +83,7 @@ export const products = [
     {
         "brand": "Apple",
         "category": "Mac",
-        "slug": "mac",
+        "slug": "/shop/mac",
         "name": "Apple MacBook Pro",
         "model": "MLVF3H",
         "price": {
@@ -98,7 +98,7 @@ export const products = [
     {
         "brand": "Apple",
         "category": "iPhone",
-        "slug": "iphone/iphone-13-pro/MLVF3H",
+        "slug": "/shop/iphone/iphone-13-pro/MLVF3H",
         "name": "Apple iPhone 13 Pro",
         "model": "MLVF3H",
         "price": {
@@ -113,7 +113,7 @@ export const products = [
     {
         "brand": "Apple",
         "category": "iPad",
-        "slug": "ipad",
+        "slug": "/shop/ipad",
         "name": "Apple iPad Pro",
         "model": "MHNG3HN/A",
         "price": {
@@ -128,7 +128,7 @@ export const products = [
     {
         "brand": "Apple",
         "category": "Watch",
-        "slug": "watch",
+        "slug": "/shop/watch",
         "name": "Apple Watch Series 7",
         "model": "MKN53HN/A",
         "price": {
@@ -143,7 +143,7 @@ export const products = [
     {
         "brand": "Apple",
         "category": "AirPods",
-        "slug": "airpods",
+        "slug": "/shop/airpods",
         "name": "Apple AirPods Pro ",
         "model": "MLWK3HN/A",
         "price": {

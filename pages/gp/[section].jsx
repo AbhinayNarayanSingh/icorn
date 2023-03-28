@@ -1,33 +1,54 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { useRouter } from 'next/router'
+
 import { BLUE, PRIMARY_COLOUR, USER_AVATAR, WHITE } from '../../Environment'
 
 // sub-components src /components/Profile
-import ManageAddresses from '../../components/Profile/Manage-Addresses'
-import ManageCards from '../../components/Profile/Manage-Cards'
-import SavedProducts from '../../components/Profile/Saved-Products'
+import ManageAddresses from '../../components/Profile/ManageAddresses'
+import ManageCards from '../../components/Profile/ManageCards'
+import SavedProducts from '../../components/Profile/SavedProducts'
 import Orders from '../../components/Profile/Orders'
 import AccountSettings from '../../components/Profile/AccountSettings'
+import OrderDetails from '../../components/Profile/OrderDetails'
 
-const ProfilePageActiveSection = (ActiveSection) => {
-    switch (ActiveSection) {
-        case "Saved Product":
-            return <SavedProducts/>
-        case "Manage Address":
-            return <ManageAddresses/>
-        case "Manage Cards":
-            return <ManageCards/>
-        case "Orders":
-            return <Orders/>
-        case "Account Settings":
-            return <AccountSettings/>
-    }
-}
 
 const Profile = () => {
     const {user} = useSelector((state)=> state)
     const [ActiveSection, setActiveSection] = useState("Orders")
-    const profileSections = ["Manage Address", "Saved Product", "Manage Cards", "Orders", "Account Settings"]
+    const router = useRouter()
+    
+    const {section} = router.query    
+
+    const profileSections = [
+        { url: "address", name: "Manage Address" },
+        { url: "saved-products", name: "Saved Product" },
+        { url: "cards", name: "Manage Cards" },
+        { url: "orders", name: "Orders" },
+        { url: "settings", name: "Account Settings" }
+    ]
+
+    const ProfilePageActiveSection = () => {
+
+        switch (section) {
+            case "saved-products":
+                return <SavedProducts/>
+            case "address":
+                return <ManageAddresses/>
+            case "cards":
+                return <ManageCards/>
+            case "orders":
+                return <Orders/>
+            case "settings":
+                return <AccountSettings/>
+            case "orders":
+                return <OrderDetails/>
+            case "order":
+                return <OrderDetails/>
+            default :
+                return <SavedProducts/>
+        }
+    }
 
 
   return (
@@ -42,11 +63,11 @@ const Profile = () => {
         <div className="row profile-sections">
             <div className="profile-sections-header col-12 col-md-3 hide-scrollbar">
                 {profileSections.map((i, index) => 
-                    <h2 className={ActiveSection == i && "active"} key={index} onClick={() => setActiveSection(i)}>{i}</h2>
+                    <h2 className={section == i["url"] && "active"} key={index} onClick={() => router.push(`/gp/${i["url"]}`)}>{i["name"]}</h2>
                 )}
             </div>
             <div className="col-md-9 col-12">
-                {ProfilePageActiveSection(ActiveSection)}
+                {ProfilePageActiveSection()}
             </div>
         </div>
         

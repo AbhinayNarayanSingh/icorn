@@ -10,7 +10,7 @@ export const initialState = {
     relatedProducts: relatedProducts,
     bag: bag,
     varients: varient,
-    user : {},
+    user : user,
     hero: hero,
     dialog: {},
     loader: {},

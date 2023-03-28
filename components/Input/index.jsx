@@ -6,11 +6,11 @@ const FormInputs = ({
   type,
   name,
   label,
+  name2,
+  label2,
   options,
   className,
   register,
-  label2,
-  name2,
 }) => {
 
   const [selectedCategory, setSelectedCategory] = useState()

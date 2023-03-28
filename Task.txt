@@ -1,0 +1,5 @@
+- add data in db
+- finish order detail page      blocker
+- make search page in popup
+
+- start api integration

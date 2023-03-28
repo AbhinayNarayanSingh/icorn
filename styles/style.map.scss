@@ -1,0 +1,21 @@
+
+$PRIMARY_COLOUR : rgba(0, 0, 0, 0.8);
+$LIGHT_GREY_FONT : rgba(255, 255, 255, 0.5);
+
+$BLUE : #0066cc;
+$WHITE : white;
+$BLACK : black;
+
+$WHITE_BACKGROUND: #f5f5f7;
+
+$CARD_BORDER_RADIUS: 8px;
+
+$CONTAINER_INNER_PADDING: 1rem;
+
+// css box shadow
+$BOX_SHADOW_LIGHT : rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$BOX_SHADOW_C3 : inset 1px 1px 4px rgba(0, 0, 0, 0.1);
+
+
+// gp
+@import "./gp/order_details.scss"

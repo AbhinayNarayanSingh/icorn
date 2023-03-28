@@ -6,8 +6,8 @@ import {
   LEFT_ARROW_ICON,
   RIGHT_ARROW_ICON,
   WHITE,
-} from "../../../Environment";
-import { INR_STYLE_HELPER } from "../../../utils/Helper";
+} from "../../../../Environment";
+import { INR_STYLE_HELPER } from "../../../../utils/Helper";
 
 const Model = () => {
   const { product, productImages, varients } = useSelector((state) => state);

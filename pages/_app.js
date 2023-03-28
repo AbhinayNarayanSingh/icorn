@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import '../styles/bootstrap-grid.css'
+import '../styles/style.map.scss'
 
 // redux store 
 import { Provider } from "react-redux";

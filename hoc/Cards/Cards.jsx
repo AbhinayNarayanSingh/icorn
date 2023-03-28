@@ -269,85 +269,87 @@ const Cards = ({ type, data, index, variant, onClickFn}) => {
 
     case "Order":
       return (
-        <>
-          <div className={`bag-product-container ${variant && "variant"}`}>
-            <div className="d-flex">
-              <img
-                src={data["images"]}
-                alt={data["name"]}
-                className="product-image"
-              />
-              <div className="product-details">
-                <h2>{data["name"]}</h2>
-                <p>Expected by {data["carrier"]["expectedDeliveryDate"]}</p>
+        <Link href="/gp/order/">
+          <div>
+            <div className={`bag-product-container ${variant && "variant"}`}>
+              <div className="d-flex">
+                <img
+                  src={data["images"]}
+                  alt={data["name"]}
+                  className="product-image"
+                />
+                <div className="product-details">
+                  <h2>{data["name"]}</h2>
+                  <p>Expected by {data["carrier"]["expectedDeliveryDate"]}</p>
+                </div>
               </div>
+              <h3 className="product-price">
+                ₹ {INR_STYLE_HELPER(data["total"])}
+              </h3>
             </div>
-            <h3 className="product-price">
-              ₹ {INR_STYLE_HELPER(data["total"])}
-            </h3>
-          </div>
 
-          <style jsx>{`
-            .bag-product-container {
-              display: flex;
-              justify-content: space-between;
-              background: ${WHITE_BCK};
-              border-radius: 8px;
-              margin-bottom: 1rem;
-              position: relative;
-              width: 100%;
-              cursor: pointer;
-            }
-            .bag-product-container:hover{
-              BOX-SHADOW: ${BOX_SHADOW_LIGHT};
-            }
-            img {
-              height: 75px;
-              width: 75px;
-              object-fit: contain;
-              padding: 1rem;
-            }
-            h2 {
-              font-weight: 600;
-              font-size: 16px;
-              color: ${BLACK};
-              margin-bottom: 0.25rem;
-              line-height: 125%;
-              margin-top: 1rem;
-            }
-            p {
-              font-weight: 600;
-              font-size: 12px;
-            }
-            .product-price {
-              display: none;
-            }
-            @media only screen and (min-width: 600px) {
+            <style jsx>{`
+              .bag-product-container {
+                display: flex;
+                justify-content: space-between;
+                background: ${WHITE_BCK};
+                border-radius: 8px;
+                margin-bottom: 1rem;
+                position: relative;
+                width: 100%;
+                cursor: pointer;
+              }
+              .bag-product-container:hover{
+                BOX-SHADOW: ${BOX_SHADOW_LIGHT};
+              }
               img {
-                height: 100px;
-                width: 100px;
-                padding: 2rem;
-                margin-right: 2rem;
+                height: 75px;
+                width: 75px;
+                object-fit: contain;
+                padding: 1rem;
               }
               h2 {
-                font-size: 20px;
-                margin-bottom: 0.5rem;
+                font-weight: 600;
+                font-size: 16px;
+                color: ${BLACK};
+                margin-bottom: 0.25rem;
                 line-height: 125%;
-                margin-top: 2rem;
+                margin-top: 1rem;
               }
               p {
                 font-weight: 600;
-                font-size: 14px;
+                font-size: 12px;
               }
               .product-price {
-                display: block;
-                margin: 2rem 1rem;
-                font-weight: 600;
-                font-size: 20px;
+                display: none;
               }
-            }
-          `}</style>
-        </>
+              @media only screen and (min-width: 600px) {
+                img {
+                  height: 100px;
+                  width: 100px;
+                  padding: 2rem;
+                  margin-right: 2rem;
+                }
+                h2 {
+                  font-size: 20px;
+                  margin-bottom: 0.5rem;
+                  line-height: 125%;
+                  margin-top: 2rem;
+                }
+                p {
+                  font-weight: 600;
+                  font-size: 14px;
+                }
+                .product-price {
+                  display: block;
+                  margin: 2rem 1rem;
+                  font-weight: 600;
+                  font-size: 20px;
+                }
+              }
+            `}</style>
+          </div>
+        </Link>
       );
       
       case "Bag":
