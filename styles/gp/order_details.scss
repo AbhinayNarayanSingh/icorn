@@ -1,71 +1,71 @@
-.order-details-container{
+.order-details-container {
+  background: $WHITE_BACKGROUND;
+  padding: $CONTAINER_INNER_PADDING;
+  border-radius: $CARD_BORDER_RADIUS;
+
+  &:hover {
+    box-shadow: $BOX_SHADOW_LIGHT;
+  }
+
+  .col-heading {
+    font-weight: 600;
+  }
+
+  .order-product-container {
+    display: flex;
+    justify-content: space-between;
     background: $WHITE_BACKGROUND;
-    padding: $CONTAINER_INNER_PADDING;
-    border-radius: $CARD_BORDER_RADIUS;
-    &:hover{
-        box-shadow: $BOX_SHADOW_LIGHT;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+
+    .expected-date {
+      font-size: .9rem;
+    }
+  }
+
+  img {
+    height: 75px;
+    width: 75px;
+    object-fit: contain;
+    padding: 1rem 1rem 1rem 0;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 0.25rem;
+    line-height: 125%;
+  }
+
+  h3 span {
+    font-weight: 600;
+  }
+
+
+  h5 {
+    font-weight: 600;
+    margin-bottom: .5rem;
+  }
+
+  p {
+    line-height: 1.25rem;
+  }
+
+  .product-price {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  @media only screen and (min-width: 600px) {
+    img {
+      height: 100px;
+      width: 100px;
+      padding: 1rem;
+      margin-right: 1rem;
     }
 
-    .col-heading{
-        font-weight: 600;
-    }
-
-    .bag-product-container {
-        display: flex;
-        justify-content: space-between;
-        background: $WHITE_BACKGROUND;
-        border-radius: 8px;
-        margin-bottom: 1rem;
-        position: relative;
-        width: 100%;
-        cursor: pointer;
-      }
-      .bag-product-container:hover{
-        BOX-SHADOW: $BOX_SHADOW_LIGHT;
-      }
-      img {
-        height: 75px;
-        width: 75px;
-        object-fit: contain;
-        padding: 1rem;
-      }
-      h2 {
-        font-weight: 600;
-        font-size: 16px;
-        color: $BLACK;
-        margin-bottom: 0.25rem;
-        line-height: 125%;
-        margin-top: 1rem;
-      }
-      p {
-        font-weight: 600;
-        font-size: 12px;
-      }
-      .product-price {
-        display: none;
-      }
-      @media only screen and (min-width: 600px) {
-        img {
-          height: 100px;
-          width: 100px;
-          padding: 2rem;
-          margin-right: 2rem;
-        }
-        h2 {
-          font-size: 20px;
-          margin-bottom: 0.5rem;
-          line-height: 125%;
-          margin-top: 2rem;
-        }
-        p {
-          font-weight: 600;
-          font-size: 14px;
-        }
-        .product-price {
-          display: block;
-          margin: 2rem 1rem;
-          font-weight: 600;
-          font-size: 20px;
-        }
-      }
+  }
 }

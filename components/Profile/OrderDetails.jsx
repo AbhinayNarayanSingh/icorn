@@ -13,21 +13,22 @@ const OrderDetails = () => {
     <div className="order-details-container">
 
       <div className="address-container">
-          <h2 className="col-heading">Shipping Address</h2>
-          <p className="mt-1">{`${shippingAddress?.firstname} ${shippingAddress?.lastname}`}</p>
-          <h5 className="pt-05">{`${shippingAddress?.address}`}</h5>
-          <h5>{`${shippingAddress?.city}, ${shippingAddress?.state}, ${shippingAddress?.country}-${shippingAddress?.postalCode}`}</h5>
+          {/* <h2 className="col-heading">Shipping Address</h2> */}
 
-          <p className="mt-1">Phone Number : <span>{shippingAddress?.phoneNumber}</span></p>
+          <h5>{`${shippingAddress?.firstname} ${shippingAddress?.lastname}`}</h5>
+          <p className="pt-05">{`${shippingAddress?.address}`}</p>
+          <p>{`${shippingAddress?.city}, ${shippingAddress?.state}, ${shippingAddress?.country}-${shippingAddress?.postalCode}`}</p>
 
-          <p className="mt-1">Status : <span>Out For Delivery</span></p>
+          <h3 className="mt-1">Phone Number : <span>{shippingAddress?.phoneNumber}</span></h3>
 
-          <p className="mt-1">Your Rewards : <span>{data?.["reward"]} SuperCoins</span></p>
+          <h3 className="mt-1">Status : <span>Out For Delivery</span></h3>
 
-          <p className='mt-1'>Expected to arrive : <span>{moment(data?.["carrier"]?.["expectedDeliveryDate"]).format("DD MMMM, YYYY")}</span></p>
+          <h3 className="mt-1">Your Rewards : <span>{data?.["reward"]} SuperCoins</span></h3>
+
+          <h3 className='mt-1'>Expected to arrive : <span>{moment(data?.["carrier"]?.["expectedDeliveryDate"]).format("DD MMMM, YYYY")}</span></h3>
       </div>
 
-      <p className='col-heading mt-1 mb-1'>Items</p>
+      <h2 className='col-heading mt-2 mb-1'>Items</h2>
 
         {data?.item?.map((i) => {
           return (
@@ -38,9 +39,9 @@ const OrderDetails = () => {
                   alt={i["name"]}
                   className="product-image"
                   />
-                <div className="product-details">
+                <div className="product-details mt-1">
                   <h2>{i["name"]}</h2>
-                  <p>Expected by {moment(data["carrier"]["expectedDeliveryDate"]).format("DD MMMM")}</p>
+                  <p className='expected-date'>Expected by {moment(data["carrier"]["expectedDeliveryDate"]).format("DD MMMM")}</p>
                 </div>
 
                   

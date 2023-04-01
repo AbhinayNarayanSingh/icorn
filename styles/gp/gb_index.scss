@@ -1,0 +1,70 @@
+.profile-container {
+    max-width: 1000px;
+
+    .user-card-container {
+        padding: 2rem;
+    }
+
+    .user-profile {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 2px solid $PRIMARY_COLOUR;
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+    }
+
+    .user-profile-container h2 {
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    .profile-sections-header h2 {
+        padding: 0 1rem 1rem;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .profile-sections {
+        margin: 1rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .profile-sections-header {
+            display: flex;
+            overflow: scroll;
+        }
+    }
+
+    .profile-sections-header {
+        cursor: pointer;
+        overflow-x: scroll;
+
+        button {
+            background: none;
+            font-weight: 600;
+            display: block;
+            padding-bottom: 1rem;
+
+            &:hover {
+                color: $BLUE;
+            }
+
+            &.active {
+                color: $BLUE;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            display: flex;
+            margin-bottom: 1rem;
+
+            button {
+                min-width: 150px;
+            }
+        }
+    }
+
+
+}

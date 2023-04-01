@@ -62,8 +62,7 @@ const Profile = () => {
 
         <div className="row profile-sections">
             <div className="profile-sections-header col-12 col-md-3 hide-scrollbar">
-                {profileSections.map((i, index) => 
-                    <h2 className={section == i["url"] && "active"} key={index} onClick={() => router.push(`/gp/${i["url"]}`)}>{i["name"]}</h2>
+                {profileSections.map((i, index) => <button className={section == i["url"] && "active"} key={index} onClick={() => router.push(`/gp/${i["url"]}`)}>{i["name"]}</button>
                 )}
             </div>
             <div className="col-md-9 col-12">
@@ -72,41 +71,7 @@ const Profile = () => {
         </div>
         
         <style jsx>{`
-            .profile-container{
-                max-width: 1000px;
-            }
-            .user-card-container{
-                padding:2rem;
-            }
-            .user-profile{
-                width: 150px;
-                height: 150px;
-                object-fit: cover;
-                border:2px solid ${PRIMARY_COLOUR};
-                border-radius: 50%;
-                margin-bottom : 1.5rem;
-            }
-            .user-profile-container h2{
-                font-weight: 600;
-                font-size:1.1rem;
-            }
-            .profile-sections-header h2{
-                padding: 0 1rem 1rem;
-                cursor: pointer;
-                font-weight: 600;
-            }
-            h2.active{
-                color: ${BLUE};
-            }
-            .profile-sections{
-                margin: 1rem;
-            }
-            @media only screen and (max-width: 600px) {
-              .profile-sections-header{
-                  display: flex;
-                  overflow: scroll;
-              }
-            }
+          
         `}</style>
     </div>
   )

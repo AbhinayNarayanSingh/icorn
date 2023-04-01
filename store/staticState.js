@@ -107,7 +107,7 @@ export const products = [
             "mrp": 129900,
             "sellingPrice": 123990,
         },
-        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "images": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662703724/Croma%20Assets/Communication/Mobiles/Images/261934_qgssvy.png/mxw_2048,f_auto",
         "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
     },
     {
@@ -152,7 +152,7 @@ export const products = [
             "mrp": 26300,
             "sellingPrice": 21499,
         },
-        "images": "https://media.croma.com/image/upload/v1651838583/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/251322_qd8g3s.png",
+        "images": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1669124421/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/262015_0_hnwvzo.png/mxw_2048,f_auto",
     }
 ]
 
@@ -219,7 +219,7 @@ export const relatedProducts = [
             "mrp": 129900,
             "sellingPrice": 123990,
         },
-        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "images": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662703724/Croma%20Assets/Communication/Mobiles/Images/261934_qgssvy.png/mxw_2048,f_auto",
         "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
     }, {
         "brand": "Apple",
@@ -233,7 +233,7 @@ export const relatedProducts = [
             "mrp": 129900,
             "sellingPrice": 123990,
         },
-        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "images": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662703724/Croma%20Assets/Communication/Mobiles/Images/261934_qgssvy.png/mxw_2048,f_auto",
         "color": ['#566856', '#f1f3ed', '#f9e8d2', '#605f5d', '#b2c9dd']
     }
 ]
@@ -244,7 +244,7 @@ export const orders = [
 
         "category": "iPhone",
         "name": "Apple iPhone 13 Pro",
-        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "images": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662703724/Croma%20Assets/Communication/Mobiles/Images/261934_qgssvy.png/mxw_2048,f_auto",
         "shipping" : 0,
         "tax" : 999,
         "total" : 99999,
@@ -284,7 +284,7 @@ export const order = {
 
         "category": "iPhone",
         "name": "Apple iPhone 13 Pro",
-        "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+        "images": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662703724/Croma%20Assets/Communication/Mobiles/Images/261934_qgssvy.png/mxw_2048,f_auto",
         "shipping" : 0,
         "tax" : 999,
         "total" : 144998,
@@ -294,7 +294,7 @@ export const order = {
         "item" : [
             {
                 "name": "Apple iPhone 13 Pro",
-                "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+                "images": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662703724/Croma%20Assets/Communication/Mobiles/Images/261934_qgssvy.png/mxw_2048,f_auto",
                 "price" : 124999,
                 "varient" : {
                     "model" : "iPhone 13 Pro",
@@ -304,7 +304,7 @@ export const order = {
             },
             {
                 "name": "Apple AirPods Pro ",
-                "images": "https://media.croma.com/image/upload/v1651838583/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/251322_qd8g3s.png",
+                "images": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1669124421/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/262015_0_hnwvzo.png/mxw_2048,f_auto",
                 "price" : 19999
             },
         ],
@@ -447,7 +447,7 @@ export const bag = {
                 "mrp": 129900,
                 "sellingPrice": 123990,
             },
-            "images": "https://media.croma.com/image/upload/v1631855852/Croma%20Assets/Communication/Mobiles/Images/243512_7_ulnxdo.png",
+            "images": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662703724/Croma%20Assets/Communication/Mobiles/Images/261934_qgssvy.png/mxw_2048,f_auto",
         },
         {
             "brand": "Apple",
@@ -461,7 +461,7 @@ export const bag = {
                 "mrp": 26300,
                 "sellingPrice": 21499,
             },
-            "images": "https://media.croma.com/image/upload/v1651838583/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/251322_qd8g3s.png",
+            "images": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1669124421/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/262015_0_hnwvzo.png/mxw_2048,f_auto",
         },
         {
             "brand": "Apple",

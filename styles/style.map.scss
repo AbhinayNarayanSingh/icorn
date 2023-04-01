@@ -1,4 +1,3 @@
-
 $PRIMARY_COLOUR : rgba(0, 0, 0, 0.8);
 $LIGHT_GREY_FONT : rgba(255, 255, 255, 0.5);
 
@@ -18,4 +17,5 @@ $BOX_SHADOW_C3 : inset 1px 1px 4px rgba(0, 0, 0, 0.1);
 
 
 // gp
-@import "./gp/order_details.scss"
+@import "./gp/order_details.scss";
+@import "./gp/gb_index.scss";
